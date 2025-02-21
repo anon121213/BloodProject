@@ -6,7 +6,7 @@ namespace _Scripts.Common.Physics
   public interface IPhysicsService
   {
     GameEntity Raycast(Vector2 worldPosition, Vector2 direction, int layerMask);
-    GameEntity LineCast(Vector2 start, Vector2 end, int layerMask);
+    GameEntity LineCast(Vector3 start, Vector3 end, int layerMask, out Collider collider);
     TEntity OverlapPoint<TEntity>(Vector2 worldPosition, int layerMask) where TEntity : class;
     IEnumerable<GameEntity> RaycastAll(Vector2 worldPosition, Vector2 direction, int layerMask);
     IEnumerable<GameEntity> CircleCast(Vector3 position, float radius, int layerMask);

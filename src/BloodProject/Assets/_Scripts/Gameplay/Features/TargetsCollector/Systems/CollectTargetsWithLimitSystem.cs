@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using _Scripts.Common.Physics;
 using Entitas;
 using UnityEngine;
 
-namespace Gameplay.Features.TargetsCollector.Systems
+namespace _Scripts.Gameplay.Features.TargetsCollector.Systems
 {
   public class CollectTargetsWithLimitSystem : IExecuteSystem
   {
@@ -23,6 +25,7 @@ namespace Gameplay.Features.TargetsCollector.Systems
           GameMatcher.ProcessedTargets,
           GameMatcher.TargetsLimit,
           GameMatcher.WorldPosition,
+          GameMatcher.LastWorldPosition,
           GameMatcher.LayerMask
         ));
     }
@@ -31,13 +34,23 @@ namespace Gameplay.Features.TargetsCollector.Systems
     {
       foreach (var collector in _collectors.GetEntities(_buffer))
       {
-        int targetsCount = GetTargetsInRadius(collector);
-        
-        if (targetsCount > 0) 
-          collector.isCollide = true;
-        
-        for (int i = 0; i < Mathf.Min(targetsCount, collector.TargetsLimit); i++)
+        GameEntity entity = GetTargetsInRadius(collector, out Collider hitCollider);
+        collector.ReplaceLastWorldPosition(collector.WorldPosition);
+
+        if (hitCollider != null)
         {
+          collector.isCollide = true;
+          Debug.Log("collide");
+        }
+        
+        /*for (int i = 0; i < Mathf.Min(targetsCount.Count(), collector.TargetsLimit); i++)
+        {
+          collector.isCollide = true;
+          Debug.Log("collide");
+          
+          if (_targetCastBuffer[i] == null || !_targetCastBuffer[i].hasId)
+            continue;
+          
           int targetId = _targetCastBuffer[i].Id;
 
           if (!AlreadyProcessed(collector, targetId))
@@ -45,7 +58,7 @@ namespace Gameplay.Features.TargetsCollector.Systems
             collector.TargetsBuffer.Add(targetId);
             collector.ProcessedTargets.Add(targetId);
           }
-        }
+        }*/
 
         if (!collector.isCollectTargetsContinuously) 
           collector.isReadyToCollectTargets = false;
@@ -55,8 +68,10 @@ namespace Gameplay.Features.TargetsCollector.Systems
     private bool AlreadyProcessed(GameEntity entity, int targetId) => 
       entity.ProcessedTargets.Contains(targetId);
 
-    private int GetTargetsInRadius(GameEntity entity) =>
-      _physicsService.CircleCastNonAlloc(entity.WorldPosition, entity.Radius, entity.LayerMask,
-        _targetCastBuffer);
+    private GameEntity GetTargetsInRadius(GameEntity entity, out Collider hitCollider)
+    {
+      return _physicsService.LineCast(entity.LastWorldPosition, entity.WorldPosition, entity.LayerMask, out hitCollider);
+      
+    }
   }
 }

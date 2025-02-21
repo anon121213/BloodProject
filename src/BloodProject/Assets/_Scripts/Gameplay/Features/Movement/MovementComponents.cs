@@ -1,10 +1,11 @@
 ﻿using Entitas;
 using UnityEngine;
 
-namespace Gameplay.Features.Movement
+namespace _Scripts.Gameplay.Features.Movement
 { 
     [Game] public class Speed : IComponent { public float Value; }
     [Game] public class Direction : IComponent { public Vector3 Value; }
+    [Game] public class LastWorldPosition : IComponent { public Vector3 Value; }
     [Game] public class MoveSmooth : IComponent { public float Value; }
     [Game] public class Moving : IComponent { }
     [Game] public class MoveByPhysic : IComponent { }

@@ -1,4 +1,5 @@
-﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
+﻿using _Scripts.Gameplay.Features.TargetsCollector.Systems;
+using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using Gameplay.Features.TargetsCollector.Systems;
 
 namespace Gameplay.Features.TargetsCollector

@@ -3,6 +3,7 @@ using _Scripts.Gameplay.Features.Weapon.Factory;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.StateMachine.Factory;
 using _Scripts.Infrastructure.View.Factory;
+using Gameplay.Features.Effects.Factory;
 using Gameplay.Features.Player.Factory;
 using VContainer;
 
@@ -18,6 +19,7 @@ namespace _Scripts.Infrastructure.Installers.Installers
             builder.Register<IPlayerFactory, PlayerFactory>(Lifetime.Singleton);
             builder.Register<IProjectileFactory, ProjectileFactory>(Lifetime.Singleton);
             builder.Register<IWeaponFactory, WeaponFactory>(Lifetime.Singleton);
+            builder.Register<IEffectsFactory, EffectsFactory>(Lifetime.Singleton);
         }
     }
 }

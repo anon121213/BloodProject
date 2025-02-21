@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Gameplay.Features.Movement.Speed speed { get { return (Gameplay.Features.Movement.Speed)GetComponent(GameComponentsLookup.Speed); } }
+    public _Scripts.Gameplay.Features.Movement.Speed speed { get { return (_Scripts.Gameplay.Features.Movement.Speed)GetComponent(GameComponentsLookup.Speed); } }
     public float Speed { get { return speed.Value; } }
     public bool hasSpeed { get { return HasComponent(GameComponentsLookup.Speed); } }
 
     public GameEntity AddSpeed(float newValue) {
         var index = GameComponentsLookup.Speed;
-        var component = (Gameplay.Features.Movement.Speed)CreateComponent(index, typeof(Gameplay.Features.Movement.Speed));
+        var component = (_Scripts.Gameplay.Features.Movement.Speed)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Movement.Speed));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceSpeed(float newValue) {
         var index = GameComponentsLookup.Speed;
-        var component = (Gameplay.Features.Movement.Speed)CreateComponent(index, typeof(Gameplay.Features.Movement.Speed));
+        var component = (_Scripts.Gameplay.Features.Movement.Speed)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Movement.Speed));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

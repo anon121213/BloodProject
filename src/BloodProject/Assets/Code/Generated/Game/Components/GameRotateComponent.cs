@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Gameplay.Features.Movement.Rotate rotateComponent = new Gameplay.Features.Movement.Rotate();
+    static readonly _Scripts.Gameplay.Features.Movement.Rotate rotateComponent = new _Scripts.Gameplay.Features.Movement.Rotate();
 
     public bool isRotate {
         get { return HasComponent(GameComponentsLookup.Rotate); }

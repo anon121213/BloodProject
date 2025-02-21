@@ -1,4 +1,5 @@
 ﻿using Entitas;
+using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Projectiles.Systems
 {
@@ -11,8 +12,7 @@ namespace _Scripts.Gameplay.Features.Projectiles.Systems
       _projectiles = gameContext.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.SimpleBulletProjectile,
-          GameMatcher.Direction,
-          GameMatcher.Transform
+          GameMatcher.Collide
         ));
     }
 
@@ -20,10 +20,8 @@ namespace _Scripts.Gameplay.Features.Projectiles.Systems
     {
       foreach (var projectile in _projectiles)
       {
-        if (projectile.Direction != projectile.Transform.forward.normalized)
-        {
-          projectile.ReplaceDirection(projectile.Transform.forward.normalized);
-        }
+        Debug.Log("destroy");
+        projectile.isDestructed = true;
       } 
     }
   }

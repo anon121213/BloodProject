@@ -2,6 +2,7 @@
 using _Scripts.Gameplay.Features.Camera;
 using _Scripts.Gameplay.Features.Movement;
 using _Scripts.Gameplay.Features.Player;
+using _Scripts.Gameplay.Features.Projectiles;
 using _Scripts.Gameplay.Features.Weapon;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.View;
@@ -21,8 +22,8 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<MovementFeature>());
       Add(systemFactory.Create<CameraFeature>());
       Add(systemFactory.Create<WeaponFeature>());
+      Add(systemFactory.Create<ProjectilesFeature>());
       
-      Add(systemFactory.Create<TargetsCollectorFeature>());
       
       Add(systemFactory.Create<ProcessDestructedFeature>());
     }

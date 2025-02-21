@@ -28,7 +28,7 @@ MonoBehaviour:
         m_SubObjectType: 
         m_EditorAssetChanged: 0
       EffectSetups: []
-      Speed: 10
+      Speed: 100
       LifeTime: 5
       Pierce: 1
       CollisionRadius: 0.1

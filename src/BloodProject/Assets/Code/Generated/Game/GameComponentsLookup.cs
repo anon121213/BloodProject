@@ -32,59 +32,60 @@ public static class GameComponentsLookup {
     public const int WorldRotation = 21;
     public const int Camera = 22;
     public const int CameraHolder = 23;
-    public const int LeftHand = 24;
-    public const int Model = 25;
-    public const int Player = 26;
-    public const int RigBuilder = 27;
-    public const int RightHand = 28;
-    public const int EffectSetups = 29;
-    public const int Projectile = 30;
-    public const int ProjectileData = 31;
-    public const int SimpleBulletProjectile = 32;
-    public const int AttackPoint = 33;
-    public const int CurrentShootDelay = 34;
-    public const int CurrentWeapon = 35;
-    public const int LeftHandHolder = 36;
-    public const int OnShootDelay = 37;
-    public const int RightHandHolder = 38;
-    public const int Shoot = 39;
-    public const int ShootAvailable = 40;
-    public const int ShootDelay = 41;
-    public const int Shooter = 42;
-    public const int Weapon = 43;
-    public const int WeaponHolder = 44;
-    public const int CurrentHealth = 45;
-    public const int DamageEffect = 46;
-    public const int Effect = 47;
-    public const int EffectValue = 48;
-    public const int MaxHealth = 49;
-    public const int ProducerId = 50;
-    public const int PushEffect = 51;
-    public const int TargetId = 52;
-    public const int BaseStats = 53;
-    public const int StatChange = 54;
-    public const int StatModifiers = 55;
-    public const int Direction = 56;
-    public const int MoveByPhysic = 57;
-    public const int MovementAvailable = 58;
-    public const int MoveSmooth = 59;
-    public const int Moving = 60;
-    public const int Rotate = 61;
-    public const int RotationAlignedAlongDirection = 62;
-    public const int Speed = 63;
-    public const int Teleport = 64;
-    public const int TurnedAlongDirection = 65;
-    public const int CollectTargetsContinuously = 66;
-    public const int CollectTargetsInterval = 67;
-    public const int CollectTargetsTimer = 68;
-    public const int Collide = 69;
-    public const int LayerMask = 70;
-    public const int ProcessedTargets = 71;
-    public const int ReadyToCollectTargets = 72;
-    public const int TargetsBuffer = 73;
-    public const int TargetsLimit = 74;
+    public const int Direction = 24;
+    public const int LastWorldPosition = 25;
+    public const int MoveByPhysic = 26;
+    public const int MovementAvailable = 27;
+    public const int MoveSmooth = 28;
+    public const int Moving = 29;
+    public const int Rotate = 30;
+    public const int RotationAlignedAlongDirection = 31;
+    public const int Speed = 32;
+    public const int Teleport = 33;
+    public const int TurnedAlongDirection = 34;
+    public const int LeftHand = 35;
+    public const int Model = 36;
+    public const int Player = 37;
+    public const int RigBuilder = 38;
+    public const int RightHand = 39;
+    public const int EffectSetups = 40;
+    public const int Projectile = 41;
+    public const int ProjectileData = 42;
+    public const int SimpleBulletProjectile = 43;
+    public const int AttackPoint = 44;
+    public const int CurrentShootDelay = 45;
+    public const int CurrentWeapon = 46;
+    public const int LeftHandHolder = 47;
+    public const int OnShootDelay = 48;
+    public const int RightHandHolder = 49;
+    public const int Shoot = 50;
+    public const int ShootAvailable = 51;
+    public const int ShootDelay = 52;
+    public const int Shooter = 53;
+    public const int Weapon = 54;
+    public const int WeaponHolder = 55;
+    public const int CurrentHealth = 56;
+    public const int DamageEffect = 57;
+    public const int Effect = 58;
+    public const int EffectValue = 59;
+    public const int MaxHealth = 60;
+    public const int ProducerId = 61;
+    public const int PushEffect = 62;
+    public const int TargetId = 63;
+    public const int BaseStats = 64;
+    public const int StatChange = 65;
+    public const int StatModifiers = 66;
+    public const int CollectTargetsContinuously = 67;
+    public const int CollectTargetsInterval = 68;
+    public const int CollectTargetsTimer = 69;
+    public const int Collide = 70;
+    public const int LayerMask = 71;
+    public const int ProcessedTargets = 72;
+    public const int ReadyToCollectTargets = 73;
+    public const int TargetsBuffer = 74;
+    public const int TargetsLimit = 75;
 
-    public const int TotalComponents = 75;
+    public const int TotalComponents = 76;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -111,6 +112,17 @@ public static class GameComponentsLookup {
         "WorldRotation",
         "Camera",
         "CameraHolder",
+        "Direction",
+        "LastWorldPosition",
+        "MoveByPhysic",
+        "MovementAvailable",
+        "MoveSmooth",
+        "Moving",
+        "Rotate",
+        "RotationAlignedAlongDirection",
+        "Speed",
+        "Teleport",
+        "TurnedAlongDirection",
         "LeftHand",
         "Model",
         "Player",
@@ -143,16 +155,6 @@ public static class GameComponentsLookup {
         "BaseStats",
         "StatChange",
         "StatModifiers",
-        "Direction",
-        "MoveByPhysic",
-        "MovementAvailable",
-        "MoveSmooth",
-        "Moving",
-        "Rotate",
-        "RotationAlignedAlongDirection",
-        "Speed",
-        "Teleport",
-        "TurnedAlongDirection",
         "CollectTargetsContinuously",
         "CollectTargetsInterval",
         "CollectTargetsTimer",
@@ -189,6 +191,17 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldRotation),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraComponent),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraHolder),
+        typeof(_Scripts.Gameplay.Features.Movement.Direction),
+        typeof(_Scripts.Gameplay.Features.Movement.LastWorldPosition),
+        typeof(_Scripts.Gameplay.Features.Movement.MoveByPhysic),
+        typeof(_Scripts.Gameplay.Features.Movement.MovementAvailable),
+        typeof(_Scripts.Gameplay.Features.Movement.MoveSmooth),
+        typeof(_Scripts.Gameplay.Features.Movement.Moving),
+        typeof(_Scripts.Gameplay.Features.Movement.Rotate),
+        typeof(_Scripts.Gameplay.Features.Movement.RotationAlignedAlongDirection),
+        typeof(_Scripts.Gameplay.Features.Movement.Speed),
+        typeof(_Scripts.Gameplay.Features.Movement.Teleport),
+        typeof(_Scripts.Gameplay.Features.Movement.TurnedAlongDirection),
         typeof(_Scripts.Gameplay.Features.Player.LeftHand),
         typeof(_Scripts.Gameplay.Features.Player.Model),
         typeof(_Scripts.Gameplay.Features.Player.Player),
@@ -221,16 +234,6 @@ public static class GameComponentsLookup {
         typeof(Gameplay.Features.EntitiesStats.BaseStats),
         typeof(Gameplay.Features.EntitiesStats.StatChange),
         typeof(Gameplay.Features.EntitiesStats.StatModifiers),
-        typeof(Gameplay.Features.Movement.Direction),
-        typeof(Gameplay.Features.Movement.MoveByPhysic),
-        typeof(Gameplay.Features.Movement.MovementAvailable),
-        typeof(Gameplay.Features.Movement.MoveSmooth),
-        typeof(Gameplay.Features.Movement.Moving),
-        typeof(Gameplay.Features.Movement.Rotate),
-        typeof(Gameplay.Features.Movement.RotationAlignedAlongDirection),
-        typeof(Gameplay.Features.Movement.Speed),
-        typeof(Gameplay.Features.Movement.Teleport),
-        typeof(Gameplay.Features.Movement.TurnedAlongDirection),
         typeof(Gameplay.Features.TargetsCollector.CollectTargetsContinuously),
         typeof(Gameplay.Features.TargetsCollector.CollectTargetsInterval),
         typeof(Gameplay.Features.TargetsCollector.CollectTargetsTimer),

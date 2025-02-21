@@ -5,49 +5,67 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Weapon.Systems
 {
-  public class WeaponShootSystem : IExecuteSystem
-  {
-    private readonly IProjectileFactory _projectileFactory;
-    private readonly IGroup<GameEntity> _weapons;
-    private readonly IGroup<InputEntity> _inputs;
-    private readonly List<GameEntity> _buffer = new(1);
-
-    public WeaponShootSystem(GameContext gameContext,
-      InputContext inputContext,
-      IProjectileFactory projectileFactory)
+    public class WeaponShootSystem : IExecuteSystem
     {
-      _projectileFactory = projectileFactory;
-      
-      _weapons = gameContext.GetGroup(GameMatcher
-        .AllOf(
-          GameMatcher.Weapon,
-          GameMatcher.ShootAvailable,
-          GameMatcher.ProjectileData
-        ));
+        private readonly IProjectileFactory _projectileFactory;
+        private readonly IGroup<GameEntity> _weapons;
+        private readonly IGroup<InputEntity> _inputs;
+        private readonly IGroup<GameEntity> _camera;
+        private readonly List<GameEntity> _buffer = new(1);
 
-      _inputs = inputContext.GetGroup(InputMatcher
-        .AllOf(
-          InputMatcher.Input
-        ));
-    }
-
-    public void Execute()
-    {
-      foreach (var input in _inputs)
-      foreach (var weapon in _weapons.GetEntities(_buffer))
-      {
-        if (weapon.isShootAvailable && input.isShooting)
+        public WeaponShootSystem(GameContext gameContext,
+            InputContext inputContext,
+            IProjectileFactory projectileFactory)
         {
-          weapon.isShoot = true;
-          Shoot(weapon);
-        }
-      }
-    }
+            _projectileFactory = projectileFactory;
 
-    private void Shoot(GameEntity weapon)
-    {
-      _projectileFactory.CreateSimpleBulletProjectile(weapon.ProjectileData, weapon.Id,
-        weapon.AttackPoint.position, Quaternion.identity);
+            _camera = gameContext.GetGroup(GameMatcher
+                .AllOf(
+                    GameMatcher.Camera
+                ));
+
+            _weapons = gameContext.GetGroup(GameMatcher
+                .AllOf(
+                    GameMatcher.Weapon,
+                    GameMatcher.ShootAvailable,
+                    GameMatcher.ProjectileData,
+                    GameMatcher.AttackPoint
+                ));
+
+            _inputs = inputContext.GetGroup(InputMatcher
+                .AllOf(
+                    InputMatcher.Input
+                ));
+        }
+
+        public void Execute()
+        {
+            foreach (var input in _inputs)
+            foreach (var camera in _camera)
+            foreach (var weapon in _weapons.GetEntities(_buffer))
+            {
+                if (!weapon.isShootAvailable || !input.isShooting) 
+                    continue;
+                
+                weapon.isShoot = true;
+                Shoot(weapon, camera.Camera);
+            }
+        }
+
+        private void Shoot(GameEntity weapon, UnityEngine.Camera camera)
+        {
+            Ray ray = camera.ScreenPointToRay(new Vector2(Screen.width / 2f, Screen.height / 2f));
+
+            float rayDistance = 100f;
+
+            Vector3 direction = ray.GetPoint(rayDistance) - weapon.AttackPoint.position;
+
+            if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
+                direction = hit.point - weapon.AttackPoint.position;
+
+            _projectileFactory.CreateSimpleBulletProjectile(weapon.ProjectileData, weapon.Id,
+                weapon.AttackPoint.position, weapon.Transform.rotation, direction.normalized);
+        }
+
     }
-  }
 }

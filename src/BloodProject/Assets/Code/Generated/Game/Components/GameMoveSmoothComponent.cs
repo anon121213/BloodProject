@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Gameplay.Features.Movement.MoveSmooth moveSmooth { get { return (Gameplay.Features.Movement.MoveSmooth)GetComponent(GameComponentsLookup.MoveSmooth); } }
+    public _Scripts.Gameplay.Features.Movement.MoveSmooth moveSmooth { get { return (_Scripts.Gameplay.Features.Movement.MoveSmooth)GetComponent(GameComponentsLookup.MoveSmooth); } }
     public float MoveSmooth { get { return moveSmooth.Value; } }
     public bool hasMoveSmooth { get { return HasComponent(GameComponentsLookup.MoveSmooth); } }
 
     public GameEntity AddMoveSmooth(float newValue) {
         var index = GameComponentsLookup.MoveSmooth;
-        var component = (Gameplay.Features.Movement.MoveSmooth)CreateComponent(index, typeof(Gameplay.Features.Movement.MoveSmooth));
+        var component = (_Scripts.Gameplay.Features.Movement.MoveSmooth)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Movement.MoveSmooth));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceMoveSmooth(float newValue) {
         var index = GameComponentsLookup.MoveSmooth;
-        var component = (Gameplay.Features.Movement.MoveSmooth)CreateComponent(index, typeof(Gameplay.Features.Movement.MoveSmooth));
+        var component = (_Scripts.Gameplay.Features.Movement.MoveSmooth)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Movement.MoveSmooth));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

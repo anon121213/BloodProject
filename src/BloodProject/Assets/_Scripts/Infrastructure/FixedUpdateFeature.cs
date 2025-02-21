@@ -1,6 +1,6 @@
-﻿using _Scripts.Gameplay.Features.Camera;
-using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
+﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using Gameplay.Features.Movement;
+using Gameplay.Features.TargetsCollector;
 
 namespace _Scripts.Infrastructure
 {
@@ -9,6 +9,7 @@ namespace _Scripts.Infrastructure
     public FixedUpdateFeature(ISystemFactory systemFactory)
     {
       Add(systemFactory.Create<PhysicsMovementFeature>());
+      Add(systemFactory.Create<TargetsCollectorFeature>());
     }
   }
 }

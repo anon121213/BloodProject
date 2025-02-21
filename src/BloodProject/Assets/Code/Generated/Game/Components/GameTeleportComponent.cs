@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Gameplay.Features.Movement.Teleport teleportComponent = new Gameplay.Features.Movement.Teleport();
+    static readonly _Scripts.Gameplay.Features.Movement.Teleport teleportComponent = new _Scripts.Gameplay.Features.Movement.Teleport();
 
     public bool isTeleport {
         get { return HasComponent(GameComponentsLookup.Teleport); }

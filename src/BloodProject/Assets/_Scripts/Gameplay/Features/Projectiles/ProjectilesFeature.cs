@@ -2,7 +2,7 @@
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using Gameplay.Features.Projectiles.Systems;
 
-namespace Gameplay.Features.Projectiles
+namespace _Scripts.Gameplay.Features.Projectiles
 {
   public class ProjectilesFeature : Feature
   {
