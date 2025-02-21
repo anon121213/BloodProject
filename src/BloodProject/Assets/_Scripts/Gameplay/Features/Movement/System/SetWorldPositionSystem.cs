@@ -19,7 +19,7 @@ namespace Gameplay.Features.Movement.System
     public void Execute()
     {
       foreach (var entity in _entities) 
-        entity.ReplaceWorldPosition((Vector2)entity.Transform.position);
+        entity.ReplaceWorldPosition(entity.Transform.position);
     }
   }
 }

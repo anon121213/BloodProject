@@ -21,9 +21,8 @@ namespace _Scripts.Infrastructure.View.Systems
     public void Execute()
     {
       foreach (GameEntity entity in _entities.GetEntities(_buffer))
-      {
-        _entityViewFactory.CreateViewForEntityFromPrefab(entity);
-      }
+        _entityViewFactory.CreateViewForEntityFromPrefab(entity, entity.hasViewRoot
+          ? entity.ViewRoot : null);
     }
   }
 }

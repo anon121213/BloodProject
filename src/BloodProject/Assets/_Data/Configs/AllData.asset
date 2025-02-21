@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CameraSettings>k__BackingField: {fileID: 11400000, guid: 75c1b6843c5cda041bed0b49ba15be39, type: 2}
   <PlayerSettings>k__BackingField: {fileID: 11400000, guid: c5a3a9909aec29b46aa993c2501f54b7, type: 2}
+  <WeaponConfigs>k__BackingField: {fileID: 11400000, guid: 75ba4894256daad4184344ec3e615606, type: 2}

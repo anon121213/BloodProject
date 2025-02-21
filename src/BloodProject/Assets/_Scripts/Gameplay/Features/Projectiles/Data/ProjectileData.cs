@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using Gameplay.Features.Effects.Data;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Serialization;
 
-namespace Gameplay.Features.Projectiles.Data
+namespace _Scripts.Gameplay.Features.Projectiles.Data
 {
   [Serializable]
   public struct ProjectileData

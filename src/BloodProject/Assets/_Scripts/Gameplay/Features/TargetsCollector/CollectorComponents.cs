@@ -5,6 +5,7 @@ namespace Gameplay.Features.TargetsCollector
 { 
   [Game] public class ReadyToCollectTargets : IComponent { }
   [Game] public class CollectTargetsContinuously : IComponent { }
+  [Game] public class Collide : IComponent { }
   [Game] public class TargetsBuffer : IComponent { public List<int> Value; }
   [Game] public class TargetsLimit : IComponent { public float Value; }
   [Game] public class ProcessedTargets : IComponent { public List<int> Value; }

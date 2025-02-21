@@ -1,7 +1,8 @@
 ﻿using _Scripts.Common.Destruct;
 using _Scripts.Gameplay.Features.Camera;
 using _Scripts.Gameplay.Features.Movement;
-using _Scripts.Gameplay.Features.SimpleShootSystem;
+using _Scripts.Gameplay.Features.Player;
+using _Scripts.Gameplay.Features.Weapon;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.View;
 using Gameplay.Features.Input;
@@ -19,7 +20,7 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<PlayerFeature>());
       Add(systemFactory.Create<MovementFeature>());
       Add(systemFactory.Create<CameraFeature>());
-      Add(systemFactory.Create<ShootFeature>());
+      Add(systemFactory.Create<WeaponFeature>());
       
       Add(systemFactory.Create<TargetsCollectorFeature>());
       

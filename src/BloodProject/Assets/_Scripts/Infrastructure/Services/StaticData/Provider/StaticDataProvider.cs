@@ -1,4 +1,5 @@
-﻿using Gameplay.Features.Camera.Data;
+﻿using _Scripts.Gameplay.Features.Weapon.Data;
+using Gameplay.Features.Camera.Data;
 using Gameplay.Features.Player.Data;
 
 namespace _Scripts.Infrastructure.Services.StaticData.Provider
@@ -9,15 +10,18 @@ namespace _Scripts.Infrastructure.Services.StaticData.Provider
         {
             CameraSettings = allData.CameraSettings;
             PlayerSettings = allData.PlayerSettings;
+            WeaponConfigs = allData.WeaponConfigs;
         }
 
         public CameraSettings CameraSettings { get; }
         public PlayerSettings PlayerSettings { get; }
+        public WeaponConfigs WeaponConfigs { get; }
     }
 
     public interface IStaticDataProvider
     {
         CameraSettings CameraSettings { get; }
         PlayerSettings PlayerSettings { get; }
+        WeaponConfigs WeaponConfigs { get; }
     }
 }

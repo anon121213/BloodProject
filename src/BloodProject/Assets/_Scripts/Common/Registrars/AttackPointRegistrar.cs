@@ -9,13 +9,13 @@ namespace _Scripts.Common.Registrars
     
     public override void RegisterComponents()
     {
-      //Entity.AddAttackPoint(_attackPoint);
+      Entity.AddAttackPoint(_attackPoint);
     }
 
     public override void UnregisterComponents()
     {
-      /*if (Entity.hasAttackPoint) 
-        Entity.RemoveAttackPoint();*/
+      if (Entity.hasAttackPoint) 
+        Entity.RemoveAttackPoint();
     }
   }
 }

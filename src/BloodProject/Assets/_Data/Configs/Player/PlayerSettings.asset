@@ -18,6 +18,22 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  <ProjectileData>k__BackingField:
+    Prefab:
+      m_AssetGUID: f194d986b385a004da161969295ce6d2
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    EffectSetups: []
+    Speed: 10
+    LifeTime: 5
+    Pierce: 1
+    CollisionRadius: 0.1
+    CheckCollisionInterval: 0.1
+    CollisionLayerMask:
+      serializedVersion: 2
+      m_Bits: 64
   <SpawnPosition>k__BackingField: {x: 0, y: 0}
   <MoveSmooth>k__BackingField: 1000
   <MoveSpeed>k__BackingField: 10

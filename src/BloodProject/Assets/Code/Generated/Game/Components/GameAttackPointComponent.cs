@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public _Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint attackPoint { get { return (_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint)GetComponent(GameComponentsLookup.AttackPoint); } }
+    public _Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint attackPoint { get { return (_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint)GetComponent(GameComponentsLookup.AttackPoint); } }
     public UnityEngine.Transform AttackPoint { get { return attackPoint.Value; } }
     public bool hasAttackPoint { get { return HasComponent(GameComponentsLookup.AttackPoint); } }
 
     public GameEntity AddAttackPoint(UnityEngine.Transform newValue) {
         var index = GameComponentsLookup.AttackPoint;
-        var component = (_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint)CreateComponent(index, typeof(_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint));
+        var component = (_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceAttackPoint(UnityEngine.Transform newValue) {
         var index = GameComponentsLookup.AttackPoint;
-        var component = (_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint)CreateComponent(index, typeof(_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint));
+        var component = (_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

@@ -10,7 +10,6 @@ namespace _Scripts.Infrastructure.View.Factory
   {
     private readonly IAssetProvider _assetProvider;
     private readonly IObjectResolver _resolver;
-    private readonly Vector3 _farAway = new(-999, 999, 0);
 
     public EntityViewFactory(IAssetProvider assetProvider,
       IObjectResolver resolver)
@@ -19,27 +18,36 @@ namespace _Scripts.Infrastructure.View.Factory
       _resolver = resolver;
     }
     
-    public async UniTask<EntityBehaviour> CreateViewForEntity(GameEntity entity)
+    public async UniTask<EntityBehaviour> CreateViewForEntity(GameEntity entity, Transform root)
     {
       EntityBehaviour viewPrefab = await _assetProvider.LoadAsync<EntityBehaviour>(entity.ViewReference);
-      
+    
+      Vector3 spawnPosition = entity.WorldPosition;
+      Quaternion spawnRotation = entity.hasWorldRotation ? entity.WorldRotation : Quaternion.identity;
+
       EntityBehaviour view = _resolver.Instantiate(
         viewPrefab,
-        position: _farAway,
-        Quaternion.identity,
-        null);
+        root);
+
+      view.transform.localPosition = spawnPosition;
+      view.transform.localRotation = spawnRotation;
       
       view.SetEntity(entity);
-
       return view;
     }
 
-    public EntityBehaviour CreateViewForEntityFromPrefab(GameEntity entity)
+
+    public EntityBehaviour CreateViewForEntityFromPrefab(GameEntity entity, Transform root)
     {
+      Vector3 spawnPosition = entity.WorldPosition;
+      Quaternion spawnRotation = entity.hasWorldRotation ? entity.WorldRotation : Quaternion.identity;
+      
       EntityBehaviour view = _resolver.Instantiate(
         entity.ViewPrefab,
-        position: _farAway,
-        Quaternion.identity,null);
+        root);
+      
+      view.transform.localPosition = spawnPosition;
+      view.transform.localRotation = spawnRotation;
       
       view.SetEntity(entity);
 

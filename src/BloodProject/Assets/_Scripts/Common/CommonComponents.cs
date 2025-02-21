@@ -1,5 +1,6 @@
 ﻿using _Scripts.Infrastructure.View;
 using Entitas;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace _Scripts.Common
@@ -11,6 +12,7 @@ namespace _Scripts.Common
   
   [Game] public class View : IComponent { public IEntityView Value; }
   [Game] public class AddedView : IComponent { }
+  [Game] public class ViewRootComponent : IComponent { public Transform Value; }
   [Game] public class ViewPath : IComponent { public string Value; }
   [Game] public class ViewReference : IComponent { public AssetReferenceGameObject Value; }
   [Game] public class ViewPrefab : IComponent { public EntityBehaviour Value; }

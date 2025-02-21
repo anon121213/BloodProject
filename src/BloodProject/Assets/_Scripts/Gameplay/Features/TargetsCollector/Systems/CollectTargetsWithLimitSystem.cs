@@ -31,7 +31,12 @@ namespace Gameplay.Features.TargetsCollector.Systems
     {
       foreach (var collector in _collectors.GetEntities(_buffer))
       {
-        for (int i = 0; i < Mathf.Min(GetTargetsInRadius(collector), collector.TargetsLimit); i++)
+        int targetsCount = GetTargetsInRadius(collector);
+        
+        if (targetsCount > 0) 
+          collector.isCollide = true;
+        
+        for (int i = 0; i < Mathf.Min(targetsCount, collector.TargetsLimit); i++)
         {
           int targetId = _targetCastBuffer[i].Id;
 

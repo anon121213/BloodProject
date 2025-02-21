@@ -1,7 +1,6 @@
 ﻿using Entitas;
-using UnityEngine;
 
-namespace Gameplay.Features.Projectiles.Systems
+namespace _Scripts.Gameplay.Features.Projectiles.Systems
 {
   public class SimpleBulletProjectileSystem : IExecuteSystem
   {
@@ -21,9 +20,9 @@ namespace Gameplay.Features.Projectiles.Systems
     {
       foreach (var projectile in _projectiles)
       {
-        if (projectile.Direction != projectile.Transform.right.normalized)
+        if (projectile.Direction != projectile.Transform.forward.normalized)
         {
-          projectile.ReplaceDirection(projectile.Transform.right.normalized);
+          projectile.ReplaceDirection(projectile.Transform.forward.normalized);
         }
       } 
     }

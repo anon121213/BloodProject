@@ -1,4 +1,6 @@
-﻿using _Scripts.Infrastructure.Constants;
+﻿using _Scripts.Gameplay.Features.Weapon.Data;
+using _Scripts.Gameplay.Features.Weapon.Factory;
+using _Scripts.Infrastructure.Constants;
 using _Scripts.Infrastructure.Services.SceneLoader;
 using _Scripts.Infrastructure.Services.StaticData.Provider;
 using _Scripts.Infrastructure.StateMachine.StateInfrastructure;
@@ -31,7 +33,6 @@ namespace _Scripts.Infrastructure.StateMachine.States
             await _sceneLoader.Load(SceneConstants.GameSceneName);
             
             _playerFactory.CreatePlayer(_staticDataProvider.PlayerSettings.SpawnPosition);
-            
             _gameStateMachine.Enter<GameLoopState>();
         }
     }

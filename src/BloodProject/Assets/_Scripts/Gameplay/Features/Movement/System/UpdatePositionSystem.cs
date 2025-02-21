@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Entitas;
 
-namespace Gameplay.Features.Movement.System
+namespace _Scripts.Gameplay.Features.Movement.System
 {
   public class UpdatePositionSystem : IExecuteSystem
   {
@@ -14,8 +14,7 @@ namespace Gameplay.Features.Movement.System
         .AllOf(
           GameMatcher.Teleport,
           GameMatcher.WorldPosition,
-          GameMatcher.Transform,
-          GameMatcher.MovementAvailable));
+          GameMatcher.Transform));
     }
     
     public void Execute()

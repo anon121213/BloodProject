@@ -1,4 +1,6 @@
-﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
+﻿using _Scripts.Gameplay.Features.Projectiles.Factory;
+using _Scripts.Gameplay.Features.Weapon.Factory;
+using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.StateMachine.Factory;
 using _Scripts.Infrastructure.View.Factory;
 using Gameplay.Features.Player.Factory;
@@ -14,6 +16,8 @@ namespace _Scripts.Infrastructure.Installers.Installers
             builder.Register<ISystemFactory, SystemFactory>(Lifetime.Singleton);
             builder.Register<IEntityViewFactory, EntityViewFactory>(Lifetime.Singleton);
             builder.Register<IPlayerFactory, PlayerFactory>(Lifetime.Singleton);
+            builder.Register<IProjectileFactory, ProjectileFactory>(Lifetime.Singleton);
+            builder.Register<IWeaponFactory, WeaponFactory>(Lifetime.Singleton);
         }
     }
 }

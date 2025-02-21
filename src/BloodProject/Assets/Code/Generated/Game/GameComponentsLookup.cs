@@ -19,55 +19,72 @@ public static class GameComponentsLookup {
     public const int ViewPath = 8;
     public const int ViewPrefab = 9;
     public const int ViewReference = 10;
-    public const int Active = 11;
-    public const int CharacterController = 12;
-    public const int Damage = 13;
-    public const int EntityLink = 14;
-    public const int Id = 15;
-    public const int Rigidbody = 16;
-    public const int SpriteRenderer = 17;
-    public const int Transform = 18;
-    public const int WorldPosition = 19;
-    public const int WorldRotation = 20;
-    public const int Camera = 21;
-    public const int CameraHolder = 22;
-    public const int Model = 23;
-    public const int Player = 24;
-    public const int AttackPoint = 25;
-    public const int Shoot = 26;
-    public const int CurrentHealth = 27;
-    public const int DamageEffect = 28;
-    public const int Effect = 29;
-    public const int EffectValue = 30;
-    public const int MaxHealth = 31;
-    public const int ProducerId = 32;
-    public const int PushEffect = 33;
-    public const int TargetId = 34;
-    public const int BaseStats = 35;
-    public const int StatChange = 36;
-    public const int StatModifiers = 37;
-    public const int Direction = 38;
-    public const int MoveByPhysic = 39;
-    public const int MovementAvailable = 40;
-    public const int MoveSmooth = 41;
-    public const int Moving = 42;
-    public const int RotationAlignedAlongDirection = 43;
-    public const int Speed = 44;
-    public const int Teleport = 45;
-    public const int TurnedAlongDirection = 46;
-    public const int EffectSetups = 47;
-    public const int Projectile = 48;
-    public const int SimpleBulletProjectile = 49;
-    public const int CollectTargetsContinuously = 50;
-    public const int CollectTargetsInterval = 51;
-    public const int CollectTargetsTimer = 52;
-    public const int LayerMask = 53;
-    public const int ProcessedTargets = 54;
-    public const int ReadyToCollectTargets = 55;
-    public const int TargetsBuffer = 56;
-    public const int TargetsLimit = 57;
+    public const int ViewRoot = 11;
+    public const int Active = 12;
+    public const int CharacterController = 13;
+    public const int Damage = 14;
+    public const int EntityLink = 15;
+    public const int Id = 16;
+    public const int Rigidbody = 17;
+    public const int SpriteRenderer = 18;
+    public const int Transform = 19;
+    public const int WorldPosition = 20;
+    public const int WorldRotation = 21;
+    public const int Camera = 22;
+    public const int CameraHolder = 23;
+    public const int LeftHand = 24;
+    public const int Model = 25;
+    public const int Player = 26;
+    public const int RigBuilder = 27;
+    public const int RightHand = 28;
+    public const int EffectSetups = 29;
+    public const int Projectile = 30;
+    public const int ProjectileData = 31;
+    public const int SimpleBulletProjectile = 32;
+    public const int AttackPoint = 33;
+    public const int CurrentShootDelay = 34;
+    public const int CurrentWeapon = 35;
+    public const int LeftHandHolder = 36;
+    public const int OnShootDelay = 37;
+    public const int RightHandHolder = 38;
+    public const int Shoot = 39;
+    public const int ShootAvailable = 40;
+    public const int ShootDelay = 41;
+    public const int Shooter = 42;
+    public const int Weapon = 43;
+    public const int WeaponHolder = 44;
+    public const int CurrentHealth = 45;
+    public const int DamageEffect = 46;
+    public const int Effect = 47;
+    public const int EffectValue = 48;
+    public const int MaxHealth = 49;
+    public const int ProducerId = 50;
+    public const int PushEffect = 51;
+    public const int TargetId = 52;
+    public const int BaseStats = 53;
+    public const int StatChange = 54;
+    public const int StatModifiers = 55;
+    public const int Direction = 56;
+    public const int MoveByPhysic = 57;
+    public const int MovementAvailable = 58;
+    public const int MoveSmooth = 59;
+    public const int Moving = 60;
+    public const int Rotate = 61;
+    public const int RotationAlignedAlongDirection = 62;
+    public const int Speed = 63;
+    public const int Teleport = 64;
+    public const int TurnedAlongDirection = 65;
+    public const int CollectTargetsContinuously = 66;
+    public const int CollectTargetsInterval = 67;
+    public const int CollectTargetsTimer = 68;
+    public const int Collide = 69;
+    public const int LayerMask = 70;
+    public const int ProcessedTargets = 71;
+    public const int ReadyToCollectTargets = 72;
+    public const int TargetsBuffer = 73;
+    public const int TargetsLimit = 74;
 
-    public const int TotalComponents = 58;
+    public const int TotalComponents = 75;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -81,6 +98,7 @@ public static class GameComponentsLookup {
         "ViewPath",
         "ViewPrefab",
         "ViewReference",
+        "ViewRoot",
         "Active",
         "CharacterController",
         "Damage",
@@ -93,10 +111,27 @@ public static class GameComponentsLookup {
         "WorldRotation",
         "Camera",
         "CameraHolder",
+        "LeftHand",
         "Model",
         "Player",
+        "RigBuilder",
+        "RightHand",
+        "EffectSetups",
+        "Projectile",
+        "ProjectileData",
+        "SimpleBulletProjectile",
         "AttackPoint",
+        "CurrentShootDelay",
+        "CurrentWeapon",
+        "LeftHandHolder",
+        "OnShootDelay",
+        "RightHandHolder",
         "Shoot",
+        "ShootAvailable",
+        "ShootDelay",
+        "Shooter",
+        "Weapon",
+        "WeaponHolder",
         "CurrentHealth",
         "DamageEffect",
         "Effect",
@@ -113,16 +148,15 @@ public static class GameComponentsLookup {
         "MovementAvailable",
         "MoveSmooth",
         "Moving",
+        "Rotate",
         "RotationAlignedAlongDirection",
         "Speed",
         "Teleport",
         "TurnedAlongDirection",
-        "EffectSetups",
-        "Projectile",
-        "SimpleBulletProjectile",
         "CollectTargetsContinuously",
         "CollectTargetsInterval",
         "CollectTargetsTimer",
+        "Collide",
         "LayerMask",
         "ProcessedTargets",
         "ReadyToCollectTargets",
@@ -142,6 +176,7 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Common.ViewPath),
         typeof(_Scripts.Common.ViewPrefab),
         typeof(_Scripts.Common.ViewReference),
+        typeof(_Scripts.Common.ViewRootComponent),
         typeof(_Scripts.Gameplay.Common.CommonComponents.Active),
         typeof(_Scripts.Gameplay.Common.CommonComponents.CharacterControllerComponent),
         typeof(_Scripts.Gameplay.Common.CommonComponents.Damage),
@@ -154,10 +189,27 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldRotation),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraComponent),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraHolder),
+        typeof(_Scripts.Gameplay.Features.Player.LeftHand),
         typeof(_Scripts.Gameplay.Features.Player.Model),
         typeof(_Scripts.Gameplay.Features.Player.Player),
-        typeof(_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.AttackPoint),
-        typeof(_Scripts.Gameplay.Features.SimpleShootSystem.ShootComponents.Shoot),
+        typeof(_Scripts.Gameplay.Features.Player.RigBuilderComponent),
+        typeof(_Scripts.Gameplay.Features.Player.RightHand),
+        typeof(_Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent),
+        typeof(_Scripts.Gameplay.Features.Projectiles.Projectile),
+        typeof(_Scripts.Gameplay.Features.Projectiles.ProjectileDataComponent),
+        typeof(_Scripts.Gameplay.Features.Projectiles.SimpleBulletProjectile),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentShootDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.LeftHandHolder),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.OnShootDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RightHandHolder),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Shoot),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootAvailable),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Shooter),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Weapon),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.WeaponHolder),
         typeof(Gameplay.Features.Effects.CurrentHealth),
         typeof(Gameplay.Features.Effects.DamageEffect),
         typeof(Gameplay.Features.Effects.Effect),
@@ -174,16 +226,15 @@ public static class GameComponentsLookup {
         typeof(Gameplay.Features.Movement.MovementAvailable),
         typeof(Gameplay.Features.Movement.MoveSmooth),
         typeof(Gameplay.Features.Movement.Moving),
+        typeof(Gameplay.Features.Movement.Rotate),
         typeof(Gameplay.Features.Movement.RotationAlignedAlongDirection),
         typeof(Gameplay.Features.Movement.Speed),
         typeof(Gameplay.Features.Movement.Teleport),
         typeof(Gameplay.Features.Movement.TurnedAlongDirection),
-        typeof(Gameplay.Features.Projectiles.EffectSetupsComponent),
-        typeof(Gameplay.Features.Projectiles.Projectile),
-        typeof(Gameplay.Features.Projectiles.SimpleBulletProjectile),
         typeof(Gameplay.Features.TargetsCollector.CollectTargetsContinuously),
         typeof(Gameplay.Features.TargetsCollector.CollectTargetsInterval),
         typeof(Gameplay.Features.TargetsCollector.CollectTargetsTimer),
+        typeof(Gameplay.Features.TargetsCollector.Collide),
         typeof(Gameplay.Features.TargetsCollector.LayerMask),
         typeof(Gameplay.Features.TargetsCollector.ProcessedTargets),
         typeof(Gameplay.Features.TargetsCollector.ReadyToCollectTargets),
