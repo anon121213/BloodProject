@@ -28,16 +28,16 @@ MonoBehaviour:
         m_SubObjectType: 
         m_EditorAssetChanged: 0
       EffectSetups: []
-      Speed: 100
+      Speed: 2000
       LifeTime: 5
       Pierce: 1
       CollisionRadius: 0.1
-      CheckCollisionInterval: 0.1
+      CheckCollisionInterval: 0.3
       CollisionLayerMask:
         serializedVersion: 2
         m_Bits: 64
     <BulletsInClipCount>k__BackingField: 30
-    <ShootDelay>k__BackingField: 0.2
+    <ShootDelay>k__BackingField: 0.1
     <ReloadDelay>k__BackingField: 0
     <Damage>k__BackingField: 30
   <WeaponType>k__BackingField: 0

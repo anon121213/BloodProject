@@ -37,6 +37,7 @@ namespace _Scripts.Gameplay.Features.Projectiles.Factory
         .With(x => x.isMoving = true)
         .With(x => x.isTeleport = true)
         .With(x => x.isRotate = true)
+        .With(x => x.isMoveByPhysic = true)
         .With(x => x.isMovementAvailable = true);
     }
   }

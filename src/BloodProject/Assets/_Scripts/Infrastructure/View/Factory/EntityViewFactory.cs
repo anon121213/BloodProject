@@ -27,6 +27,8 @@ namespace _Scripts.Infrastructure.View.Factory
 
       EntityBehaviour view = _resolver.Instantiate(
         viewPrefab,
+        spawnPosition,
+        spawnRotation,
         root);
 
       view.transform.localPosition = spawnPosition;

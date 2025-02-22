@@ -34,6 +34,7 @@ namespace _Scripts.Gameplay.Features.TargetsCollector.Systems
     {
       foreach (var collector in _collectors.GetEntities(_buffer))
       {
+        return;
         GameEntity entity = GetTargetsInRadius(collector, out Collider hitCollider);
         collector.ReplaceLastWorldPosition(collector.WorldPosition);
 
