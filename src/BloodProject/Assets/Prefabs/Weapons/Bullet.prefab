@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 9158919267906378421}
   - component: {fileID: 9133760210682383655}
   - component: {fileID: 2003612056925811443}
-  - component: {fileID: -1110404558530891809}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,12 +131,6 @@ MonoBehaviour:
   _ignoreLayers:
     serializedVersion: 2
     m_Bits: 896
-  _ignoreLayers1:
-    serializedVersion: 2
-    m_Bits: 512
-  _ignoreLayers2:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &2003612056925811443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,18 +141,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 511653e70f1b4434a642cfce8b90ee4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-1110404558530891809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8873796497077777859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d31fc6e4ef46b69428298ba6ee7599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5090709736915029880

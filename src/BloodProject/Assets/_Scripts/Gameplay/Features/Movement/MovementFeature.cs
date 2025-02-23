@@ -4,7 +4,7 @@ using Gameplay.Features.Movement.System;
 
 namespace _Scripts.Gameplay.Features.Movement
 {
-  public class MovementFeature : Feature
+  public sealed class MovementFeature : Feature
   {
     public MovementFeature(ISystemFactory systemFactory)
     {

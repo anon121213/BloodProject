@@ -1,9 +1,9 @@
 ﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using Gameplay.Features.Input.System;
 
-namespace Gameplay.Features.Input
+namespace _Scripts.Gameplay.Features.Input
 {
-  public class InputFeature : Feature
+  public sealed class InputFeature : Feature
   {
     public InputFeature(ISystemFactory systems)
     {

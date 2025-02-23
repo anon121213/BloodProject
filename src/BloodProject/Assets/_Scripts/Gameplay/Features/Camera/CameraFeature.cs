@@ -3,7 +3,7 @@ using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Gameplay.Features.Camera
 {
-  public class CameraFeature : Feature
+  public sealed class CameraFeature : Feature
   {
     public CameraFeature(ISystemFactory systemFactory)
     {

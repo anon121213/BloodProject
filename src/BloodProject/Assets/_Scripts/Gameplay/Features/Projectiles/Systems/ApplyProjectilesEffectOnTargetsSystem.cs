@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using Gameplay.Features.Effects.Factory;
 
-namespace Gameplay.Features.Projectiles.Systems
+namespace _Scripts.Gameplay.Features.Projectiles.Systems
 {
   public class ApplyProjectilesEffectOnTargetsSystem : IExecuteSystem
   {
@@ -13,7 +13,7 @@ namespace Gameplay.Features.Projectiles.Systems
       _effectsFactory = effectsFactory;
       _projectiles = gameContext.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.TargetsBuffer,
+          GameMatcher.CollideEntity,
           GameMatcher.Projectile,
           GameMatcher.EffectSetups
         ));
@@ -22,10 +22,9 @@ namespace Gameplay.Features.Projectiles.Systems
     public void Execute()
     {
       foreach (var projectile in _projectiles)
-      foreach (var target in projectile.TargetsBuffer)
       foreach (var effect in projectile.EffectSetups)
       {
-        _effectsFactory.CreateEffect(effect, projectile.ProducerId, target);
+        _effectsFactory.CreateEffect(effect, projectile.ProducerId, projectile.CollideEntity.Id);
       }
     }
   }

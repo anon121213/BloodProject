@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using _Scripts.Gameplay.Features.Collides;
+
 public static class GameComponentsLookup {
 
     public const int AddedView = 0;
@@ -52,40 +55,36 @@ public static class GameComponentsLookup {
     public const int Projectile = 41;
     public const int ProjectileData = 42;
     public const int SimpleBulletProjectile = 43;
-    public const int AttackPoint = 44;
-    public const int CurrentShootDelay = 45;
-    public const int CurrentWeapon = 46;
-    public const int LeftHandHolder = 47;
-    public const int OnShootDelay = 48;
-    public const int RightHandHolder = 49;
-    public const int Shoot = 50;
-    public const int ShootAvailable = 51;
-    public const int ShootDelay = 52;
-    public const int Shooter = 53;
-    public const int Weapon = 54;
-    public const int WeaponHolder = 55;
-    public const int CurrentHealth = 56;
-    public const int DamageEffect = 57;
-    public const int Effect = 58;
-    public const int EffectValue = 59;
-    public const int MaxHealth = 60;
-    public const int ProducerId = 61;
-    public const int PushEffect = 62;
-    public const int TargetId = 63;
-    public const int BaseStats = 64;
-    public const int StatChange = 65;
-    public const int StatModifiers = 66;
-    public const int CollectTargetsContinuously = 67;
-    public const int CollectTargetsInterval = 68;
-    public const int CollectTargetsTimer = 69;
-    public const int Collide = 70;
-    public const int LayerMask = 71;
-    public const int ProcessedTargets = 72;
-    public const int ReadyToCollectTargets = 73;
-    public const int TargetsBuffer = 74;
-    public const int TargetsLimit = 75;
+    public const int Collide = 44;
+    public const int CollideEntity = 45;
+    public const int CollideEntityCollider = 46;
+    public const int LayerMask = 47;
+    public const int ReadyToCollectTargets = 48;
+    public const int AttackPoint = 49;
+    public const int CurrentShootDelay = 50;
+    public const int CurrentWeapon = 51;
+    public const int LeftHandHolder = 52;
+    public const int OnShootDelay = 53;
+    public const int RightHandHolder = 54;
+    public const int Shoot = 55;
+    public const int ShootAvailable = 56;
+    public const int ShootDelay = 57;
+    public const int Shooter = 58;
+    public const int Weapon = 59;
+    public const int WeaponHolder = 60;
+    public const int CurrentHealth = 61;
+    public const int DamageEffect = 62;
+    public const int Effect = 63;
+    public const int EffectValue = 64;
+    public const int MaxHealth = 65;
+    public const int ProducerId = 66;
+    public const int PushEffect = 67;
+    public const int TargetId = 68;
+    public const int BaseStats = 69;
+    public const int StatChange = 70;
+    public const int StatModifiers = 71;
 
-    public const int TotalComponents = 76;
+    public const int TotalComponents = 72;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -132,6 +131,11 @@ public static class GameComponentsLookup {
         "Projectile",
         "ProjectileData",
         "SimpleBulletProjectile",
+        "Collide",
+        "CollideEntity",
+        "CollideEntityCollider",
+        "LayerMask",
+        "ReadyToCollectTargets",
         "AttackPoint",
         "CurrentShootDelay",
         "CurrentWeapon",
@@ -154,16 +158,7 @@ public static class GameComponentsLookup {
         "TargetId",
         "BaseStats",
         "StatChange",
-        "StatModifiers",
-        "CollectTargetsContinuously",
-        "CollectTargetsInterval",
-        "CollectTargetsTimer",
-        "Collide",
-        "LayerMask",
-        "ProcessedTargets",
-        "ReadyToCollectTargets",
-        "TargetsBuffer",
-        "TargetsLimit"
+        "StatModifiers"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -211,6 +206,11 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Projectiles.Projectile),
         typeof(_Scripts.Gameplay.Features.Projectiles.ProjectileDataComponent),
         typeof(_Scripts.Gameplay.Features.Projectiles.SimpleBulletProjectile),
+        typeof(Collide),
+        typeof(CollideEntity),
+        typeof(CollideEntityCollider),
+        typeof(LayerMaskComponent),
+        typeof(ReadyToCollectTargets),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentShootDelay),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon),
@@ -233,15 +233,6 @@ public static class GameComponentsLookup {
         typeof(Gameplay.Features.Effects.TargetId),
         typeof(Gameplay.Features.EntitiesStats.BaseStats),
         typeof(Gameplay.Features.EntitiesStats.StatChange),
-        typeof(Gameplay.Features.EntitiesStats.StatModifiers),
-        typeof(Gameplay.Features.TargetsCollector.CollectTargetsContinuously),
-        typeof(Gameplay.Features.TargetsCollector.CollectTargetsInterval),
-        typeof(Gameplay.Features.TargetsCollector.CollectTargetsTimer),
-        typeof(Gameplay.Features.TargetsCollector.Collide),
-        typeof(Gameplay.Features.TargetsCollector.LayerMask),
-        typeof(Gameplay.Features.TargetsCollector.ProcessedTargets),
-        typeof(Gameplay.Features.TargetsCollector.ReadyToCollectTargets),
-        typeof(Gameplay.Features.TargetsCollector.TargetsBuffer),
-        typeof(Gameplay.Features.TargetsCollector.TargetsLimit)
+        typeof(Gameplay.Features.EntitiesStats.StatModifiers)
     };
 }

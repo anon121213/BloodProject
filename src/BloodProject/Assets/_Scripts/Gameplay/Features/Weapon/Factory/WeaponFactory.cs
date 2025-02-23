@@ -23,7 +23,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Factory
         .AddId(IdentifierService.Next())
         .AddWorldPosition(Vector3.zero)
         .AddWorldRotation(Quaternion.Euler(Vector3.zero))
-        .AddProjectileData(config.WeaponSettings.BulletData)
+        .AddProjectileData(config.BulletConfig)
         .AddShootDelay(config.WeaponSettings.ShootDelay)
         .AddCurrentShootDelay(0)
         .AddViewReference(config.Prefab)

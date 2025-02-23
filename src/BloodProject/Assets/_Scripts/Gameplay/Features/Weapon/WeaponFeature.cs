@@ -3,7 +3,7 @@ using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Gameplay.Features.Weapon
 {
-  public class WeaponFeature : Feature
+  public sealed class WeaponFeature : Feature
   {
     public WeaponFeature(ISystemFactory systemFactory)
     {

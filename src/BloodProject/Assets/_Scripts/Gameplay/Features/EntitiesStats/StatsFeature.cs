@@ -1,9 +1,9 @@
 ﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using Gameplay.Features.EntitiesStats.Systems;
 
-namespace Gameplay.Features.EntitiesStats
+namespace _Scripts.Gameplay.Features.EntitiesStats
 {
-  public class StatsFeature : Feature
+  public sealed class StatsFeature : Feature
   {
     public StatsFeature(ISystemFactory systemFactory)
     {

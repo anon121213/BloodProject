@@ -8,6 +8,6 @@ namespace Gameplay.Features.TargetsCollector.Data
     [field: SerializeField] public float Radius { get; private set; }
     [field: SerializeField] public float TargetsLimit { get; private set; }
     [field: SerializeField] public float CollectTargetsInterval { get; private set; }
-    [field: SerializeField] public UnityEngine.LayerMask LayerMask { get; private set; }
+    [field: SerializeField] public LayerMask LayerMask { get; private set; }
   }
 }

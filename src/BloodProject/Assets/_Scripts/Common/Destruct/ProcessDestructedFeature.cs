@@ -3,7 +3,7 @@ using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Common.Destruct
 {
-  public class ProcessDestructedFeature : Feature
+  public sealed class ProcessDestructedFeature : Feature
   {
     public ProcessDestructedFeature(ISystemFactory systems)
     {

@@ -1,15 +1,15 @@
-﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
-using Gameplay.Features.Movement;
-using Gameplay.Features.TargetsCollector;
+﻿using _Scripts.Gameplay.Features.Collides;
+using _Scripts.Gameplay.Features.Movement;
+using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Infrastructure
 {
-  public class FixedUpdateFeature : Feature
+  public sealed class FixedUpdateFeature : Feature
   {
     public FixedUpdateFeature(ISystemFactory systemFactory)
     {
       Add(systemFactory.Create<PhysicsMovementFeature>());
-      Add(systemFactory.Create<TargetsCollectorFeature>());
+      Add(systemFactory.Create<CollideFeature>());
     }
   }
 }

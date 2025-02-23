@@ -1,5 +1,6 @@
 ﻿using _Scripts.Common.Destruct;
 using _Scripts.Gameplay.Features.Camera;
+using _Scripts.Gameplay.Features.Input;
 using _Scripts.Gameplay.Features.Movement;
 using _Scripts.Gameplay.Features.Player;
 using _Scripts.Gameplay.Features.Projectiles;
@@ -12,7 +13,7 @@ using Gameplay.Features.TargetsCollector;
 
 namespace _Scripts.Infrastructure
 {
-  public class UpdateFeature : Feature
+  public sealed class UpdateFeature : Feature
   {
     public UpdateFeature(ISystemFactory systemFactory)
     {

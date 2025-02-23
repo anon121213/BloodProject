@@ -16,7 +16,7 @@ namespace _Scripts.Common.Physics
       _collisionRegistry = collisionRegistry;
     }
 
-    public IEnumerable<GameEntity> RaycastAll(Vector2 worldPosition, Vector2 direction, int layerMask)
+    public IEnumerable<GameEntity> RaycastAll(Vector3 worldPosition, Vector3 direction, int layerMask)
     {
       int hitCount = UnityEngine.Physics.RaycastNonAlloc(worldPosition, direction, Hits, layerMask);
 
@@ -34,7 +34,7 @@ namespace _Scripts.Common.Physics
       }
     }
 
-    public GameEntity Raycast(Vector2 worldPosition, Vector2 direction, int layerMask)
+    public GameEntity Raycast(Vector3 worldPosition, Vector3 direction, int layerMask)
     {
       int hitCount = UnityEngine.Physics.RaycastNonAlloc(worldPosition, direction, Hits, layerMask);
 
@@ -56,7 +56,7 @@ namespace _Scripts.Common.Physics
 
     public GameEntity LineCast(Vector3 start, Vector3 end, int layerMask, out Collider outHit)
     {
-      bool hitDetected = UnityEngine.Physics.Linecast(start, end, out RaycastHit hit, layerMask);
+      UnityEngine.Physics.Linecast(start, end, out RaycastHit hit, layerMask);
 
       Debug.DrawLine(start, end, Color.green, 3);
 
@@ -107,7 +107,7 @@ namespace _Scripts.Common.Physics
       return hitCount;
     }
 
-    public TEntity OverlapPoint<TEntity>(Vector2 worldPosition, int layerMask) where TEntity : class
+    public TEntity OverlapPoint<TEntity>(Vector3 worldPosition, int layerMask) where TEntity : class
     {
       int hitCount = UnityEngine.Physics.OverlapSphereNonAlloc(worldPosition, 1, OverlapHits, layerMask);
 

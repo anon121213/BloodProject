@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using _Scripts.Gameplay.Features.Collides;
+
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherCollide;
@@ -33,7 +36,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Gameplay.Features.TargetsCollector.Collide collideComponent = new Gameplay.Features.TargetsCollector.Collide();
+    static readonly Collide collideComponent = new Collide();
 
     public bool isCollide {
         get { return HasComponent(GameComponentsLookup.Collide); }

@@ -11,17 +11,17 @@ using _Scripts.Gameplay.Features.Collides;
 
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherLayerMask;
+    static Entitas.IMatcher<GameEntity> _matcherCollideEntity;
 
-    public static Entitas.IMatcher<GameEntity> LayerMask {
+    public static Entitas.IMatcher<GameEntity> CollideEntity {
         get {
-            if (_matcherLayerMask == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.LayerMask);
+            if (_matcherCollideEntity == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.CollideEntity);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherLayerMask = matcher;
+                _matcherCollideEntity = matcher;
             }
 
-            return _matcherLayerMask;
+            return _matcherCollideEntity;
         }
     }
 }
@@ -36,28 +36,28 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public LayerMaskComponent layerMask { get { return (LayerMaskComponent)GetComponent(GameComponentsLookup.LayerMask); } }
-    public int LayerMask { get { return layerMask.Value; } }
-    public bool hasLayerMask { get { return HasComponent(GameComponentsLookup.LayerMask); } }
+    public CollideEntity collideEntity { get { return (CollideEntity)GetComponent(GameComponentsLookup.CollideEntity); } }
+    public GameEntity CollideEntity { get { return collideEntity.Value; } }
+    public bool hasCollideEntity { get { return HasComponent(GameComponentsLookup.CollideEntity); } }
 
-    public GameEntity AddLayerMask(int newValue) {
-        var index = GameComponentsLookup.LayerMask;
-        var component = (LayerMaskComponent)CreateComponent(index, typeof(LayerMaskComponent));
+    public GameEntity AddCollideEntity(GameEntity newValue) {
+        var index = GameComponentsLookup.CollideEntity;
+        var component = (CollideEntity)CreateComponent(index, typeof(CollideEntity));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
     }
 
-    public GameEntity ReplaceLayerMask(int newValue) {
-        var index = GameComponentsLookup.LayerMask;
-        var component = (LayerMaskComponent)CreateComponent(index, typeof(LayerMaskComponent));
+    public GameEntity ReplaceCollideEntity(GameEntity newValue) {
+        var index = GameComponentsLookup.CollideEntity;
+        var component = (CollideEntity)CreateComponent(index, typeof(CollideEntity));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;
     }
 
-    public GameEntity RemoveLayerMask() {
-        RemoveComponent(GameComponentsLookup.LayerMask);
+    public GameEntity RemoveCollideEntity() {
+        RemoveComponent(GameComponentsLookup.CollideEntity);
         return this;
     }
 }

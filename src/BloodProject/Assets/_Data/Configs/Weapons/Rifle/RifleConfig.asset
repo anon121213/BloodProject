@@ -9,16 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f90a617af36341f1a46708f457c800ef, type: 3}
-  m_Name: PlayerSettings
+  m_Script: {fileID: 11500000, guid: 43ee828569c24a64b3045a248d7b12e9, type: 3}
+  m_Name: RifleConfig
   m_EditorClassIdentifier: 
   <Prefab>k__BackingField:
-    m_AssetGUID: ee3d8cec434591c45a9bb61c9a67dd48
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  <SpawnPosition>k__BackingField: {x: 0, y: 0}
-  <MoveSmooth>k__BackingField: 1000
-  <MoveSpeed>k__BackingField: 8
-  <InitHealth>k__BackingField: 100
+  <WeaponSettings>k__BackingField:
+    <BulletsInClipCount>k__BackingField: 0
+    <ShootDelay>k__BackingField: 0
+    <ReloadDelay>k__BackingField: 0
+    <Damage>k__BackingField: 0
+  <WeaponType>k__BackingField: 0
+  <BulletConfig>k__BackingField: {fileID: 0}

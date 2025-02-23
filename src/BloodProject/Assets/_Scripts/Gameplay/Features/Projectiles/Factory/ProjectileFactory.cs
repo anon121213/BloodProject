@@ -11,7 +11,7 @@ namespace _Scripts.Gameplay.Features.Projectiles.Factory
   {
     private const int TargetBufferSize = 16;
     
-    public GameEntity CreateSimpleBulletProjectile(ProjectileData projectileData, int producerID, Vector3 at, Quaternion rotation, Vector3 direction)
+    public GameEntity CreateSimpleBulletProjectile(ProjectileConfig projectileConfig, int producerID, Vector3 at, Quaternion rotation, Vector3 direction)
     {
       return CreateEntity.Empty()
         .AddId(IdentifierService.Next())
@@ -19,18 +19,12 @@ namespace _Scripts.Gameplay.Features.Projectiles.Factory
         .AddWorldPosition(at)
         .AddLastWorldPosition(at)
         .AddWorldRotation(rotation)
-        .AddSpeed(projectileData.Speed)
+        .AddSpeed(projectileConfig.Speed)
         .AddDirection(direction)
-        .AddEffectSetups(projectileData.EffectSetups)
-        .AddViewReference(projectileData.Prefab)
-        .AddSelfDestructTimer(projectileData.LifeTime)
-        .AddTargetsBuffer(new List<int>(TargetBufferSize))
-        .AddProcessedTargets(new List<int>(TargetBufferSize))
-        .AddTargetsLimit(projectileData.Pierce)
-        .AddCollectTargetsInterval(projectileData.CheckCollisionInterval)
-        .AddCollectTargetsTimer(0)
-        .AddRadius(projectileData.CollisionRadius)
-        .AddLayerMask(projectileData.CollisionLayerMask)
+        .AddEffectSetups(projectileConfig.EffectSetups)
+        .AddViewReference(projectileConfig.Prefab)
+        .AddSelfDestructTimer(projectileConfig.LifeTime)
+        .AddLayerMask(projectileConfig.CollisionLayerMask)
         .With(x => x.isProjectile = true)
         .With(x => x.isSimpleBulletProjectile = true)
         .With(x => x.isReadyToCollectTargets = true)
