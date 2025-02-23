@@ -1,5 +1,5 @@
-﻿using _Scripts.Gameplay.Features.Weapon.Data;
-using Gameplay.Features.Camera.Data;
+﻿using _Scripts.Gameplay.Features.Camera.Data;
+using _Scripts.Gameplay.Features.Weapon.Data;
 using Gameplay.Features.Player.Data;
 
 namespace _Scripts.Infrastructure.Services.StaticData.Provider

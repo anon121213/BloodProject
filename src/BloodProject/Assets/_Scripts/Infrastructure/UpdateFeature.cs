@@ -7,9 +7,6 @@ using _Scripts.Gameplay.Features.Projectiles;
 using _Scripts.Gameplay.Features.Weapon;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.View;
-using Gameplay.Features.Input;
-using Gameplay.Features.Player;
-using Gameplay.Features.TargetsCollector;
 
 namespace _Scripts.Infrastructure
 {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using _Scripts.Gameplay.Features.Collides;
+using _Scripts.Gameplay.Features.ProjectilesCollides;
 
 public static class GameComponentsLookup {
 
@@ -35,56 +35,57 @@ public static class GameComponentsLookup {
     public const int WorldRotation = 21;
     public const int Camera = 22;
     public const int CameraHolder = 23;
-    public const int Direction = 24;
-    public const int LastWorldPosition = 25;
-    public const int MoveByPhysic = 26;
-    public const int MovementAvailable = 27;
-    public const int MoveSmooth = 28;
-    public const int Moving = 29;
-    public const int Rotate = 30;
-    public const int RotationAlignedAlongDirection = 31;
-    public const int Speed = 32;
-    public const int Teleport = 33;
-    public const int TurnedAlongDirection = 34;
-    public const int LeftHand = 35;
-    public const int Model = 36;
-    public const int Player = 37;
-    public const int RigBuilder = 38;
-    public const int RightHand = 39;
-    public const int EffectSetups = 40;
-    public const int Projectile = 41;
-    public const int ProjectileData = 42;
-    public const int SimpleBulletProjectile = 43;
-    public const int Collide = 44;
-    public const int CollideEntity = 45;
-    public const int CollideEntityCollider = 46;
-    public const int LayerMask = 47;
-    public const int ReadyToCollectTargets = 48;
-    public const int AttackPoint = 49;
-    public const int CurrentShootDelay = 50;
-    public const int CurrentWeapon = 51;
-    public const int LeftHandHolder = 52;
-    public const int OnShootDelay = 53;
-    public const int RightHandHolder = 54;
-    public const int Shoot = 55;
-    public const int ShootAvailable = 56;
-    public const int ShootDelay = 57;
-    public const int Shooter = 58;
-    public const int Weapon = 59;
-    public const int WeaponHolder = 60;
-    public const int CurrentHealth = 61;
-    public const int DamageEffect = 62;
-    public const int Effect = 63;
-    public const int EffectValue = 64;
-    public const int MaxHealth = 65;
-    public const int ProducerId = 66;
-    public const int PushEffect = 67;
-    public const int TargetId = 68;
-    public const int BaseStats = 69;
-    public const int StatChange = 70;
-    public const int StatModifiers = 71;
+    public const int Collide = 24;
+    public const int CollideEntity = 25;
+    public const int CollideEntityCollider = 26;
+    public const int IgnoreLayers = 27;
+    public const int LayerMask = 28;
+    public const int ReadyToCollectTargets = 29;
+    public const int Direction = 30;
+    public const int LastWorldPosition = 31;
+    public const int MoveByPhysic = 32;
+    public const int MovementAvailable = 33;
+    public const int MoveSmooth = 34;
+    public const int Moving = 35;
+    public const int Rotate = 36;
+    public const int RotationAlignedAlongDirection = 37;
+    public const int Speed = 38;
+    public const int Teleport = 39;
+    public const int TurnedAlongDirection = 40;
+    public const int LeftHand = 41;
+    public const int Model = 42;
+    public const int Player = 43;
+    public const int RigBuilder = 44;
+    public const int RightHand = 45;
+    public const int EffectSetups = 46;
+    public const int Projectile = 47;
+    public const int ProjectileData = 48;
+    public const int SimpleBulletProjectile = 49;
+    public const int AttackPoint = 50;
+    public const int CurrentShootDelay = 51;
+    public const int CurrentWeapon = 52;
+    public const int LeftHandHolder = 53;
+    public const int OnShootDelay = 54;
+    public const int RightHandHolder = 55;
+    public const int Shoot = 56;
+    public const int ShootAvailable = 57;
+    public const int ShootDelay = 58;
+    public const int Shooter = 59;
+    public const int Weapon = 60;
+    public const int WeaponHolder = 61;
+    public const int CurrentHealth = 62;
+    public const int DamageEffect = 63;
+    public const int Effect = 64;
+    public const int EffectValue = 65;
+    public const int MaxHealth = 66;
+    public const int ProducerId = 67;
+    public const int PushEffect = 68;
+    public const int TargetId = 69;
+    public const int BaseStats = 70;
+    public const int StatChange = 71;
+    public const int StatModifiers = 72;
 
-    public const int TotalComponents = 72;
+    public const int TotalComponents = 73;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -111,6 +112,12 @@ public static class GameComponentsLookup {
         "WorldRotation",
         "Camera",
         "CameraHolder",
+        "Collide",
+        "CollideEntity",
+        "CollideEntityCollider",
+        "IgnoreLayers",
+        "LayerMask",
+        "ReadyToCollectTargets",
         "Direction",
         "LastWorldPosition",
         "MoveByPhysic",
@@ -131,11 +138,6 @@ public static class GameComponentsLookup {
         "Projectile",
         "ProjectileData",
         "SimpleBulletProjectile",
-        "Collide",
-        "CollideEntity",
-        "CollideEntityCollider",
-        "LayerMask",
-        "ReadyToCollectTargets",
         "AttackPoint",
         "CurrentShootDelay",
         "CurrentWeapon",
@@ -186,6 +188,12 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldRotation),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraComponent),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraHolder),
+        typeof(Collide),
+        typeof(CollideEntity),
+        typeof(CollideEntityCollider),
+        typeof(IgnoreLayers),
+        typeof(LayerMaskComponent),
+        typeof(ReadyToCollectTargets),
         typeof(_Scripts.Gameplay.Features.Movement.Direction),
         typeof(_Scripts.Gameplay.Features.Movement.LastWorldPosition),
         typeof(_Scripts.Gameplay.Features.Movement.MoveByPhysic),
@@ -206,11 +214,6 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Projectiles.Projectile),
         typeof(_Scripts.Gameplay.Features.Projectiles.ProjectileDataComponent),
         typeof(_Scripts.Gameplay.Features.Projectiles.SimpleBulletProjectile),
-        typeof(Collide),
-        typeof(CollideEntity),
-        typeof(CollideEntityCollider),
-        typeof(LayerMaskComponent),
-        typeof(ReadyToCollectTargets),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentShootDelay),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon),

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using _Scripts.Gameplay.Features.Collides;
+using _Scripts.Gameplay.Features.ProjectilesCollides;
 
 public sealed partial class GameMatcher {
 

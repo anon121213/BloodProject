@@ -63,7 +63,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
             if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
                 direction = hit.point - weapon.AttackPoint.position;
 
-            _projectileFactory.CreateSimpleBulletProjectile(weapon.ProjectileConfig, weapon.Id,
+            _projectileFactory.CreateSimpleBulletProjectile(weapon.ProjectileData, weapon.Id,
                 weapon.AttackPoint.position, weapon.Transform.rotation, direction.normalized);
         }
 

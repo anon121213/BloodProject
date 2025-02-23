@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using _Scripts.Gameplay.Features.Collides;
+using _Scripts.Gameplay.Features.ProjectilesCollides;
 
 public sealed partial class GameMatcher {
 
@@ -37,10 +37,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public LayerMaskComponent layerMask { get { return (LayerMaskComponent)GetComponent(GameComponentsLookup.LayerMask); } }
-    public int LayerMask { get { return layerMask.Value; } }
+    public UnityEngine.LayerMask LayerMask { get { return layerMask.Value; } }
     public bool hasLayerMask { get { return HasComponent(GameComponentsLookup.LayerMask); } }
 
-    public GameEntity AddLayerMask(int newValue) {
+    public GameEntity AddLayerMask(UnityEngine.LayerMask newValue) {
         var index = GameComponentsLookup.LayerMask;
         var component = (LayerMaskComponent)CreateComponent(index, typeof(LayerMaskComponent));
         component.Value = newValue;
@@ -48,7 +48,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceLayerMask(int newValue) {
+    public GameEntity ReplaceLayerMask(UnityEngine.LayerMask newValue) {
         var index = GameComponentsLookup.LayerMask;
         var component = (LayerMaskComponent)CreateComponent(index, typeof(LayerMaskComponent));
         component.Value = newValue;

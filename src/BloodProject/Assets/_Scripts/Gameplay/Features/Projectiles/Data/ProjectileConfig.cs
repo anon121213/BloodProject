@@ -12,6 +12,8 @@ namespace _Scripts.Gameplay.Features.Projectiles.Data
     public List<EffectSetup> EffectSetups;
     public float Speed;
     public float LifeTime;
-    public LayerMask CollisionLayerMask;
+    public float Radius;
+    public LayerMask IgnoreLayers;
+    public LayerMask DamageLayers;
   }
 }

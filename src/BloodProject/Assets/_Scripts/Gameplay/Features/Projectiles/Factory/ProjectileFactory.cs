@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using _Scripts.Common.Entity;
+﻿using _Scripts.Common.Entity;
 using _Scripts.Common.Extensions;
 using _Scripts.Gameplay.Features.Projectiles.Data;
 using _Scripts.Infrastructure.Services.Identifiers;
@@ -9,8 +8,6 @@ namespace _Scripts.Gameplay.Features.Projectiles.Factory
 {
   public class ProjectileFactory : IProjectileFactory
   {
-    private const int TargetBufferSize = 16;
-    
     public GameEntity CreateSimpleBulletProjectile(ProjectileConfig projectileConfig, int producerID, Vector3 at, Quaternion rotation, Vector3 direction)
     {
       return CreateEntity.Empty()
@@ -21,10 +18,12 @@ namespace _Scripts.Gameplay.Features.Projectiles.Factory
         .AddWorldRotation(rotation)
         .AddSpeed(projectileConfig.Speed)
         .AddDirection(direction)
+        .AddRadius(projectileConfig.Radius)
         .AddEffectSetups(projectileConfig.EffectSetups)
         .AddViewReference(projectileConfig.Prefab)
         .AddSelfDestructTimer(projectileConfig.LifeTime)
-        .AddLayerMask(projectileConfig.CollisionLayerMask)
+        .AddIgnoreLayers(projectileConfig.IgnoreLayers)
+        .AddLayerMask(projectileConfig.DamageLayers)
         .With(x => x.isProjectile = true)
         .With(x => x.isSimpleBulletProjectile = true)
         .With(x => x.isReadyToCollectTargets = true)

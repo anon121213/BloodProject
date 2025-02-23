@@ -1,4 +1,5 @@
 ﻿using _Scripts.Common.Time;
+using _Scripts.Infrastructure.Services.StaticData.Provider;
 using Entitas;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace _Scripts.Gameplay.Features.Camera.Systems
   public class CameraRotateByMouseSystem : IExecuteSystem
   {
     private readonly ITimeService _timeService;
+    private readonly IStaticDataProvider _staticDataProvider;
     private readonly IGroup<InputEntity> _inputs;
     private readonly IGroup<GameEntity> _player;
 
@@ -14,7 +16,8 @@ namespace _Scripts.Gameplay.Features.Camera.Systems
 
     public CameraRotateByMouseSystem(InputContext inputContext,
       GameContext gameContext,
-      ITimeService timeService)
+      ITimeService timeService,
+      IStaticDataProvider staticDataProvider)
     {
       _inputs = inputContext.GetGroup(InputMatcher.Input);
       _player = gameContext.GetGroup(GameMatcher
@@ -26,6 +29,7 @@ namespace _Scripts.Gameplay.Features.Camera.Systems
         ));
 
       _timeService = timeService;
+      _staticDataProvider = staticDataProvider;
     }
 
     public void Execute()
@@ -33,7 +37,7 @@ namespace _Scripts.Gameplay.Features.Camera.Systems
       foreach (var player in _player)
       foreach (var input in _inputs)
       {
-        Rotate(player, input.MouseInputDelta.x, input.MouseInputDelta.y, 10);
+        Rotate(player, input.MouseInputDelta.x, input.MouseInputDelta.y, _staticDataProvider.CameraSettings.Sensitivity);
       }
     }
 

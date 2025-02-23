@@ -34,7 +34,7 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public _Scripts.Gameplay.Features.Projectiles.ProjectileDataComponent projectileData { get { return (_Scripts.Gameplay.Features.Projectiles.ProjectileDataComponent)GetComponent(GameComponentsLookup.ProjectileData); } }
-    public _Scripts.Gameplay.Features.Projectiles.Data.ProjectileConfig ProjectileConfig { get { return projectileData.Value; } }
+    public _Scripts.Gameplay.Features.Projectiles.Data.ProjectileConfig ProjectileData { get { return projectileData.Value; } }
     public bool hasProjectileData { get { return HasComponent(GameComponentsLookup.ProjectileData); } }
 
     public GameEntity AddProjectileData(_Scripts.Gameplay.Features.Projectiles.Data.ProjectileConfig newValue) {

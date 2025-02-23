@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: RifleConfig
   m_EditorClassIdentifier: 
   <Prefab>k__BackingField:
-    m_AssetGUID: 
+    m_AssetGUID: 92cdedd723ae2ee4c9885f83efd899de
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   <WeaponSettings>k__BackingField:
-    <BulletsInClipCount>k__BackingField: 0
-    <ShootDelay>k__BackingField: 0
+    <BulletsInClipCount>k__BackingField: 30
+    <ShootDelay>k__BackingField: 0.2
     <ReloadDelay>k__BackingField: 0
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 30
   <WeaponType>k__BackingField: 0
-  <BulletConfig>k__BackingField: {fileID: 0}
+  <BulletConfig>k__BackingField: {fileID: 11400000, guid: c7a0be8874ab42d41bba9d407a422cac, type: 2}

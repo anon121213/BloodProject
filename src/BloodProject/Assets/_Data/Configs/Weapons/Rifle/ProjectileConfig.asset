@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: ProjectileConfig
   m_EditorClassIdentifier: 
   Prefab:
-    m_AssetGUID: 
+    m_AssetGUID: f194d986b385a004da161969295ce6d2
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  EffectSetups: []
-  Speed: 0
-  LifeTime: 0
+  EffectSetups:
+  - EffectTypeId: 1
+    Value: 30
+  Speed: 6000
+  LifeTime: 3
   CollisionLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
