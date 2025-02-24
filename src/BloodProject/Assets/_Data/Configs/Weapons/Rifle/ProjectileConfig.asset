@@ -23,6 +23,10 @@ MonoBehaviour:
     Value: 30
   Speed: 6000
   LifeTime: 3
-  CollisionLayerMask:
+  Radius: 0.1
+  IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 896
+  DamageLayers:
     serializedVersion: 2
     m_Bits: 64

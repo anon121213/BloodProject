@@ -1,7 +1,8 @@
-﻿using Entitas;
-using Gameplay.Features.Input.InputServices;
+﻿using _Scripts.Gameplay.Features.Input.InputServices;
+using Entitas;
+using UnityEngine;
 
-namespace Gameplay.Features.Input.System
+namespace _Scripts.Gameplay.Features.Input.System
 {
   public class EmitInputSystem : IExecuteSystem
   {
@@ -29,7 +30,9 @@ namespace Gameplay.Features.Input.System
 
         input.isShooting = _inputService.IsShooting;
         input.isReloading = _inputService.IsReloading;
-
+        input.isJumping = _inputService.IsJumping;
+        input.isDashing = _inputService.IsDashing;
+        
         input.ReplaceMouseInputAxis(_inputService.MousePosition);
         input.ReplaceMouseInputDelta(_inputService.MouseDelta);
       }

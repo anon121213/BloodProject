@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace Gameplay.Features.Input.System
+namespace _Scripts.Gameplay.Features.Input.System
 {
   public class InitializeInputSystem : IInitializeSystem
   {

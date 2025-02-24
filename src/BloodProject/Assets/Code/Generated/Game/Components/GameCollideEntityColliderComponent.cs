@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using _Scripts.Gameplay.Features.ProjectilesCollides;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherCollideEntityCollider;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public CollideEntityCollider collideEntityCollider { get { return (CollideEntityCollider)GetComponent(GameComponentsLookup.CollideEntityCollider); } }
+    public _Scripts.Gameplay.Features.ProjectilesCollides.CollideEntityCollider collideEntityCollider { get { return (_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntityCollider)GetComponent(GameComponentsLookup.CollideEntityCollider); } }
     public UnityEngine.Collider CollideEntityCollider { get { return collideEntityCollider.Value; } }
     public bool hasCollideEntityCollider { get { return HasComponent(GameComponentsLookup.CollideEntityCollider); } }
 
     public GameEntity AddCollideEntityCollider(UnityEngine.Collider newValue) {
         var index = GameComponentsLookup.CollideEntityCollider;
-        var component = (CollideEntityCollider)CreateComponent(index, typeof(CollideEntityCollider));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntityCollider)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntityCollider));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceCollideEntityCollider(UnityEngine.Collider newValue) {
         var index = GameComponentsLookup.CollideEntityCollider;
-        var component = (CollideEntityCollider)CreateComponent(index, typeof(CollideEntityCollider));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntityCollider)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntityCollider));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

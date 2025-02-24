@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Gameplay.Features.Input.InputServices
+namespace _Scripts.Gameplay.Features.Input.InputServices
 {
     public interface IInputService
     {
@@ -13,6 +12,8 @@ namespace Gameplay.Features.Input.InputServices
         public bool IsReloading { get; }
 
         public bool IsMoving { get; }
+        public bool IsJumping { get; }
+        public bool IsDashing { get; }
 
         void EnableInput();
         void DisableInput();

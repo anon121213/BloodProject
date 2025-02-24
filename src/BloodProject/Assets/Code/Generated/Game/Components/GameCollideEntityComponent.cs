@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using _Scripts.Gameplay.Features.ProjectilesCollides;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherCollideEntity;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public CollideEntity collideEntity { get { return (CollideEntity)GetComponent(GameComponentsLookup.CollideEntity); } }
+    public _Scripts.Gameplay.Features.ProjectilesCollides.CollideEntity collideEntity { get { return (_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntity)GetComponent(GameComponentsLookup.CollideEntity); } }
     public GameEntity CollideEntity { get { return collideEntity.Value; } }
     public bool hasCollideEntity { get { return HasComponent(GameComponentsLookup.CollideEntity); } }
 
     public GameEntity AddCollideEntity(GameEntity newValue) {
         var index = GameComponentsLookup.CollideEntity;
-        var component = (CollideEntity)CreateComponent(index, typeof(CollideEntity));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntity)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntity));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceCollideEntity(GameEntity newValue) {
         var index = GameComponentsLookup.CollideEntity;
-        var component = (CollideEntity)CreateComponent(index, typeof(CollideEntity));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntity)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.CollideEntity));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Gameplay.Features.Input.InputServices.PC
+namespace _Scripts.Gameplay.Features.Input.InputServices.PC
 {
   public class PCInputService : IInputService, IDisposable
   {
@@ -13,6 +13,8 @@ namespace Gameplay.Features.Input.InputServices.PC
     public Vector2 MouseDelta => _playerInput.Pc.MouseDelta.ReadValue<Vector2>();
 
     public bool IsMoving { get; private set; }
+    public bool IsJumping { get; private set; }
+    public bool IsDashing { get; private set; }
     public bool IsShooting { get; private set; }
     public bool IsReloading { get; private set; }
 
@@ -49,6 +51,8 @@ namespace Gameplay.Features.Input.InputServices.PC
       RegisterAction(_playerInput.Pc.Movement, _ => IsMoving = true, _ => IsMoving = false);
       RegisterAction(_playerInput.Pc.Shooting, _ => IsShooting = true, _ => IsShooting = false);
       RegisterAction(_playerInput.Pc.Reload, _ => IsReloading = true, _ => IsReloading = false);
+      RegisterAction(_playerInput.Pc.Jumping, _ => IsJumping = true, _ => IsJumping = false);
+      RegisterAction(_playerInput.Pc.Dashing, _ => IsDashing = true, _ => IsDashing = false);
     }
 
     public void Dispose()

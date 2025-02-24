@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using _Scripts.Gameplay.Features.ProjectilesCollides;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherIgnoreLayers;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public IgnoreLayers ignoreLayers { get { return (IgnoreLayers)GetComponent(GameComponentsLookup.IgnoreLayers); } }
+    public _Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers ignoreLayers { get { return (_Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers)GetComponent(GameComponentsLookup.IgnoreLayers); } }
     public UnityEngine.LayerMask IgnoreLayers { get { return ignoreLayers.Value; } }
     public bool hasIgnoreLayers { get { return HasComponent(GameComponentsLookup.IgnoreLayers); } }
 
     public GameEntity AddIgnoreLayers(UnityEngine.LayerMask newValue) {
         var index = GameComponentsLookup.IgnoreLayers;
-        var component = (IgnoreLayers)CreateComponent(index, typeof(IgnoreLayers));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceIgnoreLayers(UnityEngine.LayerMask newValue) {
         var index = GameComponentsLookup.IgnoreLayers;
-        var component = (IgnoreLayers)CreateComponent(index, typeof(IgnoreLayers));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

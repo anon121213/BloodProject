@@ -18,7 +18,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  <SpawnPosition>k__BackingField: {x: 0, y: 0}
-  <MoveSmooth>k__BackingField: 1000
-  <MoveSpeed>k__BackingField: 8
+  <SpawnPosition>k__BackingField: {x: 0, y: 1, z: 0}
+  <MoveSpeed>k__BackingField: 12
+  <JumpForce>k__BackingField: 0.2
+  <Gravity>k__BackingField: 2
+  <DashDistance>k__BackingField: 4
+  <DashDuration>k__BackingField: 0.2
+  <DashCooldown>k__BackingField: 1
+  <CheckGroundRadius>k__BackingField: 1.1
+  <IgnoreGroundLayers>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 640
   <InitHealth>k__BackingField: 100

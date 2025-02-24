@@ -1,5 +1,5 @@
-﻿using Gameplay.Features.Input.InputServices;
-using Gameplay.Features.Input.InputServices.PC;
+﻿using _Scripts.Gameplay.Features.Input.InputServices;
+using _Scripts.Gameplay.Features.Input.InputServices.PC;
 using VContainer;
 
 namespace _Scripts.Infrastructure.Installers.Installers

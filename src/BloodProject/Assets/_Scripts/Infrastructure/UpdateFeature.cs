@@ -1,5 +1,6 @@
 ﻿using _Scripts.Common.Destruct;
 using _Scripts.Gameplay.Features.Camera;
+using _Scripts.Gameplay.Features.Dash;
 using _Scripts.Gameplay.Features.Input;
 using _Scripts.Gameplay.Features.Movement;
 using _Scripts.Gameplay.Features.Player;
@@ -21,7 +22,7 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<CameraFeature>());
       Add(systemFactory.Create<WeaponFeature>());
       Add(systemFactory.Create<ProjectilesFeature>());
-      
+      Add(systemFactory.Create<DashFeature>());
       
       Add(systemFactory.Create<ProcessDestructedFeature>());
     }

@@ -1,4 +1,5 @@
-﻿using _Scripts.Gameplay.Features.Projectiles.Factory;
+﻿using _Scripts.Gameplay.Features.Player.Factory;
+using _Scripts.Gameplay.Features.Projectiles.Factory;
 using _Scripts.Gameplay.Features.Weapon.Factory;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.StateMachine.Factory;

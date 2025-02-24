@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using _Scripts.Gameplay.Features.ProjectilesCollides;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherLayerMask;
@@ -36,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public LayerMaskComponent layerMask { get { return (LayerMaskComponent)GetComponent(GameComponentsLookup.LayerMask); } }
+    public _Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent layerMask { get { return (_Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent)GetComponent(GameComponentsLookup.LayerMask); } }
     public UnityEngine.LayerMask LayerMask { get { return layerMask.Value; } }
     public bool hasLayerMask { get { return HasComponent(GameComponentsLookup.LayerMask); } }
 
     public GameEntity AddLayerMask(UnityEngine.LayerMask newValue) {
         var index = GameComponentsLookup.LayerMask;
-        var component = (LayerMaskComponent)CreateComponent(index, typeof(LayerMaskComponent));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -50,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceLayerMask(UnityEngine.LayerMask newValue) {
         var index = GameComponentsLookup.LayerMask;
-        var component = (LayerMaskComponent)CreateComponent(index, typeof(LayerMaskComponent));
+        var component = (_Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent)CreateComponent(index, typeof(_Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

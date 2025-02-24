@@ -8,17 +8,21 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int Input = 0;
-    public const int MouseInputAxis = 1;
-    public const int MouseInputDelta = 2;
-    public const int MoveInputAxis = 3;
-    public const int Reloading = 4;
-    public const int Shooting = 5;
+    public const int Dashing = 0;
+    public const int Input = 1;
+    public const int Jumping = 2;
+    public const int MouseInputAxis = 3;
+    public const int MouseInputDelta = 4;
+    public const int MoveInputAxis = 5;
+    public const int Reloading = 6;
+    public const int Shooting = 7;
 
-    public const int TotalComponents = 6;
+    public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
+        "Dashing",
         "Input",
+        "Jumping",
         "MouseInputAxis",
         "MouseInputDelta",
         "MoveInputAxis",
@@ -27,7 +31,9 @@ public static class InputComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Gameplay.Features.Input.Dashing),
         typeof(Gameplay.Features.Input.Input),
+        typeof(Gameplay.Features.Input.Jumping),
         typeof(Gameplay.Features.Input.MouseInputAxis),
         typeof(Gameplay.Features.Input.MouseInputDelta),
         typeof(Gameplay.Features.Input.MoveInputAxis),
