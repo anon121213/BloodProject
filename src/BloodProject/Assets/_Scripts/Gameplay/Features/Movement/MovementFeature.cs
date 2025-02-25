@@ -16,6 +16,7 @@ namespace _Scripts.Gameplay.Features.Movement
       Add(systemFactory.Create<GravityFeature>());
       Add(systemFactory.Create<CharacterControllerJumpSystem>());
       Add(systemFactory.Create<MoveCharacterControllerByDirectionSystem>());
+      Add(systemFactory.Create<NavMeshAgentMoveToTargetSystem>());
     }
   }
 }

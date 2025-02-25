@@ -19,6 +19,7 @@ namespace _Scripts.Infrastructure.StateMachine.States
     private readonly IEnemyFactory _enemyFactory;
     private readonly PatrolNode _patrolNode;
     private readonly MoveToPlayerNode _moveToPlayerNode;
+    private readonly AttackNode _attackNode;
     private readonly IStaticDataProvider _staticDataProvider;
     private readonly IGameStateMachine _gameStateMachine;
 
@@ -30,13 +31,15 @@ namespace _Scripts.Infrastructure.StateMachine.States
       IPlayerFactory playerFactory,
       IEnemyFactory enemyFactory,
       PatrolNode patrolNode,
-      MoveToPlayerNode moveToPlayerNode)
+      MoveToPlayerNode moveToPlayerNode,
+      AttackNode attackNode)
     {
       _sceneLoader = sceneLoader;
       _playerFactory = playerFactory;
       _enemyFactory = enemyFactory;
       _patrolNode = patrolNode;
       _moveToPlayerNode = moveToPlayerNode;
+      _attackNode = attackNode;
       _staticDataProvider = staticDataProvider;
       _gameStateMachine = gameStateMachine;
     }
@@ -50,6 +53,7 @@ namespace _Scripts.Infrastructure.StateMachine.States
         new SequenceNode(new List<Node>
         {
           _moveToPlayerNode,
+          _attackNode
         }),
         _patrolNode
       });

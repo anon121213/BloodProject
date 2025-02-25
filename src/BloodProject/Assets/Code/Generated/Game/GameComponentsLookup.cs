@@ -25,8 +25,8 @@ public static class GameComponentsLookup {
     public const int Damage = 14;
     public const int EntityLink = 15;
     public const int Id = 16;
-    public const int Rigidbody = 17;
-    public const int SpriteRenderer = 18;
+    public const int NavMeshAgent = 17;
+    public const int Rigidbody = 18;
     public const int Transform = 19;
     public const int WorldPosition = 20;
     public const int WorldRotation = 21;
@@ -42,76 +42,82 @@ public static class GameComponentsLookup {
     public const int OnDashCooldown = 31;
     public const int OnEndDash = 32;
     public const int OnStartDash = 33;
-    public const int BehaviourTree = 34;
-    public const int CheckPlayerRadius = 35;
-    public const int CurrentNode = 36;
-    public const int DistanceToAttackPlayer = 37;
-    public const int DistanceToPatrol = 38;
-    public const int Enemy = 39;
-    public const int RootNode = 40;
-    public const int RotateToPlayerSpeed = 41;
-    public const int TargetAvailable = 42;
-    public const int TargetsLayerMask = 43;
-    public const int CheckGround = 44;
-    public const int CheckGroundRadius = 45;
-    public const int Gravity = 46;
-    public const int GravityVelocity = 47;
-    public const int Grounded = 48;
-    public const int IgnoreGroundLayers = 49;
-    public const int Direction = 50;
-    public const int DiscreteRbMovement = 51;
-    public const int JumpAvailable = 52;
-    public const int JumpForce = 53;
-    public const int Jumping = 54;
-    public const int LastWorldPosition = 55;
-    public const int MoveByPhysic = 56;
-    public const int MovementAvailable = 57;
-    public const int Moving = 58;
-    public const int Rotate = 59;
-    public const int RotationAlignedAlongDirection = 60;
-    public const int Speed = 61;
-    public const int Teleport = 62;
-    public const int TurnedAlongDirection = 63;
-    public const int LeftHand = 64;
-    public const int Model = 65;
-    public const int Player = 66;
-    public const int RigBuilder = 67;
-    public const int RightHand = 68;
-    public const int EffectSetups = 69;
-    public const int Projectile = 70;
-    public const int ProjectileData = 71;
-    public const int SimpleBulletProjectile = 72;
-    public const int Collide = 73;
-    public const int CollideEntity = 74;
-    public const int CollideEntityCollider = 75;
-    public const int IgnoreLayers = 76;
-    public const int LayerMask = 77;
-    public const int ReadyToCollectTargets = 78;
-    public const int AttackPoint = 79;
-    public const int CurrentShootDelay = 80;
-    public const int CurrentWeapon = 81;
-    public const int LeftHandHolder = 82;
-    public const int OnShootDelay = 83;
-    public const int RightHandHolder = 84;
-    public const int Shoot = 85;
-    public const int ShootAvailable = 86;
-    public const int ShootDelay = 87;
-    public const int Shooter = 88;
-    public const int Weapon = 89;
-    public const int WeaponHolder = 90;
-    public const int CurrentHealth = 91;
-    public const int DamageEffect = 92;
-    public const int Effect = 93;
-    public const int EffectValue = 94;
-    public const int MaxHealth = 95;
-    public const int ProducerId = 96;
-    public const int PushEffect = 97;
-    public const int TargetId = 98;
-    public const int BaseStats = 99;
-    public const int StatChange = 100;
-    public const int StatModifiers = 101;
+    public const int AttackCombo = 34;
+    public const int AttackEffects = 35;
+    public const int AttackRadius = 36;
+    public const int BehaviourTree = 37;
+    public const int CheckPlayerRadius = 38;
+    public const int CurrentNode = 39;
+    public const int DistanceToAttackPlayer = 40;
+    public const int DistanceToPatrol = 41;
+    public const int Enemy = 42;
+    public const int MaxAttackCombo = 43;
+    public const int RootNode = 44;
+    public const int RotateToPlayerSpeed = 45;
+    public const int TargetAvailable = 46;
+    public const int TargetsLayerMask = 47;
+    public const int CheckGround = 48;
+    public const int CheckGroundRadius = 49;
+    public const int Gravity = 50;
+    public const int GravityVelocity = 51;
+    public const int Grounded = 52;
+    public const int IgnoreGroundLayers = 53;
+    public const int Direction = 54;
+    public const int DiscreteRbMovement = 55;
+    public const int JumpAvailable = 56;
+    public const int JumpForce = 57;
+    public const int Jumping = 58;
+    public const int LastWorldPosition = 59;
+    public const int MoveByNavMesh = 60;
+    public const int MoveByPhysic = 61;
+    public const int MovementAvailable = 62;
+    public const int Moving = 63;
+    public const int NavMashTargetPosition = 64;
+    public const int Rotate = 65;
+    public const int RotationAlignedAlongDirection = 66;
+    public const int Speed = 67;
+    public const int Teleport = 68;
+    public const int TurnedAlongDirection = 69;
+    public const int LeftHand = 70;
+    public const int Model = 71;
+    public const int Player = 72;
+    public const int RigBuilder = 73;
+    public const int RightHand = 74;
+    public const int EffectSetups = 75;
+    public const int Projectile = 76;
+    public const int ProjectileData = 77;
+    public const int SimpleBulletProjectile = 78;
+    public const int Collide = 79;
+    public const int CollideEntity = 80;
+    public const int CollideEntityCollider = 81;
+    public const int IgnoreLayers = 82;
+    public const int LayerMask = 83;
+    public const int ReadyToCollectTargets = 84;
+    public const int Attack = 85;
+    public const int AttackAvailable = 86;
+    public const int AttackDelay = 87;
+    public const int Attacker = 88;
+    public const int AttackPoint = 89;
+    public const int CurrentAttackDelay = 90;
+    public const int CurrentWeapon = 91;
+    public const int LeftHandHolder = 92;
+    public const int OnAttackDelay = 93;
+    public const int RightHandHolder = 94;
+    public const int Weapon = 95;
+    public const int WeaponHolder = 96;
+    public const int CurrentHealth = 97;
+    public const int DamageEffect = 98;
+    public const int Effect = 99;
+    public const int EffectValue = 100;
+    public const int MaxHealth = 101;
+    public const int ProducerId = 102;
+    public const int PushEffect = 103;
+    public const int TargetId = 104;
+    public const int BaseStats = 105;
+    public const int StatChange = 106;
+    public const int StatModifiers = 107;
 
-    public const int TotalComponents = 102;
+    public const int TotalComponents = 108;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -131,8 +137,8 @@ public static class GameComponentsLookup {
         "Damage",
         "EntityLink",
         "Id",
+        "NavMeshAgent",
         "Rigidbody",
-        "SpriteRenderer",
         "Transform",
         "WorldPosition",
         "WorldRotation",
@@ -148,12 +154,16 @@ public static class GameComponentsLookup {
         "OnDashCooldown",
         "OnEndDash",
         "OnStartDash",
+        "AttackCombo",
+        "AttackEffects",
+        "AttackRadius",
         "BehaviourTree",
         "CheckPlayerRadius",
         "CurrentNode",
         "DistanceToAttackPlayer",
         "DistanceToPatrol",
         "Enemy",
+        "MaxAttackCombo",
         "RootNode",
         "RotateToPlayerSpeed",
         "TargetAvailable",
@@ -170,9 +180,11 @@ public static class GameComponentsLookup {
         "JumpForce",
         "Jumping",
         "LastWorldPosition",
+        "MoveByNavMesh",
         "MoveByPhysic",
         "MovementAvailable",
         "Moving",
+        "NavMashTargetPosition",
         "Rotate",
         "RotationAlignedAlongDirection",
         "Speed",
@@ -193,16 +205,16 @@ public static class GameComponentsLookup {
         "IgnoreLayers",
         "LayerMask",
         "ReadyToCollectTargets",
+        "Attack",
+        "AttackAvailable",
+        "AttackDelay",
+        "Attacker",
         "AttackPoint",
-        "CurrentShootDelay",
+        "CurrentAttackDelay",
         "CurrentWeapon",
         "LeftHandHolder",
-        "OnShootDelay",
+        "OnAttackDelay",
         "RightHandHolder",
-        "Shoot",
-        "ShootAvailable",
-        "ShootDelay",
-        "Shooter",
         "Weapon",
         "WeaponHolder",
         "CurrentHealth",
@@ -236,8 +248,8 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Common.CommonComponents.Damage),
         typeof(_Scripts.Gameplay.Common.CommonComponents.EntityLink),
         typeof(_Scripts.Gameplay.Common.CommonComponents.Id),
+        typeof(_Scripts.Gameplay.Common.CommonComponents.NavMeshAgentComponent),
         typeof(_Scripts.Gameplay.Common.CommonComponents.RigidbodyComponent),
-        typeof(_Scripts.Gameplay.Common.CommonComponents.SpriteRendererComponent),
         typeof(_Scripts.Gameplay.Common.CommonComponents.TransformComponent),
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldPosition),
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldRotation),
@@ -253,12 +265,16 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Dash.OnDashCooldown),
         typeof(_Scripts.Gameplay.Features.Dash.OnEndDash),
         typeof(_Scripts.Gameplay.Features.Dash.OnStartDash),
+        typeof(_Scripts.Gameplay.Features.Enemies.AttackCombo),
+        typeof(_Scripts.Gameplay.Features.Enemies.AttackEffects),
+        typeof(_Scripts.Gameplay.Features.Enemies.AttackRadiusComponent),
         typeof(_Scripts.Gameplay.Features.Enemies.BehaviourTreeComponent),
         typeof(_Scripts.Gameplay.Features.Enemies.CheckPlayerRadius),
         typeof(_Scripts.Gameplay.Features.Enemies.CurrentNode),
         typeof(_Scripts.Gameplay.Features.Enemies.DistanceToAttackPlayer),
         typeof(_Scripts.Gameplay.Features.Enemies.DistanceToPatrol),
         typeof(_Scripts.Gameplay.Features.Enemies.Enemy),
+        typeof(_Scripts.Gameplay.Features.Enemies.MaxAttackCombo),
         typeof(_Scripts.Gameplay.Features.Enemies.RootNode),
         typeof(_Scripts.Gameplay.Features.Enemies.RotateToPlayerSpeed),
         typeof(_Scripts.Gameplay.Features.Enemies.TargetAvailable),
@@ -275,9 +291,11 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Movement.JumpForce),
         typeof(_Scripts.Gameplay.Features.Movement.Jumping),
         typeof(_Scripts.Gameplay.Features.Movement.LastWorldPosition),
+        typeof(_Scripts.Gameplay.Features.Movement.MoveByNavMesh),
         typeof(_Scripts.Gameplay.Features.Movement.MoveByPhysic),
         typeof(_Scripts.Gameplay.Features.Movement.MovementAvailable),
         typeof(_Scripts.Gameplay.Features.Movement.Moving),
+        typeof(_Scripts.Gameplay.Features.Movement.NavMashTargetPosition),
         typeof(_Scripts.Gameplay.Features.Movement.Rotate),
         typeof(_Scripts.Gameplay.Features.Movement.RotationAlignedAlongDirection),
         typeof(_Scripts.Gameplay.Features.Movement.Speed),
@@ -298,16 +316,16 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.ProjectilesCollides.IgnoreLayers),
         typeof(_Scripts.Gameplay.Features.ProjectilesCollides.LayerMaskComponent),
         typeof(_Scripts.Gameplay.Features.ProjectilesCollides.ReadyToCollectTargets),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Attack),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackAvailable),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Attacker),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint),
-        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentShootDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentAttackDelay),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.LeftHandHolder),
-        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.OnShootDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.OnAttackDelay),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RightHandHolder),
-        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Shoot),
-        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootAvailable),
-        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootDelay),
-        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Shooter),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Weapon),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.WeaponHolder),
         typeof(Gameplay.Features.Effects.CurrentHealth),

@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherShootAvailable;
+    static Entitas.IMatcher<GameEntity> _matcherOnAttackDelay;
 
-    public static Entitas.IMatcher<GameEntity> ShootAvailable {
+    public static Entitas.IMatcher<GameEntity> OnAttackDelay {
         get {
-            if (_matcherShootAvailable == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.ShootAvailable);
+            if (_matcherOnAttackDelay == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.OnAttackDelay);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherShootAvailable = matcher;
+                _matcherOnAttackDelay = matcher;
             }
 
-            return _matcherShootAvailable;
+            return _matcherOnAttackDelay;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly _Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootAvailable shootAvailableComponent = new _Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootAvailable();
+    static readonly _Scripts.Gameplay.Features.Weapon.WeaponComponents.OnAttackDelay onAttackDelayComponent = new _Scripts.Gameplay.Features.Weapon.WeaponComponents.OnAttackDelay();
 
-    public bool isShootAvailable {
-        get { return HasComponent(GameComponentsLookup.ShootAvailable); }
+    public bool isOnAttackDelay {
+        get { return HasComponent(GameComponentsLookup.OnAttackDelay); }
         set {
-            if (value != isShootAvailable) {
-                var index = GameComponentsLookup.ShootAvailable;
+            if (value != isOnAttackDelay) {
+                var index = GameComponentsLookup.OnAttackDelay;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : shootAvailableComponent;
+                            : onAttackDelayComponent;
 
                     AddComponent(index, component);
                 } else {

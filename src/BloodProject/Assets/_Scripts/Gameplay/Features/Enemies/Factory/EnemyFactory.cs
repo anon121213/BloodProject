@@ -31,10 +31,16 @@ namespace _Scripts.Gameplay.Features.Enemies.Factory
         .AddDistanceToAttackPlayer(config.DistanceToAttackPlayer)
         .AddRotateToPlayerSpeed(config.RotateToPlayerSpeed)
         .AddTargetsLayerMask(config.TargetsLayerMask)
+        .AddAttackRadius(config.AttackRadius)
+        .AddEffectSetups(config.AttackEffects)
+        .AddAttackDelay(config.AttackDelay)
+        .AddCurrentAttackDelay(0)
         .With(x => x.isEnemy = true)
+        .With(x => x.isAttacker = true)
+        .With(x => x.isAttackAvailable = true)
         .With(x => x.isMovementAvailable = true)
         .With(x => x.isTeleport = true)
-        .With(x => x.isMoveByPhysic = true)
+        .With(x => x.isMoveByNavMesh = true)
         .With(x => x.isBehaviourTree = true);
     }
   }

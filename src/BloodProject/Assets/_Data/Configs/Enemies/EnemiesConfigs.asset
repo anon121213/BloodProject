@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c81ce62442344a3b5c3085c287754d3, type: 3}
   m_Name: EnemiesConfigs
   m_EditorClassIdentifier: 
-  Configs: []
+  Configs:
+  - Config: {fileID: 11400000, guid: da9eaef6a7203c443bbb5f3e0c8fcdb3, type: 2}
+    Type: 1

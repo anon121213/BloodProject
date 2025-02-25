@@ -3,7 +3,7 @@
 namespace Gameplay.Features.Effects.Data
 {
   [Serializable]
-  public class EffectSetup
+  public struct EffectSetup
   {
     public EffectTypeId EffectTypeId;
     public float Value;

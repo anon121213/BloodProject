@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherShooter;
+    static Entitas.IMatcher<GameEntity> _matcherAttack;
 
-    public static Entitas.IMatcher<GameEntity> Shooter {
+    public static Entitas.IMatcher<GameEntity> Attack {
         get {
-            if (_matcherShooter == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Shooter);
+            if (_matcherAttack == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Attack);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherShooter = matcher;
+                _matcherAttack = matcher;
             }
 
-            return _matcherShooter;
+            return _matcherAttack;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly _Scripts.Gameplay.Features.Weapon.WeaponComponents.Shooter shooterComponent = new _Scripts.Gameplay.Features.Weapon.WeaponComponents.Shooter();
+    static readonly _Scripts.Gameplay.Features.Weapon.WeaponComponents.Attack attackComponent = new _Scripts.Gameplay.Features.Weapon.WeaponComponents.Attack();
 
-    public bool isShooter {
-        get { return HasComponent(GameComponentsLookup.Shooter); }
+    public bool isAttack {
+        get { return HasComponent(GameComponentsLookup.Attack); }
         set {
-            if (value != isShooter) {
-                var index = GameComponentsLookup.Shooter;
+            if (value != isAttack) {
+                var index = GameComponentsLookup.Attack;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : shooterComponent;
+                            : attackComponent;
 
                     AddComponent(index, component);
                 } else {

@@ -20,7 +20,7 @@ namespace Gameplay.Features.Movement.System
           GameMatcher.Speed,
           GameMatcher.Moving
         )
-        .NoneOf(GameMatcher.MoveByPhysic));
+        .NoneOf(GameMatcher.MoveByPhysic, GameMatcher.MoveByNavMesh));
     }
     
     public void Execute()

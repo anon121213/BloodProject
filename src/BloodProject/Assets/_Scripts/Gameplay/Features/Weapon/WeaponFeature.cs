@@ -8,7 +8,7 @@ namespace _Scripts.Gameplay.Features.Weapon
     public WeaponFeature(ISystemFactory systemFactory)
     {
       Add(systemFactory.Create<WeaponShootSystem>());
-      Add(systemFactory.Create<ShootDelaySystem>());
+      Add(systemFactory.Create<AttackDelaySystem>());
     }
   }
 }

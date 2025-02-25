@@ -14,15 +14,23 @@
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Tests/Editor/NativePassCompilerRenderGraphTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Tests/Editor/Volumes/VolumeComponentTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Settings/FrameSettingsDefaults.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Samples~/WaterSamples/Scripts/Buoyancy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Samples~/WaterSamples/Scripts/SpawnRandomBeachBall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.visualeffectgraph/Samples~/VFXOutputEventHandlers/Editor/VFXOutputEventRigidBodyEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.visualeffectgraph/Samples~/VFXOutputEventHandlers/Runtime/VFXOutputEventRigidBody.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.addressables@2.2.2/Editor/GUI/AddressableAssetGroupTemplateInspector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.addressables@2.2.2/Tests/Editor/BinaryStorageBufferTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.profiling.core@1.0.2/Runtime/ProfilerMarker1Param.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.profiling.core@1.0.2/Runtime/ProfilerUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Animation/TimelineAnimationUtilities.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Audio/AudioPlayableAssetEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/DirectorNamedColor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Items/ITimelineItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Items/ItemsPerTrack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Manipulators/EditMode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Trackhead.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Undo/UndoScope.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Window/TimelineWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/Window/TimelineWindowAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.7/Editor/treeview/TrackGui/TimelineGroupGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d851e39d164043519e84d650683ea1592ac00/a6/0095c30c/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
@@ -120,6 +128,7 @@
       <workItem from="1740045373240" duration="21623000" />
       <workItem from="1740155107081" duration="8881000" />
       <workItem from="1740345749655" duration="15972000" />
+      <workItem from="1740512745674" duration="8862000" />
     </task>
     <servers />
   </component>

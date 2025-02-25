@@ -18,7 +18,7 @@ namespace _Scripts.Infrastructure.Installers
         }
     }
     
-    public class MonoInstaller : MonoBehaviour
+    public abstract class MonoInstaller : MonoBehaviour
     {
         public virtual void Register(IContainerBuilder builder) { }
     }

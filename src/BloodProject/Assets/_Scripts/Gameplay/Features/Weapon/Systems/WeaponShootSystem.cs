@@ -27,7 +27,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
             _weapons = gameContext.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.Weapon,
-                    GameMatcher.ShootAvailable,
+                    GameMatcher.AttackAvailable,
                     GameMatcher.ProjectileData,
                     GameMatcher.AttackPoint
                 ));
@@ -44,10 +44,10 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
             foreach (var camera in _camera)
             foreach (var weapon in _weapons.GetEntities(_buffer))
             {
-                if (!weapon.isShootAvailable || !input.isShooting) 
+                if (!weapon.isAttackAvailable || !input.isShooting) 
                     continue;
                 
-                weapon.isShoot = true;
+                weapon.isAttack = true;
                 Shoot(weapon, camera.Camera);
             }
         }

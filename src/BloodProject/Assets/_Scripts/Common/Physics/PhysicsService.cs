@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Common.Collisions;
+using _Scripts.Gameplay.Features.ProjectilesCollides;
 using UnityEngine;
 
 namespace _Scripts.Common.Physics
@@ -72,13 +73,11 @@ namespace _Scripts.Common.Physics
       return null;
     }
 
-    public int OverlapSphereNonAlloc(Vector3 worldPosition, float raduis, out GameEntity[] results, int layerMask)
+    public int OverlapSphereNonAlloc(Vector3 worldPosition, float radius, out GameEntity[] results, int layerMask)
     {
-      int hitCount = UnityEngine.Physics.OverlapSphereNonAlloc(worldPosition, 1, OverlapHits, layerMask);
+      int hitCount = UnityEngine.Physics.OverlapSphereNonAlloc(worldPosition, radius, OverlapHits, layerMask);
 
-      for (int i = 0; i < OverlapEntities.Length; i++) 
-        OverlapEntities[i] = null;
-      
+      int entityCount = 0;
       for (int i = 0; i < hitCount; i++)
       {
         Collider hit = OverlapHits[i];
@@ -89,11 +88,14 @@ namespace _Scripts.Common.Physics
         if (entity == null)
           continue;
 
-        OverlapEntities[i] = entity;
+        OverlapEntities[entityCount] = entity;
+        entityCount++;
       }
 
-      results = OverlapEntities;
-      return hitCount;
+      results = new GameEntity[entityCount];
+      System.Array.Copy(OverlapEntities, results, entityCount);
+
+      return entityCount;
     }
   }
 }

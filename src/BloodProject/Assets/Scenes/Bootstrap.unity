@@ -128,26 +128,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 600830577}
-  - component: {fileID: 600830576}
+  - component: {fileID: 600830578}
   m_Layer: 0
-  m_Name: InputInstaller
+  m_Name: BehaviourTreeInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &600830576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600830575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797255600dc941ce931a2a4613fa14ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &600830577
 Transform:
   m_ObjectHideFlags: 0
@@ -163,6 +151,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1527898679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600830578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600830575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0337717cd2436eaffe1d071ce089ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843040783
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 843040785}
   - component: {fileID: 843040784}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Tools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   autoInjectGameObjects: []
   _monoInstallers:
   - {fileID: 1998302314}
-  - {fileID: 600830576}
+  - {fileID: 600830578}
   - {fileID: 1427767941}
   - {fileID: 2123241536}
 --- !u!4 &1527898679

@@ -6,7 +6,7 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
 {
   public class MoveToPlayerNode : Node
   {
-    private Vector3 _moveVector;
+    private Vector3 _lookVector;
 
     public override NodeStatus Execute(GameEntity entity)
     {
@@ -18,14 +18,14 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
 
       if (distance > entity.DistanceToAttackPlayer && distance < entity.DistanceToPatrol)
       {
-        _moveVector = (target.WorldPosition - entity.WorldPosition).normalized;
-        _moveVector.y = entity.Rigidbody.linearVelocity.y;
+        _lookVector = (target.WorldPosition - entity.WorldPosition).normalized;
 
-        Quaternion targetRotation = Quaternion.LookRotation(_moveVector);
+        /*Quaternion targetRotation = Quaternion.LookRotation(_lookVector);
         entity.Transform.rotation = Quaternion.Slerp(entity.Transform.rotation, 
-          targetRotation, entity.RotateToPlayerSpeed * Time.deltaTime);
+          targetRotation, entity.RotateToPlayerSpeed * Time.deltaTime);*/
 
-        entity.ReplaceDirection(_moveVector);
+        Debug.Log("run");
+        entity.ReplaceNavMashTargetPosition(target.WorldPosition);
         entity.isMoving = true;
         return NodeStatus.Running;
       }

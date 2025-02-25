@@ -24,13 +24,13 @@ namespace _Scripts.Gameplay.Features.Weapon.Factory
         .AddWorldPosition(Vector3.zero)
         .AddWorldRotation(Quaternion.Euler(Vector3.zero))
         .AddProjectileData(config.BulletConfig)
-        .AddShootDelay(config.WeaponSettings.ShootDelay)
-        .AddCurrentShootDelay(0)
+        .AddAttackDelay(config.WeaponSettings.ShootDelay)
+        .AddCurrentAttackDelay(0)
         .AddViewReference(config.Prefab)
         .AddViewRoot(holder)
         .With(x => x.isWeapon = true)
-        .With(x => x.isShooter = true)
-        .With(x => x.isShootAvailable = true);
+        .With(x => x.isAttacker = true)
+        .With(x => x.isAttackAvailable = true);
     }
   }
 }
