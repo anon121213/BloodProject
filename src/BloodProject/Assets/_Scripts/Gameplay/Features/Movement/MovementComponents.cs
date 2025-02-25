@@ -10,6 +10,7 @@ namespace _Scripts.Gameplay.Features.Movement
     [Game] public class Moving : IComponent { }
     [Game] public class Jumping : IComponent { }
     [Game] public class MoveByPhysic : IComponent { }
+    [Game] public class DiscreteRbMovement : IComponent { }
     [Game] public class Teleport : IComponent { }
     [Game] public class Rotate : IComponent { }
     [Game] public class TurnedAlongDirection : IComponent { }

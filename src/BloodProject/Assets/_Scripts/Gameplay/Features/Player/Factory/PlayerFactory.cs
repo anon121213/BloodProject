@@ -18,7 +18,7 @@ namespace _Scripts.Gameplay.Features.Player.Factory
       _staticDataProvider = staticDataProvider;
     }
 
-    public GameEntity CreatePlayer(Vector2 position)
+    public GameEntity CreatePlayer(Vector3 position)
     {
       Dictionary<Stats, float> baseStats = new Dictionary<Stats, float>()
           .With(x => x[Stats.Speed] = _staticDataProvider.PlayerSettings.MoveSpeed)
@@ -27,7 +27,7 @@ namespace _Scripts.Gameplay.Features.Player.Factory
       return CreateEntity.Empty()
         .AddId(IdentifierService.Next())
         .AddWorldPosition(position)
-        .AddDirection(Vector2.zero)
+        .AddDirection(Vector3.zero)
         .AddJumpForce(_staticDataProvider.PlayerSettings.JumpForce)
         .AddCheckGroundRadius(_staticDataProvider.PlayerSettings.CheckGroundRadius)
         .AddGravity(_staticDataProvider.PlayerSettings.Gravity)

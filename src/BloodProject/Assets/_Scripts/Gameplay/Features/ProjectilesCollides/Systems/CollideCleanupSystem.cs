@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using UnityEngine;
 
-namespace _Scripts.Gameplay.Features.Collides.Systems
+namespace _Scripts.Gameplay.Features.ProjectilesCollides.Systems
 {
   public class CollideCleanupSystem : ICleanupSystem
   {
@@ -23,7 +22,6 @@ namespace _Scripts.Gameplay.Features.Collides.Systems
     {
       foreach (var entity in _entities.GetEntities(_buffer))
       {
-        Debug.Log("clean");
         entity.RemoveCollideEntity();
         entity.RemoveCollideEntityCollider();
         entity.isCollide = false;

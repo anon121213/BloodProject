@@ -7,7 +7,8 @@ namespace _Scripts.Gameplay.Features.Movement
   {
     public PhysicsMovementFeature(ISystemFactory systemFactory)
     {
-      Add(systemFactory.Create<MoveRbByDirectionSystem>());
+      Add(systemFactory.Create<DiscretMoveRbByDirectionSystem>());
+      Add(systemFactory.Create<VelocityChangeMoveRbByDirectionSystem>());
     }
   }
 }

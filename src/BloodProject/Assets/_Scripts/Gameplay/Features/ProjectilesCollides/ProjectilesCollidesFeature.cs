@@ -1,5 +1,4 @@
-﻿using _Scripts.Gameplay.Features.Collides.Systems;
-using _Scripts.Gameplay.Features.ProjectilesCollides.Systems;
+﻿using _Scripts.Gameplay.Features.ProjectilesCollides.Systems;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Gameplay.Features.ProjectilesCollides

@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Movement.System
 {
-  public class MoveRbByDirectionSystem : IExecuteSystem
+  public class DiscretMoveRbByDirectionSystem : IExecuteSystem
   {
     private readonly ITimeService _time;
     private readonly IGroup<GameEntity> _movers;
 
-    public MoveRbByDirectionSystem(GameContext gameContext, ITimeService timeService)
+    private Vector3 _defaultMoveVector;
+
+    public DiscretMoveRbByDirectionSystem(GameContext gameContext, ITimeService timeService)
     {
       _time = timeService;
       _movers = gameContext.GetGroup(GameMatcher
@@ -18,7 +20,8 @@ namespace _Scripts.Gameplay.Features.Movement.System
           GameMatcher.Speed,
           GameMatcher.MovementAvailable,
           GameMatcher.Rigidbody,
-          GameMatcher.MoveByPhysic
+          GameMatcher.MoveByPhysic,
+          GameMatcher.DiscreteRbMovement
         ));
     }
 
@@ -29,7 +32,10 @@ namespace _Scripts.Gameplay.Features.Movement.System
         if (mover.isMoving)
           mover.Rigidbody.linearVelocity = mover.Direction * mover.Speed * _time.FixedDeltaTime;
         else
-          mover.Rigidbody.linearVelocity = Vector3.zero;
+        {
+          _defaultMoveVector.y = mover.Rigidbody.linearVelocity.y;
+          mover.Rigidbody.linearVelocity = _defaultMoveVector;
+        }
       }
     }
   }

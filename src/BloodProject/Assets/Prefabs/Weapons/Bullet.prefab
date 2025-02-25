@@ -90,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityView: {fileID: 2003612056925811443}
   _rb: {fileID: 1291958307017800788}
+  _isDiscreteMovement: 1
 --- !u!114 &2003612056925811443
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,6 +4,6 @@ namespace Gameplay.Features.Player.Factory
 {
     public interface IPlayerFactory
     {
-        GameEntity CreatePlayer(Vector2 position);
+        GameEntity CreatePlayer(Vector3 position);
     }
 }

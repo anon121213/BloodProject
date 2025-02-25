@@ -1,6 +1,7 @@
 ﻿using _Scripts.Common.Collisions;
 using _Scripts.Common.Physics;
 using _Scripts.Common.Time;
+using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes;
 using _Scripts.Infrastructure.Services.AssetLoader;
 using _Scripts.Infrastructure.Services.Pool;
 using _Scripts.Infrastructure.Services.SceneLoader;
@@ -26,7 +27,9 @@ namespace _Scripts.Infrastructure.Installers.Installers
       builder.Register<ITimeService, UnityTimeService>(Lifetime.Singleton);
       builder.Register<ICollisionRegistry, CollisionRegistry>(Lifetime.Singleton);
       builder.Register<IPhysicsService, PhysicsService>(Lifetime.Singleton);
-      //builder.Register<GameEntityIndices>(Lifetime.Singleton).As<IInitializable>();
+
+      builder.Register<PatrolNode>(Lifetime.Singleton);
+      builder.Register<MoveToPlayerNode>(Lifetime.Singleton);
     }
   }
 }
