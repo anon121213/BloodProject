@@ -15,6 +15,7 @@ namespace _Scripts.Gameplay.Features.Enemies.Data
     [field: SerializeField] public float DistanceToAttackPlayer { get; private set; }
     [field: SerializeField] public float AttackRadius { get; private set; }
     [field: SerializeField] public float AttackDelay { get; private set; }
+    [field: SerializeField, Range(0, 5)] public int MaxAttackCombo { get; private set; }
     [field: SerializeField] public List<EffectSetup> AttackEffects { get; private set; }
     [field: SerializeField] public LayerMask TargetsLayerMask { get; private set; }
   }

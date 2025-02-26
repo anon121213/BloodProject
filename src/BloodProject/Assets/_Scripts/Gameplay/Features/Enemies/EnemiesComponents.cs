@@ -9,6 +9,7 @@ namespace _Scripts.Gameplay.Features.Enemies
   [Game] public class Enemy : IComponent { }
   [Game] public class BehaviourTreeComponent : IComponent { }
   [Game] public class TargetAvailable : IComponent { }
+  [Game] public class Patrol : IComponent { }
   [Game] public class AttackCombo : IComponent { public int Value; }
   [Game] public class MaxAttackCombo : IComponent { public int Value; }
   [Game] public class AttackRadiusComponent : IComponent { public float Value; }

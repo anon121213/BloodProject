@@ -8,6 +8,8 @@ namespace _Scripts.Gameplay.Features.Enemies
     public EnemiesFeature(ISystemFactory systemFactory)
     {
       Add(systemFactory.Create<BehaviourTreeSystem>());
+      Add(systemFactory.Create<EnemyWalkAnimationSystem>());
+      Add(systemFactory.Create<EnemyAttackAnimationSystem>());
     }
   }
 }

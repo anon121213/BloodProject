@@ -34,6 +34,8 @@ namespace _Scripts.Gameplay.Features.Enemies.Factory
         .AddAttackRadius(config.AttackRadius)
         .AddEffectSetups(config.AttackEffects)
         .AddAttackDelay(config.AttackDelay)
+        .AddMaxAttackCombo(config.MaxAttackCombo)
+        .AddAttackCombo(0)
         .AddCurrentAttackDelay(0)
         .With(x => x.isEnemy = true)
         .With(x => x.isAttacker = true)

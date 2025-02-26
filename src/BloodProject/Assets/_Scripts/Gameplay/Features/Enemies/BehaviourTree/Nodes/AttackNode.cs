@@ -1,7 +1,6 @@
 ﻿using _Scripts.Common.Physics;
 using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Base;
 using Gameplay.Features.Effects.Factory;
-using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
 {
@@ -34,6 +33,11 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
       foreach (var target in results)
       foreach (var effect in entity.EffectSetups)
       {
+        if (entity.AttackCombo < entity.MaxAttackCombo)
+          entity.ReplaceAttackCombo(entity.AttackCombo + 1);
+        else
+          entity.ReplaceAttackCombo(0);
+        
         entity.isAttack = true;
         _effectsFactory.CreateEffect(effect, entity.Id, target.Id);
       }

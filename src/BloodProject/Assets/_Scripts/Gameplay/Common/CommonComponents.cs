@@ -1,5 +1,6 @@
 ﻿using Entitas;
 using Entitas.CodeGeneration.Attributes;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,5 +21,6 @@ namespace _Scripts.Gameplay.Common
     [Game] public class RigidbodyComponent : IComponent { public Rigidbody Value; }
     [Game] public class CharacterControllerComponent : IComponent { public CharacterController Value; }
     [Game] public class NavMeshAgentComponent : IComponent { public NavMeshAgent Value; }
+    [Game] public class AnimatorControllerComponent : IComponent { public Animator Value; }
   }
 }

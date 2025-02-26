@@ -20,10 +20,12 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
       {
         entity.isTargetAvailable = true;
         entity.ReplaceTargetId(results[0].Id);
+        Debug.Log("patrolEnd");
+        entity.isPatrol = false;
         return NodeStatus.Success;
       }
-
-      Debug.Log("runing");
+      Debug.Log("patrolStart");
+      entity.isPatrol = true;
       return NodeStatus.Running;
     }
   }
