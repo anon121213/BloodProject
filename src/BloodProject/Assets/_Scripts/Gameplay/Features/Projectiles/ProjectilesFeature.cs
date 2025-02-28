@@ -7,8 +7,9 @@ namespace _Scripts.Gameplay.Features.Projectiles
   {
     public ProjectilesFeature(ISystemFactory systemFactory)
     {
-      Add(systemFactory.Create<SimpleBulletProjectileSystem>());
       Add(systemFactory.Create<ApplyProjectilesEffectOnTargetsSystem>());
+      Add(systemFactory.Create<ProjectilesCollidesBloodHandler>());
+      Add(systemFactory.Create<SimpleBulletProjectileSystem>());
     }
   }
 }

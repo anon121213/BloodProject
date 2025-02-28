@@ -2,7 +2,7 @@
 using Knife.RealBlood;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Features.ProjectilesCollides.Systems
+namespace _Scripts.Gameplay.Features.Projectiles.Systems
 {
   public class ProjectilesCollidesBloodHandler : IExecuteSystem
   {

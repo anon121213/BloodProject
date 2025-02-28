@@ -30,12 +30,12 @@ namespace _Scripts.Infrastructure.StateMachine.States
     {
       _updateFeature.Execute();
       _updateFeature.Cleanup();
+      _fixedUpdateFeature.Cleanup();
     }
 
     protected override void OnFixedUpdate()
     {
       _fixedUpdateFeature.Execute();
-      _fixedUpdateFeature.Cleanup();
     }
 
     protected override void ExitOnEndOfFrame()

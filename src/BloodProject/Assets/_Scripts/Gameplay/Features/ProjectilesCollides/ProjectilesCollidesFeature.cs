@@ -7,9 +7,8 @@ namespace _Scripts.Gameplay.Features.ProjectilesCollides
   {
     public ProjectilesCollidesFeature(ISystemFactory systemFactory)
     {
-      Add(systemFactory.Create<ProjectilesCollisionSystem>());
-      Add(systemFactory.Create<ProjectilesCollidesBloodHandler>());
       Add(systemFactory.Create<CollideCleanupSystem>());
+      Add(systemFactory.Create<ProjectilesCollisionSystem>());
     }
   }
 }

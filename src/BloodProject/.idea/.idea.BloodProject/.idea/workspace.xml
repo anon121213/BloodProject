@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Editor/Volume/VolumeEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Tests/Editor/NativePassCompilerRenderGraphTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Tests/Editor/Volumes/VolumeComponentTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Settings/FrameSettingsDefaults.cs" root0="SKIP_HIGHLIGHTING" />
@@ -18,6 +19,7 @@
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Samples~/WaterSamples/Scripts/SpawnRandomBeachBall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.visualeffectgraph/Samples~/VFXOutputEventHandlers/Editor/VFXOutputEventRigidBodyEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.visualeffectgraph/Samples~/VFXOutputEventHandlers/Runtime/VFXOutputEventRigidBody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.addressables@2.2.2/Editor/Build/Layout/BuildLayoutEnums.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.addressables@2.2.2/Editor/GUI/AddressableAssetGroupTemplateInspector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.addressables@2.2.2/Tests/Editor/BinaryStorageBufferTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.profiling.core@1.0.2/Runtime/ProfilerMarker1Param.cs" root0="SKIP_HIGHLIGHTING" />
@@ -128,7 +130,9 @@
       <workItem from="1740045373240" duration="21623000" />
       <workItem from="1740155107081" duration="8881000" />
       <workItem from="1740345749655" duration="15972000" />
-      <workItem from="1740512745674" duration="13653000" />
+      <workItem from="1740512745674" duration="14690000" />
+      <workItem from="1740582348622" duration="764000" />
+      <workItem from="1740701014781" duration="1898000" />
     </task>
     <servers />
   </component>

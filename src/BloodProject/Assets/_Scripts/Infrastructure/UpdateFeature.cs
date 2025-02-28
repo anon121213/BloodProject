@@ -22,7 +22,6 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<PlayerFeature>());
       Add(systemFactory.Create<MovementFeature>());
       Add(systemFactory.Create<CameraFeature>());
-      Add(systemFactory.Create<ProjectilesFeature>());
       Add(systemFactory.Create<WeaponFeature>());
       Add(systemFactory.Create<DashFeature>());
       Add(systemFactory.Create<EnemiesFeature>());
