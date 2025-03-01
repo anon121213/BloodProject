@@ -9,121 +9,127 @@
 public static class GameComponentsLookup {
 
     public const int AddedView = 0;
-    public const int Dead = 1;
-    public const int Destructed = 2;
-    public const int Owner = 3;
-    public const int Processed = 4;
-    public const int Radius = 5;
-    public const int SelfDestructTimer = 6;
-    public const int View = 7;
-    public const int ViewPath = 8;
-    public const int ViewPrefab = 9;
-    public const int ViewReference = 10;
-    public const int ViewRoot = 11;
-    public const int Active = 12;
-    public const int AnimatorController = 13;
-    public const int CharacterController = 14;
-    public const int Damage = 15;
-    public const int EntityLink = 16;
-    public const int Id = 17;
-    public const int NavMeshAgent = 18;
-    public const int Rigidbody = 19;
-    public const int Transform = 20;
-    public const int WorldPosition = 21;
-    public const int WorldRotation = 22;
-    public const int Camera = 23;
-    public const int CameraHolder = 24;
-    public const int CurrentDashCooldown = 25;
-    public const int CurrentDashDuration = 26;
-    public const int DashAvailable = 27;
-    public const int DashCooldown = 28;
-    public const int DashDistance = 29;
-    public const int DashDuration = 30;
-    public const int Dashing = 31;
-    public const int OnDashCooldown = 32;
-    public const int OnEndDash = 33;
-    public const int OnStartDash = 34;
-    public const int AttackCombo = 35;
-    public const int AttackEffects = 36;
-    public const int AttackRadius = 37;
-    public const int BehaviourTree = 38;
-    public const int CheckPlayerRadius = 39;
-    public const int CurrentNode = 40;
-    public const int DistanceToAttackPlayer = 41;
-    public const int DistanceToPatrol = 42;
-    public const int Enemy = 43;
-    public const int MaxAttackCombo = 44;
-    public const int Patrol = 45;
-    public const int RootNode = 46;
-    public const int RotateToPlayerSpeed = 47;
-    public const int TargetAvailable = 48;
-    public const int TargetsLayerMask = 49;
-    public const int CheckGround = 50;
-    public const int CheckGroundRadius = 51;
-    public const int Gravity = 52;
-    public const int GravityVelocity = 53;
-    public const int Grounded = 54;
-    public const int IgnoreGroundLayers = 55;
-    public const int Direction = 56;
-    public const int DiscreteRbMovement = 57;
-    public const int JumpAvailable = 58;
-    public const int JumpForce = 59;
-    public const int Jumping = 60;
-    public const int LastWorldPosition = 61;
-    public const int MoveByNavMesh = 62;
-    public const int MoveByPhysic = 63;
-    public const int MovementAvailable = 64;
-    public const int Moving = 65;
-    public const int NavMashTargetPosition = 66;
-    public const int Rotate = 67;
-    public const int RotationAlignedAlongDirection = 68;
-    public const int Speed = 69;
-    public const int Teleport = 70;
-    public const int TurnedAlongDirection = 71;
-    public const int LeftHand = 72;
-    public const int Model = 73;
-    public const int Player = 74;
-    public const int RigBuilder = 75;
-    public const int RightHand = 76;
-    public const int EffectSetups = 77;
-    public const int Projectile = 78;
-    public const int ProjectileData = 79;
-    public const int SimpleBulletProjectile = 80;
-    public const int Collide = 81;
-    public const int CollideEntity = 82;
-    public const int CollideEntityCollider = 83;
-    public const int IgnoreLayers = 84;
-    public const int LayerMask = 85;
-    public const int ReadyToCollectTargets = 86;
-    public const int Attack = 87;
-    public const int AttackAvailable = 88;
-    public const int AttackDelay = 89;
-    public const int Attacker = 90;
-    public const int AttackPoint = 91;
-    public const int CurrentAttackDelay = 92;
-    public const int CurrentWeapon = 93;
-    public const int LeftHandHolder = 94;
-    public const int OnAttackDelay = 95;
-    public const int RightHandHolder = 96;
-    public const int Weapon = 97;
-    public const int WeaponHolder = 98;
-    public const int CurrentHealth = 99;
-    public const int DamageEffect = 100;
-    public const int Effect = 101;
-    public const int EffectValue = 102;
-    public const int MaxHealth = 103;
-    public const int ProducerId = 104;
-    public const int PushEffect = 105;
-    public const int TargetId = 106;
-    public const int BaseStats = 107;
-    public const int StatChange = 108;
-    public const int StatModifiers = 109;
+    public const int Destructed = 1;
+    public const int Owner = 2;
+    public const int Processed = 3;
+    public const int Radius = 4;
+    public const int SelfDestructTimer = 5;
+    public const int View = 6;
+    public const int ViewPath = 7;
+    public const int ViewPrefab = 8;
+    public const int ViewReference = 9;
+    public const int ViewRoot = 10;
+    public const int Active = 11;
+    public const int AnimatorController = 12;
+    public const int CharacterController = 13;
+    public const int Damage = 14;
+    public const int EntityLink = 15;
+    public const int Id = 16;
+    public const int NavMeshAgent = 17;
+    public const int Rigidbody = 18;
+    public const int Transform = 19;
+    public const int WorldPosition = 20;
+    public const int WorldRotation = 21;
+    public const int BloodData = 22;
+    public const int BloodFlowPrefab = 23;
+    public const int BloodHitPrefab = 24;
+    public const int BloodHittableEntity = 25;
+    public const int HitBoxes = 26;
+    public const int Camera = 27;
+    public const int CameraHolder = 28;
+    public const int CurrentDashCooldown = 29;
+    public const int CurrentDashDuration = 30;
+    public const int DashAvailable = 31;
+    public const int DashCooldown = 32;
+    public const int DashDistance = 33;
+    public const int DashDuration = 34;
+    public const int Dashing = 35;
+    public const int OnDashCooldown = 36;
+    public const int OnEndDash = 37;
+    public const int OnStartDash = 38;
+    public const int CurrentHealth = 39;
+    public const int Dead = 40;
+    public const int DeathProcessing = 41;
+    public const int DestructDelay = 42;
+    public const int MaxHealth = 43;
+    public const int DamageEffect = 44;
+    public const int Effect = 45;
+    public const int EffectValue = 46;
+    public const int ProducerId = 47;
+    public const int PushEffect = 48;
+    public const int TargetId = 49;
+    public const int AttackCombo = 50;
+    public const int AttackEffects = 51;
+    public const int AttackRadius = 52;
+    public const int BehaviourTree = 53;
+    public const int CheckPlayerRadius = 54;
+    public const int CurrentNode = 55;
+    public const int DistanceToAttackPlayer = 56;
+    public const int DistanceToPatrol = 57;
+    public const int Enemy = 58;
+    public const int MaxAttackCombo = 59;
+    public const int Patrol = 60;
+    public const int RootNode = 61;
+    public const int RotateToPlayerSpeed = 62;
+    public const int TargetAvailable = 63;
+    public const int TargetsLayerMask = 64;
+    public const int CheckGround = 65;
+    public const int CheckGroundRadius = 66;
+    public const int Gravity = 67;
+    public const int GravityVelocity = 68;
+    public const int Grounded = 69;
+    public const int IgnoreGroundLayers = 70;
+    public const int Direction = 71;
+    public const int DiscreteRbMovement = 72;
+    public const int JumpAvailable = 73;
+    public const int JumpForce = 74;
+    public const int Jumping = 75;
+    public const int LastWorldPosition = 76;
+    public const int MoveByNavMesh = 77;
+    public const int MoveByPhysic = 78;
+    public const int MovementAvailable = 79;
+    public const int Moving = 80;
+    public const int NavMashTargetPosition = 81;
+    public const int Rotate = 82;
+    public const int RotationAlignedAlongDirection = 83;
+    public const int Speed = 84;
+    public const int Teleport = 85;
+    public const int TurnedAlongDirection = 86;
+    public const int LeftHand = 87;
+    public const int Model = 88;
+    public const int Player = 89;
+    public const int RigBuilder = 90;
+    public const int RightHand = 91;
+    public const int EffectSetups = 92;
+    public const int Projectile = 93;
+    public const int ProjectileData = 94;
+    public const int SimpleBulletProjectile = 95;
+    public const int Collide = 96;
+    public const int CollideEntity = 97;
+    public const int CollideEntityCollider = 98;
+    public const int IgnoreLayers = 99;
+    public const int LayerMask = 100;
+    public const int ReadyToCollectTargets = 101;
+    public const int Attack = 102;
+    public const int AttackAvailable = 103;
+    public const int AttackDelay = 104;
+    public const int Attacker = 105;
+    public const int AttackPoint = 106;
+    public const int CurrentAttackDelay = 107;
+    public const int CurrentWeapon = 108;
+    public const int LeftHandHolder = 109;
+    public const int OnAttackDelay = 110;
+    public const int RightHandHolder = 111;
+    public const int Weapon = 112;
+    public const int WeaponHolder = 113;
+    public const int BaseStats = 114;
+    public const int StatChange = 115;
+    public const int StatModifiers = 116;
 
-    public const int TotalComponents = 110;
+    public const int TotalComponents = 117;
 
     public static readonly string[] componentNames = {
         "AddedView",
-        "Dead",
         "Destructed",
         "Owner",
         "Processed",
@@ -145,6 +151,11 @@ public static class GameComponentsLookup {
         "Transform",
         "WorldPosition",
         "WorldRotation",
+        "BloodData",
+        "BloodFlowPrefab",
+        "BloodHitPrefab",
+        "BloodHittableEntity",
+        "HitBoxes",
         "Camera",
         "CameraHolder",
         "CurrentDashCooldown",
@@ -157,6 +168,17 @@ public static class GameComponentsLookup {
         "OnDashCooldown",
         "OnEndDash",
         "OnStartDash",
+        "CurrentHealth",
+        "Dead",
+        "DeathProcessing",
+        "DestructDelay",
+        "MaxHealth",
+        "DamageEffect",
+        "Effect",
+        "EffectValue",
+        "ProducerId",
+        "PushEffect",
+        "TargetId",
         "AttackCombo",
         "AttackEffects",
         "AttackRadius",
@@ -221,14 +243,6 @@ public static class GameComponentsLookup {
         "RightHandHolder",
         "Weapon",
         "WeaponHolder",
-        "CurrentHealth",
-        "DamageEffect",
-        "Effect",
-        "EffectValue",
-        "MaxHealth",
-        "ProducerId",
-        "PushEffect",
-        "TargetId",
         "BaseStats",
         "StatChange",
         "StatModifiers"
@@ -236,7 +250,6 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(_Scripts.Common.AddedView),
-        typeof(_Scripts.Common.Dead),
         typeof(_Scripts.Common.Destructed),
         typeof(_Scripts.Common.Owner),
         typeof(_Scripts.Common.Processed),
@@ -258,6 +271,11 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Common.CommonComponents.TransformComponent),
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldPosition),
         typeof(_Scripts.Gameplay.Common.CommonComponents.WorldRotation),
+        typeof(_Scripts.Gameplay.Features.Blood.BloodDataComponent),
+        typeof(_Scripts.Gameplay.Features.Blood.BloodFlowPrefab),
+        typeof(_Scripts.Gameplay.Features.Blood.BloodHitPrefab),
+        typeof(_Scripts.Gameplay.Features.Blood.BloodHittableEntity),
+        typeof(_Scripts.Gameplay.Features.Blood.HitBoxes),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraComponent),
         typeof(_Scripts.Gameplay.Features.Camera.CameraComponents.CameraHolder),
         typeof(_Scripts.Gameplay.Features.Dash.CurrentDashCooldown),
@@ -270,6 +288,17 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Dash.OnDashCooldown),
         typeof(_Scripts.Gameplay.Features.Dash.OnEndDash),
         typeof(_Scripts.Gameplay.Features.Dash.OnStartDash),
+        typeof(_Scripts.Gameplay.Features.Death.CurrentHealth),
+        typeof(_Scripts.Gameplay.Features.Death.Dead),
+        typeof(_Scripts.Gameplay.Features.Death.DeathProcessing),
+        typeof(_Scripts.Gameplay.Features.Death.DestructDelay),
+        typeof(_Scripts.Gameplay.Features.Death.MaxHealth),
+        typeof(_Scripts.Gameplay.Features.Effects.DamageEffect),
+        typeof(_Scripts.Gameplay.Features.Effects.Effect),
+        typeof(_Scripts.Gameplay.Features.Effects.EffectValue),
+        typeof(_Scripts.Gameplay.Features.Effects.ProducerId),
+        typeof(_Scripts.Gameplay.Features.Effects.PushEffect),
+        typeof(_Scripts.Gameplay.Features.Effects.TargetId),
         typeof(_Scripts.Gameplay.Features.Enemies.AttackCombo),
         typeof(_Scripts.Gameplay.Features.Enemies.AttackEffects),
         typeof(_Scripts.Gameplay.Features.Enemies.AttackRadiusComponent),
@@ -334,14 +363,6 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RightHandHolder),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Weapon),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.WeaponHolder),
-        typeof(Gameplay.Features.Effects.CurrentHealth),
-        typeof(Gameplay.Features.Effects.DamageEffect),
-        typeof(Gameplay.Features.Effects.Effect),
-        typeof(Gameplay.Features.Effects.EffectValue),
-        typeof(Gameplay.Features.Effects.MaxHealth),
-        typeof(Gameplay.Features.Effects.ProducerId),
-        typeof(Gameplay.Features.Effects.PushEffect),
-        typeof(Gameplay.Features.Effects.TargetId),
         typeof(Gameplay.Features.EntitiesStats.BaseStats),
         typeof(Gameplay.Features.EntitiesStats.StatChange),
         typeof(Gameplay.Features.EntitiesStats.StatModifiers)

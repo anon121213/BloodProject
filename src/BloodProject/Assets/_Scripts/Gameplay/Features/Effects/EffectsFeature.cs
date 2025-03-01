@@ -1,4 +1,5 @@
-﻿using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
+﻿using _Scripts.Gameplay.Features.Effects.Systems;
+using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using Gameplay.Features.Effects.Systems;
 
 namespace _Scripts.Gameplay.Features.Effects

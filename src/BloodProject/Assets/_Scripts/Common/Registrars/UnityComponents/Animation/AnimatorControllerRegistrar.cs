@@ -1,5 +1,4 @@
 ﻿using _Scripts.Infrastructure.View.Registrars;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace _Scripts.Common.Registrars.UnityComponents.Animation
@@ -15,6 +14,6 @@ namespace _Scripts.Common.Registrars.UnityComponents.Animation
     }
 
     public override void UnregisterComponents() => 
-      Entity.AddAnimatorController(_animator);
+      Entity.RemoveAnimatorController();
   }
 }

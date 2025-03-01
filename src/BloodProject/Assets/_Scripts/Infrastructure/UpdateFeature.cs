@@ -1,12 +1,12 @@
 ﻿using _Scripts.Common.Destruct;
 using _Scripts.Gameplay.Features.Camera;
 using _Scripts.Gameplay.Features.Dash;
+using _Scripts.Gameplay.Features.Death;
 using _Scripts.Gameplay.Features.Effects;
 using _Scripts.Gameplay.Features.Enemies;
 using _Scripts.Gameplay.Features.Input;
 using _Scripts.Gameplay.Features.Movement;
 using _Scripts.Gameplay.Features.Player;
-using _Scripts.Gameplay.Features.Projectiles;
 using _Scripts.Gameplay.Features.Weapon;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.View;
@@ -26,6 +26,7 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<DashFeature>());
       Add(systemFactory.Create<EnemiesFeature>());
       Add(systemFactory.Create<EffectsFeature>());
+      Add(systemFactory.Create<HealthFeature>());
       
       Add(systemFactory.Create<ProcessDestructedFeature>());
     }

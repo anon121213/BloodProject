@@ -1,4 +1,5 @@
 ﻿using System;
+using _Scripts.Gameplay.Features.Blood.Data;
 using UnityEngine;
 
 namespace Knife.RealBlood

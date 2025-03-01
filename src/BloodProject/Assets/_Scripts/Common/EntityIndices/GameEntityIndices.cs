@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Gameplay.Features.Effects;
 using Entitas;
 using Gameplay.Features.Effects;
 using Gameplay.Features.EntitiesStats;

@@ -9,7 +9,9 @@ namespace _Scripts.Gameplay.Features.Enemies
     {
       Add(systemFactory.Create<BehaviourTreeSystem>());
       Add(systemFactory.Create<EnemyWalkAnimationSystem>());
+      Add(systemFactory.Create<EnemyPatrolAnimationSystem>());
       Add(systemFactory.Create<EnemyAttackAnimationSystem>());
+      Add(systemFactory.Create<EnemySimpleDeathProcessingSystem>());
     }
   }
 }

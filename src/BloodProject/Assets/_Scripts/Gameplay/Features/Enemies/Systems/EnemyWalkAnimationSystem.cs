@@ -18,13 +18,8 @@ namespace _Scripts.Gameplay.Features.Enemies.Systems
 
     public void Execute()
     {
-      foreach (var enemy in _enemies)
-      {
-        if (enemy.isPatrol)
-          enemy.AnimatorController.SetBool(EnemyAnimatorParameters.IsRun, false);
-        else if (enemy.isMoving) 
-          enemy.AnimatorController.SetBool(EnemyAnimatorParameters.IsRun, true);
-      }
+      foreach (var enemy in _enemies) 
+        enemy.AnimatorController.SetBool(EnemyAnimatorParameters.IsRun, enemy.isMoving);
     }
   }
 }

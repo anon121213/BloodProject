@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Gameplay.Features.Effects.CurrentHealth currentHealth { get { return (Gameplay.Features.Effects.CurrentHealth)GetComponent(GameComponentsLookup.CurrentHealth); } }
+    public _Scripts.Gameplay.Features.Death.CurrentHealth currentHealth { get { return (_Scripts.Gameplay.Features.Death.CurrentHealth)GetComponent(GameComponentsLookup.CurrentHealth); } }
     public float CurrentHealth { get { return currentHealth.Value; } }
     public bool hasCurrentHealth { get { return HasComponent(GameComponentsLookup.CurrentHealth); } }
 
     public GameEntity AddCurrentHealth(float newValue) {
         var index = GameComponentsLookup.CurrentHealth;
-        var component = (Gameplay.Features.Effects.CurrentHealth)CreateComponent(index, typeof(Gameplay.Features.Effects.CurrentHealth));
+        var component = (_Scripts.Gameplay.Features.Death.CurrentHealth)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Death.CurrentHealth));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceCurrentHealth(float newValue) {
         var index = GameComponentsLookup.CurrentHealth;
-        var component = (Gameplay.Features.Effects.CurrentHealth)CreateComponent(index, typeof(Gameplay.Features.Effects.CurrentHealth));
+        var component = (_Scripts.Gameplay.Features.Death.CurrentHealth)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Death.CurrentHealth));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

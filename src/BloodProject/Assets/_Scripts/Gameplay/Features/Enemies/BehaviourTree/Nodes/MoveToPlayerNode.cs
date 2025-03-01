@@ -14,7 +14,7 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
       GameEntity target = entity.Target();
       float distance = Vector3.Distance(entity.WorldPosition, target.WorldPosition);
 
-      if (distance > entity.DistanceToAttackPlayer && distance < entity.DistanceToPatrol)
+      if (distance >= entity.DistanceToAttackPlayer && distance <= entity.DistanceToPatrol)
       {
         Debug.Log("run");
         entity.ReplaceNavMashTargetPosition(target.WorldPosition);
@@ -22,6 +22,7 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
         return NodeStatus.Running;
       }
 
+      Debug.Log("Attack");
       entity.isTargetAvailable = false;
       entity.isMoving = false;
       return distance > entity.DistanceToPatrol ? NodeStatus.Failure : NodeStatus.Success;

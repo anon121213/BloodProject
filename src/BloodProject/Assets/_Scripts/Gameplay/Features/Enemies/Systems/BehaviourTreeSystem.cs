@@ -4,11 +4,11 @@ namespace _Scripts.Gameplay.Features.Enemies.Systems
 {
   public class BehaviourTreeSystem : IExecuteSystem
   {
-    private readonly GameEntity[] _enemies;
+    private readonly IGroup<GameEntity> _enemies;
 
     public BehaviourTreeSystem(GameContext gameContext)
     {
-      _enemies = gameContext.GetEntities(GameMatcher
+      _enemies = gameContext.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Enemy,
           GameMatcher.BehaviourTree,

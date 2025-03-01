@@ -18,13 +18,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  <Speed>k__BackingField: 5
+  <Speed>k__BackingField: 6.5
   <RotateToPlayerSpeed>k__BackingField: 7
   <CheckPlayerRadius>k__BackingField: 7
   <DistanceToPatrol>k__BackingField: 25
   <DistanceToAttackPlayer>k__BackingField: 3.3
   <AttackRadius>k__BackingField: 2
   <AttackDelay>k__BackingField: 2
+  <DeathDestructDelay>k__BackingField: 3
+  <Heath>k__BackingField: 100
   <MaxAttackCombo>k__BackingField: 5
   <AttackEffects>k__BackingField:
   - EffectTypeId: 1

@@ -58,8 +58,8 @@ namespace _Scripts.Gameplay.Features.ProjectilesCollides.Systems
       projectile.Transform.position = collisionPoint;
 
       GameEntity entity = _collisionRegistry.Get<GameEntity>(collider.GetInstanceID());
-
-      if (entity != null)
+      
+      if (entity != null) 
         projectile.ReplaceCollideEntity(entity);
 
       projectile.isCollide = true;

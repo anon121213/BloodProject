@@ -36,7 +36,7 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
         if (entity.AttackCombo < entity.MaxAttackCombo)
           entity.ReplaceAttackCombo(entity.AttackCombo + 1);
         else
-          entity.ReplaceAttackCombo(0);
+          entity.ReplaceAttackCombo(1);
         
         entity.isAttack = true;
         _effectsFactory.CreateEffect(effect, entity.Id, target.Id);

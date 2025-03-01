@@ -7,7 +7,6 @@ namespace _Scripts.Common
 {
   [Game] public class Destructed : IComponent { }
   
-  [Game] public class Dead : IComponent { }
   [Game] public class Processed : IComponent { }
   
   [Game] public class View : IComponent { public IEntityView Value; }

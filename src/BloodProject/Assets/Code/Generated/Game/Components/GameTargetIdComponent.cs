@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Gameplay.Features.Effects.TargetId targetId { get { return (Gameplay.Features.Effects.TargetId)GetComponent(GameComponentsLookup.TargetId); } }
+    public _Scripts.Gameplay.Features.Effects.TargetId targetId { get { return (_Scripts.Gameplay.Features.Effects.TargetId)GetComponent(GameComponentsLookup.TargetId); } }
     public int TargetId { get { return targetId.Value; } }
     public bool hasTargetId { get { return HasComponent(GameComponentsLookup.TargetId); } }
 
     public GameEntity AddTargetId(int newValue) {
         var index = GameComponentsLookup.TargetId;
-        var component = (Gameplay.Features.Effects.TargetId)CreateComponent(index, typeof(Gameplay.Features.Effects.TargetId));
+        var component = (_Scripts.Gameplay.Features.Effects.TargetId)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Effects.TargetId));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceTargetId(int newValue) {
         var index = GameComponentsLookup.TargetId;
-        var component = (Gameplay.Features.Effects.TargetId)CreateComponent(index, typeof(Gameplay.Features.Effects.TargetId));
+        var component = (_Scripts.Gameplay.Features.Effects.TargetId)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Effects.TargetId));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

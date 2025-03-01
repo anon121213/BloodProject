@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Gameplay.Features.Effects.EffectValue effectValue { get { return (Gameplay.Features.Effects.EffectValue)GetComponent(GameComponentsLookup.EffectValue); } }
+    public _Scripts.Gameplay.Features.Effects.EffectValue effectValue { get { return (_Scripts.Gameplay.Features.Effects.EffectValue)GetComponent(GameComponentsLookup.EffectValue); } }
     public float EffectValue { get { return effectValue.Value; } }
     public bool hasEffectValue { get { return HasComponent(GameComponentsLookup.EffectValue); } }
 
     public GameEntity AddEffectValue(float newValue) {
         var index = GameComponentsLookup.EffectValue;
-        var component = (Gameplay.Features.Effects.EffectValue)CreateComponent(index, typeof(Gameplay.Features.Effects.EffectValue));
+        var component = (_Scripts.Gameplay.Features.Effects.EffectValue)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Effects.EffectValue));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceEffectValue(float newValue) {
         var index = GameComponentsLookup.EffectValue;
-        var component = (Gameplay.Features.Effects.EffectValue)CreateComponent(index, typeof(Gameplay.Features.Effects.EffectValue));
+        var component = (_Scripts.Gameplay.Features.Effects.EffectValue)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Effects.EffectValue));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

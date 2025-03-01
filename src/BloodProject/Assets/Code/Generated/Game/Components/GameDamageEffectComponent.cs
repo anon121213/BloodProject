@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Gameplay.Features.Effects.DamageEffect damageEffectComponent = new Gameplay.Features.Effects.DamageEffect();
+    static readonly _Scripts.Gameplay.Features.Effects.DamageEffect damageEffectComponent = new _Scripts.Gameplay.Features.Effects.DamageEffect();
 
     public bool isDamageEffect {
         get { return HasComponent(GameComponentsLookup.DamageEffect); }

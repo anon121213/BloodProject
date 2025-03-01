@@ -1,5 +1,4 @@
 ﻿using Entitas;
-using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Projectiles.Systems
 {
@@ -20,7 +19,6 @@ namespace _Scripts.Gameplay.Features.Projectiles.Systems
     {
       foreach (var projectile in _projectiles)
       {
-        Debug.Log("destroy");
         projectile.isDestructed = true;
       } 
     }

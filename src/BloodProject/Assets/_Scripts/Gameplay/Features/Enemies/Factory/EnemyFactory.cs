@@ -1,9 +1,12 @@
-﻿using _Scripts.Common.Entity;
+﻿using System.Collections.Generic;
+using System.Linq;
+using _Scripts.Common.Entity;
 using _Scripts.Common.Extensions;
 using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Base;
 using _Scripts.Gameplay.Features.Enemies.Data;
 using _Scripts.Infrastructure.Services.Identifiers;
 using _Scripts.Infrastructure.Services.StaticData.Provider;
+using Gameplay.Features.EntitiesStats;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Enemies.Factory
@@ -19,11 +22,15 @@ namespace _Scripts.Gameplay.Features.Enemies.Factory
     {
       EnemyConfig config = _staticDataProvider.EnemiesConfigs.GetEnemyConfig(type);
 
+      Dictionary<Stats, float> baseStats = new Dictionary<Stats, float>()
+        .With(x => x[Stats.Speed] = config.Speed)
+        .With(x => x[Stats.MaxHeath] = config.Heath);
+      
       return CreateEntity.Empty()
         .AddId(IdentifierService.Next())
         .AddWorldPosition(position)
         .AddDirection(Vector3.zero)
-        .AddSpeed(config.Speed)
+        .AddSpeed(baseStats[Stats.MaxHeath])
         .AddViewReference(config.Prefab)
         .AddRootNode(rootNode)
         .AddCheckPlayerRadius(config.CheckPlayerRadius)
@@ -37,6 +44,10 @@ namespace _Scripts.Gameplay.Features.Enemies.Factory
         .AddMaxAttackCombo(config.MaxAttackCombo)
         .AddAttackCombo(0)
         .AddCurrentAttackDelay(0)
+        .AddDestructDelay(config.DeathDestructDelay)
+        .AddCurrentHealth(baseStats[Stats.MaxHeath])
+        .AddMaxHealth(baseStats[Stats.MaxHeath])
+        .AddBaseStats(baseStats)
         .With(x => x.isEnemy = true)
         .With(x => x.isAttacker = true)
         .With(x => x.isAttackAvailable = true)

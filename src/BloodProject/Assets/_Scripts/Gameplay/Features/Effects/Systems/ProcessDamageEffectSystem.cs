@@ -1,7 +1,8 @@
 ﻿using Entitas;
+using Gameplay.Features.Effects;
 using UnityEngine;
 
-namespace Gameplay.Features.Effects.Systems
+namespace _Scripts.Gameplay.Features.Effects.Systems
 {
   public class ProcessDamageEffectSystem : IExecuteSystem
   {
@@ -25,7 +26,7 @@ namespace Gameplay.Features.Effects.Systems
 
         effect.isProcessed = true;
         
-        if (target.isDead || !target.hasCurrentHealth)
+        if (target.isDead)
           continue;
         
         target.ReplaceCurrentHealth(Mathf.Clamp(target.CurrentHealth - effect.EffectValue, 0, target.MaxHealth));

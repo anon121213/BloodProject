@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Gameplay.Features.Effects.PushEffect pushEffectComponent = new Gameplay.Features.Effects.PushEffect();
+    static readonly _Scripts.Gameplay.Features.Effects.PushEffect pushEffectComponent = new _Scripts.Gameplay.Features.Effects.PushEffect();
 
     public bool isPushEffect {
         get { return HasComponent(GameComponentsLookup.PushEffect); }

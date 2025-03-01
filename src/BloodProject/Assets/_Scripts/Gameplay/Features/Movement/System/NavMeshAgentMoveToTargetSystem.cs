@@ -24,7 +24,6 @@ namespace _Scripts.Gameplay.Features.Movement.System
     {
       foreach (var agent in _agents)
       {
-        Debug.Log("Move");
         agent.NavMeshAgent.SetDestination(agent.NavMashTargetPosition);
         agent.NavMeshAgent.speed = agent.Speed;
       } 

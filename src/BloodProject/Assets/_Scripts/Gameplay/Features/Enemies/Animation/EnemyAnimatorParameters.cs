@@ -4,6 +4,7 @@ namespace _Scripts.Gameplay.Features.Enemies.Animation
 {
   public static class EnemyAnimatorParameters
   {
+    public static readonly int IsPatrol = Animator.StringToHash("IsPatrol");
     public static readonly int IsRun = Animator.StringToHash("IsRun");
     public static readonly int IsWalk = Animator.StringToHash("IsWalk");
     public static readonly int IsWalkBack = Animator.StringToHash("IsWalkBack");

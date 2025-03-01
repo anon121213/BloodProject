@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Gameplay.Features.Effects.MaxHealth maxHealth { get { return (Gameplay.Features.Effects.MaxHealth)GetComponent(GameComponentsLookup.MaxHealth); } }
+    public _Scripts.Gameplay.Features.Death.MaxHealth maxHealth { get { return (_Scripts.Gameplay.Features.Death.MaxHealth)GetComponent(GameComponentsLookup.MaxHealth); } }
     public float MaxHealth { get { return maxHealth.Value; } }
     public bool hasMaxHealth { get { return HasComponent(GameComponentsLookup.MaxHealth); } }
 
     public GameEntity AddMaxHealth(float newValue) {
         var index = GameComponentsLookup.MaxHealth;
-        var component = (Gameplay.Features.Effects.MaxHealth)CreateComponent(index, typeof(Gameplay.Features.Effects.MaxHealth));
+        var component = (_Scripts.Gameplay.Features.Death.MaxHealth)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Death.MaxHealth));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceMaxHealth(float newValue) {
         var index = GameComponentsLookup.MaxHealth;
-        var component = (Gameplay.Features.Effects.MaxHealth)CreateComponent(index, typeof(Gameplay.Features.Effects.MaxHealth));
+        var component = (_Scripts.Gameplay.Features.Death.MaxHealth)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Death.MaxHealth));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

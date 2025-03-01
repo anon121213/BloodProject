@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using _Scripts.Gameplay.Features.Blood.Data;
 
 namespace Knife.RealBlood
 {
