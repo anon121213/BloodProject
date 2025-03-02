@@ -5,7 +5,7 @@ namespace _Scripts.Common.Physics
 {
   public interface IPhysicsService
   {
-    GameEntity Raycast(Vector3 worldPosition, Vector3 direction, int layerMask);
+    GameEntity RayCast(Vector3 worldPosition, Vector3 direction, float maxDistance, out RaycastHit outHit, LayerMask layerMask);
     GameEntity LineCast(Vector3 start, Vector3 end, int layerMask, out Collider collider);
     IEnumerable<GameEntity> RaycastAll(Vector3 worldPosition, Vector3 direction, int layerMask);
     int OverlapSphereNonAlloc(Vector3 worldPosition, float raduis, out GameEntity[] results, int layerMask);

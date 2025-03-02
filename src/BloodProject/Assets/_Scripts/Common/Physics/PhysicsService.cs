@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _Scripts.Common.Collisions;
-using _Scripts.Gameplay.Features.ProjectilesCollides;
 using UnityEngine;
 
 namespace _Scripts.Common.Physics
@@ -36,9 +36,11 @@ namespace _Scripts.Common.Physics
       }
     }
 
-    public GameEntity Raycast(Vector3 worldPosition, Vector3 direction, int layerMask)
+    public GameEntity RayCast(Vector3 worldPosition, Vector3 direction, float maxDistance, out RaycastHit outHit, LayerMask layerMask)
     {
-      int hitCount = UnityEngine.Physics.RaycastNonAlloc(worldPosition, direction, Hits, layerMask);
+      Array.Clear(Hits,0, Hits.Length);
+      int hitCount = UnityEngine.Physics.RaycastNonAlloc(worldPosition, direction, Hits, maxDistance, layerMask);
+      Debug.DrawRay(worldPosition, direction * maxDistance, Color.red, 5f);
 
       for (int i = 0; i < hitCount; i++)
       {
@@ -46,13 +48,18 @@ namespace _Scripts.Common.Physics
         if (hit.collider == null)
           continue;
 
+        outHit = hit;
+        Debug.DrawRay(hit.point, hit.normal * 0.5f, Color.green, 5f); 
+
         GameEntity entity = _collisionRegistry.Get<GameEntity>(hit.collider.GetInstanceID());
+
         if (entity == null)
           continue;
 
         return entity;
       }
 
+      outHit = Hits[0];
       return null;
     }
 

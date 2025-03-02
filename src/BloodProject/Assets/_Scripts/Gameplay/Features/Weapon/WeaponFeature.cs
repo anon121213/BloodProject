@@ -8,6 +8,8 @@ namespace _Scripts.Gameplay.Features.Weapon
     public WeaponFeature(ISystemFactory systemFactory)
     {
       Add(systemFactory.Create<WeaponShootSystem>());
+      Add(systemFactory.Create<ShotgunRayCastWeaponSystem>());
+      Add(systemFactory.Create<RayCastBloodHandler>());
       Add(systemFactory.Create<AttackDelaySystem>());
     }
   }

@@ -117,16 +117,26 @@ public static class GameComponentsLookup {
     public const int AttackPoint = 106;
     public const int CurrentAttackDelay = 107;
     public const int CurrentWeapon = 108;
-    public const int LeftHandHolder = 109;
-    public const int OnAttackDelay = 110;
-    public const int RightHandHolder = 111;
-    public const int Weapon = 112;
-    public const int WeaponHolder = 113;
-    public const int BaseStats = 114;
-    public const int StatChange = 115;
-    public const int StatModifiers = 116;
+    public const int HitNormals = 109;
+    public const int HitPoints = 110;
+    public const int Hittables = 111;
+    public const int LeftHandHolder = 112;
+    public const int OnAttackDelay = 113;
+    public const int PelletCount = 114;
+    public const int RaycastShooter = 115;
+    public const int RayDistance = 116;
+    public const int RightHandHolder = 117;
+    public const int Shotgun = 118;
+    public const int ShotProcessed = 119;
+    public const int SpredAngleX = 120;
+    public const int SpredAngleY = 121;
+    public const int Weapon = 122;
+    public const int WeaponHolder = 123;
+    public const int BaseStats = 124;
+    public const int StatChange = 125;
+    public const int StatModifiers = 126;
 
-    public const int TotalComponents = 117;
+    public const int TotalComponents = 127;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -238,9 +248,19 @@ public static class GameComponentsLookup {
         "AttackPoint",
         "CurrentAttackDelay",
         "CurrentWeapon",
+        "HitNormals",
+        "HitPoints",
+        "Hittables",
         "LeftHandHolder",
         "OnAttackDelay",
+        "PelletCount",
+        "RaycastShooter",
+        "RayDistance",
         "RightHandHolder",
+        "Shotgun",
+        "ShotProcessed",
+        "SpredAngleX",
+        "SpredAngleY",
         "Weapon",
         "WeaponHolder",
         "BaseStats",
@@ -358,9 +378,19 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.AttackPoint),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentAttackDelay),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.HitNormals),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.HitPoints),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Hittables),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.LeftHandHolder),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.OnAttackDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.PelletCount),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RaycastShooter),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RayDistance),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RightHandHolder),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Shotgun),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShotProcessed),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.SpredAngleX),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.SpredAngleY),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Weapon),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.WeaponHolder),
         typeof(Gameplay.Features.EntitiesStats.BaseStats),

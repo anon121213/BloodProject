@@ -23,13 +23,13 @@ namespace _Scripts.Gameplay.Features.Player.Systems
         ));
     }
 
-    public async void Execute()
+    public void Execute()
     {
       foreach (var player in _players)
       {
         if (player.CurrentWeapon == 0)
         {
-          GameEntity weapon = _weaponFactory.CreateWeapon(WeaponTypes.Rifle, player.WeaponHolder);
+          GameEntity weapon = _weaponFactory.CreateWeapon(WeaponTypes.Shotgun, player.WeaponHolder);
           player.ReplaceCurrentWeapon(weapon.Id);
           player.RigBuilder.enabled = false;
         }

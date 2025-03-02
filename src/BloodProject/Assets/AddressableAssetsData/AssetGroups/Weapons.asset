@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Weapons
   m_GUID: 8cadad994af819047999af29decd9e5d
   m_SerializeEntries:
+  - m_GUID: 26dbcdb04aba2604cbd577ff7474951f
+    m_Address: Assets/Prefabs/Weapons/Weapons/Shotgun.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 92cdedd723ae2ee4c9885f83efd899de
     m_Address: Assets/Prefabs/Weapons/machine-gun.prefab
     m_ReadOnly: 0

@@ -30,7 +30,7 @@ namespace _Scripts.Gameplay.Features.Enemies.Factory
         .AddId(IdentifierService.Next())
         .AddWorldPosition(position)
         .AddDirection(Vector3.zero)
-        .AddSpeed(baseStats[Stats.MaxHeath])
+        .AddSpeed(baseStats[Stats.Speed])
         .AddViewReference(config.Prefab)
         .AddRootNode(rootNode)
         .AddCheckPlayerRadius(config.CheckPlayerRadius)

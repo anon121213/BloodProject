@@ -2,6 +2,7 @@
 using _Scripts.Common.Extensions;
 using _Scripts.Gameplay.Features.Weapon.Data;
 using _Scripts.Gameplay.Features.Weapon.Data.Base;
+using _Scripts.Gameplay.Features.Weapon.Data.Shotgun;
 using _Scripts.Infrastructure.Services.Identifiers;
 using _Scripts.Infrastructure.Services.StaticData.Provider;
 using UnityEngine;
@@ -19,6 +20,44 @@ namespace _Scripts.Gameplay.Features.Weapon.Factory
     {
       WeaponConfig config = _staticDataProvider.WeaponConfigs.GetWeaponConfig(type);
 
+      switch (type)
+      {
+        case WeaponTypes.Rifle:
+          return CreateRifle(config, holder);
+        
+        case WeaponTypes.Shotgun:
+          return CreateShotgun(config, holder);
+      }
+
+      return null;
+    }
+
+    private GameEntity CreateShotgun(WeaponConfig config, Transform holder)
+    {
+      ShotgunConfig shotgunConfig = (ShotgunConfig)config;
+      
+      return CreateEntity.Empty()
+        .AddId(IdentifierService.Next())
+        .AddWorldPosition(Vector3.zero)
+        .AddWorldRotation(Quaternion.Euler(Vector3.zero))
+        .AddAttackDelay(config.WeaponSettings.ShootDelay)
+        .AddCurrentAttackDelay(0)
+        .AddViewReference(config.Prefab)
+        .AddViewRoot(holder)
+        .AddPelletCount(shotgunConfig.PelletCount)
+        .AddSpredAngleX(shotgunConfig.SpredAngleX)
+        .AddSpredAngleY(shotgunConfig.SpredAngleY)
+        .AddRayDistance(shotgunConfig.RayDistance)
+        .AddIgnoreLayers(shotgunConfig.IgnoreLayers)
+        .With(x => x.isWeapon = true)
+        .With(x => x.isRaycastShooter = true)
+        .With(x => x.isShotgun = true)
+        .With(x => x.isAttacker = true)
+        .With(x => x.isAttackAvailable = true);
+    }
+
+    private GameEntity CreateRifle(WeaponConfig config, Transform holder)
+    {
       return CreateEntity.Empty()
         .AddId(IdentifierService.Next())
         .AddWorldPosition(Vector3.zero)

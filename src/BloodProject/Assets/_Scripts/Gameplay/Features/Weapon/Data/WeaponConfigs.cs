@@ -16,6 +16,8 @@ namespace _Scripts.Gameplay.Features.Weapon.Data
 
   public enum WeaponTypes
   {
-    Rifle = 0
+    Unknown = 0,
+    Rifle = 1,
+    Shotgun = 2
   }
 }

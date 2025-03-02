@@ -15,7 +15,6 @@ namespace _Scripts.Gameplay.Features.Projectiles.Systems
         .AllOf(
           GameMatcher.Projectile,
           GameMatcher.CollideEntityCollider,
-          GameMatcher.WorldPosition,
           GameMatcher.Direction,
           GameMatcher.LayerMask,
           GameMatcher.Collide

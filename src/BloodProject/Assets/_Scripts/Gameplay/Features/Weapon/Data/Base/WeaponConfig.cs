@@ -4,7 +4,6 @@ using UnityEngine.AddressableAssets;
 
 namespace _Scripts.Gameplay.Features.Weapon.Data.Base
 {
-  [CreateAssetMenu(fileName = "WeaponConfig", menuName = "Data/Weapons/WeaponConfig")]
   public abstract class WeaponConfig : ScriptableObject
   {
     [field: SerializeField] public AssetReferenceGameObject Prefab { get; private set; }

@@ -23,6 +23,7 @@ namespace _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes
       }
 
       Debug.Log("Attack");
+      entity.NavMeshAgent.ResetPath();
       entity.isTargetAvailable = false;
       entity.isMoving = false;
       return distance > entity.DistanceToPatrol ? NodeStatus.Failure : NodeStatus.Success;
