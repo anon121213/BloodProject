@@ -1,6 +1,5 @@
 ﻿using _Scripts.Gameplay.Features.Weapon.Data;
 using _Scripts.Gameplay.Features.Weapon.Factory;
-using Cysharp.Threading.Tasks;
 using Entitas;
 
 namespace _Scripts.Gameplay.Features.Player.Systems
@@ -29,7 +28,7 @@ namespace _Scripts.Gameplay.Features.Player.Systems
       {
         if (player.CurrentWeapon == 0)
         {
-          GameEntity weapon = _weaponFactory.CreateWeapon(WeaponTypes.Shotgun, player.WeaponHolder);
+          GameEntity weapon = _weaponFactory.CreateWeapon(WeaponTypes.Shotgun, player.WeaponHolder, player.Id);
           player.ReplaceCurrentWeapon(weapon.Id);
           player.RigBuilder.enabled = false;
         }

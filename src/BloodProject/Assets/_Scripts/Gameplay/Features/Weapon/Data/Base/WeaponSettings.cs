@@ -10,6 +10,5 @@ namespace _Scripts.Gameplay.Features.Weapon.Data.Base
     [field: SerializeField] public int BulletsInClipCount { get; private set; }
     [field: SerializeField] public float ShootDelay { get; private set; }
     [field: SerializeField] public float ReloadDelay { get; private set; }
-    [field: SerializeField] public int Damage { get; private set; }
   }
 }

@@ -120,23 +120,27 @@ public static class GameComponentsLookup {
     public const int HitNormals = 109;
     public const int HitPoints = 110;
     public const int Hittables = 111;
-    public const int LeftHandHolder = 112;
-    public const int OnAttackDelay = 113;
-    public const int PelletCount = 114;
-    public const int RaycastShooter = 115;
-    public const int RayDistance = 116;
-    public const int RightHandHolder = 117;
-    public const int Shotgun = 118;
-    public const int ShotProcessed = 119;
-    public const int SpredAngleX = 120;
-    public const int SpredAngleY = 121;
-    public const int Weapon = 122;
-    public const int WeaponHolder = 123;
-    public const int BaseStats = 124;
-    public const int StatChange = 125;
-    public const int StatModifiers = 126;
+    public const int HittablesEntities = 112;
+    public const int LeftHandHolder = 113;
+    public const int OnAttackDelay = 114;
+    public const int OwnerID = 115;
+    public const int PelletCount = 116;
+    public const int RaycastShooter = 117;
+    public const int RayDistance = 118;
+    public const int RightHandHolder = 119;
+    public const int ShootRaycastDirecion = 120;
+    public const int ShootRaycastPosition = 121;
+    public const int Shotgun = 122;
+    public const int ShotProcessed = 123;
+    public const int SpredAngleX = 124;
+    public const int SpredAngleY = 125;
+    public const int Weapon = 126;
+    public const int WeaponHolder = 127;
+    public const int BaseStats = 128;
+    public const int StatChange = 129;
+    public const int StatModifiers = 130;
 
-    public const int TotalComponents = 127;
+    public const int TotalComponents = 131;
 
     public static readonly string[] componentNames = {
         "AddedView",
@@ -251,12 +255,16 @@ public static class GameComponentsLookup {
         "HitNormals",
         "HitPoints",
         "Hittables",
+        "HittablesEntities",
         "LeftHandHolder",
         "OnAttackDelay",
+        "OwnerID",
         "PelletCount",
         "RaycastShooter",
         "RayDistance",
         "RightHandHolder",
+        "ShootRaycastDirecion",
+        "ShootRaycastPosition",
         "Shotgun",
         "ShotProcessed",
         "SpredAngleX",
@@ -381,12 +389,16 @@ public static class GameComponentsLookup {
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.HitNormals),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.HitPoints),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Hittables),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.HittablesEntities),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.LeftHandHolder),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.OnAttackDelay),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.OwnerID),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.PelletCount),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RaycastShooter),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RayDistance),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.RightHandHolder),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootRaycastDirecion),
+        typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShootRaycastPosition),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.Shotgun),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.ShotProcessed),
         typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.SpredAngleX),

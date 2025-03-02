@@ -20,8 +20,17 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   <WeaponSettings>k__BackingField:
     <BulletsInClipCount>k__BackingField: 0
-    <ShootDelay>k__BackingField: 0
+    <ShootDelay>k__BackingField: 2
     <ReloadDelay>k__BackingField: 0
-    <Damage>k__BackingField: 0
-  <WeaponType>k__BackingField: 0
+  <WeaponType>k__BackingField: 2
   <BulletConfig>k__BackingField: {fileID: 0}
+  <EffectSetups>k__BackingField:
+  - EffectTypeId: 1
+    Value: 20
+  <PelletCount>k__BackingField: 15
+  <SpredAngleX>k__BackingField: 5
+  <SpredAngleY>k__BackingField: 2
+  <RayDistance>k__BackingField: 15
+  <IgnoreLayers>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 640

@@ -1,4 +1,6 @@
-﻿using _Scripts.Gameplay.Features.Weapon.Data.Base;
+﻿using System.Collections.Generic;
+using _Scripts.Gameplay.Features.Weapon.Data.Base;
+using Gameplay.Features.Effects.Data;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Weapon.Data.Shotgun
@@ -6,6 +8,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Data.Shotgun
   [CreateAssetMenu(fileName = "ShotgunConfig", menuName = "Data/Weapons/ShotgunConfig")]
   public class ShotgunConfig : WeaponConfig
   {
+    [field: SerializeField] public List<EffectSetup> EffectSetups { get; private set; }
     [field: SerializeField] public int PelletCount { get; private set; }
     [field: SerializeField] public float SpredAngleX { get; private set; }
     [field: SerializeField] public float SpredAngleY { get; private set; }

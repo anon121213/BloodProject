@@ -17,7 +17,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
           GameMatcher.HitPoints,
           GameMatcher.HitNormals,
           GameMatcher.Hittables
-        ).NoneOf(GameMatcher.ShotProcessed));
+        ));
     }
 
     public void Execute()

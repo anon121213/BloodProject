@@ -5,6 +5,6 @@ namespace _Scripts.Gameplay.Features.Weapon.Factory
 {
   public interface IWeaponFactory
   {
-    GameEntity CreateWeapon(WeaponTypes type, Transform holder);
+    GameEntity CreateWeapon(WeaponTypes type, Transform holder, int OwnerId);
   }
 }

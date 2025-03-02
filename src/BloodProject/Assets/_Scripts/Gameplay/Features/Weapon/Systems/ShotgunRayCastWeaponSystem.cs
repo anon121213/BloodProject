@@ -1,28 +1,22 @@
 ﻿using System.Collections.Generic;
-using _Scripts.Common.Physics;
 using Entitas;
-using Knife.RealBlood;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Weapon.Systems
 {
   public class ShotgunRayCastWeaponSystem : IExecuteSystem
   {
-    private readonly IPhysicsService _physicsService;
     private readonly IGroup<GameEntity> _weapons;
     private readonly IGroup<InputEntity> _inputs;
     private readonly IGroup<GameEntity> _camera;
     private readonly List<GameEntity> _buffer = new(1);
 
-    private readonly List<IHittable> _hittables = new();
-    private readonly List<Vector3> _normals = new();
-    private readonly List<Vector3> _points = new();
+    private readonly List<Vector3> _rayPositions = new();
+    private readonly List<Vector3> _rayDirections = new();
 
     public ShotgunRayCastWeaponSystem(GameContext gameContext,
-      InputContext inputContext,
-      IPhysicsService physicsService)
+      InputContext inputContext)
     {
-      _physicsService = physicsService;
       _camera = gameContext.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Camera
@@ -34,11 +28,9 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
           GameMatcher.AttackAvailable,
           GameMatcher.RaycastShooter,
           GameMatcher.Shotgun,
-          GameMatcher.IgnoreLayers,
           GameMatcher.PelletCount,
           GameMatcher.SpredAngleX,
-          GameMatcher.SpredAngleY,
-          GameMatcher.RayDistance
+          GameMatcher.SpredAngleY
         ));
 
       _inputs = inputContext.GetGroup(InputMatcher
@@ -56,40 +48,20 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
         if (!weapon.isAttackAvailable || !input.isShooting)
           continue;
 
-        weapon.isAttack = true;
-        Shoot(weapon, camera.Camera, weapon.IgnoreLayers);
-      }
-    }
-
-    private void Shoot(GameEntity weapon, UnityEngine.Camera camera, LayerMask ignoreLayerMask)
-    {
-      _hittables.Clear();
-      _normals.Clear();
-      _points.Clear();
-
-      for (int i = 0; i < weapon.PelletCount; i++)
-      {
-        Vector3 direction = GetSpreadDirection(weapon, camera);
-        _physicsService.RayCast(camera.transform.position, direction, weapon.RayDistance, out RaycastHit hit,
-          ~ignoreLayerMask);
-
-        if (hit.collider == null)
-          continue;
-
-        if (hit.collider.TryGetComponent(out IHittable hittable))
+        _rayDirections.Clear();
+        _rayPositions.Clear();
+        
+        for (int i = 0; i < weapon.PelletCount; i++)
         {
-          _hittables.Add(hittable);
-          _normals.Add(hit.normal);
-          _points.Add(hit.point);
+          _rayPositions.Add(camera.Camera.transform.position);
+          _rayDirections.Add(GetSpreadDirection(weapon, camera.Camera));
         }
+        
+        weapon.ReplaceShootRaycastPosition(_rayPositions);
+        weapon.ReplaceShootRaycastDirecion(_rayDirections);
+        weapon.isAttack = true;
       }
-
-      weapon.ReplaceHittables(_hittables);
-      weapon.ReplaceHitPoints(_points);
-      weapon.ReplaceHitNormals(_normals);
-      weapon.isShotProcessed = false;
     }
-
 
     Vector3 GetSpreadDirection(GameEntity weapon, UnityEngine.Camera camera)
     {

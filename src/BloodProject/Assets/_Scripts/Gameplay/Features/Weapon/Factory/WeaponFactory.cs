@@ -16,17 +16,17 @@ namespace _Scripts.Gameplay.Features.Weapon.Factory
     public WeaponFactory(IStaticDataProvider staticDataProvider) => 
       _staticDataProvider = staticDataProvider;
 
-    public GameEntity CreateWeapon(WeaponTypes type, Transform holder)
+    public GameEntity CreateWeapon(WeaponTypes type, Transform holder, int OwnerId)
     {
       WeaponConfig config = _staticDataProvider.WeaponConfigs.GetWeaponConfig(type);
 
       switch (type)
       {
         case WeaponTypes.Rifle:
-          return CreateRifle(config, holder);
+          return CreateRifle(config, holder).AddOwnerID(OwnerId);
         
         case WeaponTypes.Shotgun:
-          return CreateShotgun(config, holder);
+          return CreateShotgun(config, holder).AddOwnerID(OwnerId);
       }
 
       return null;
@@ -49,6 +49,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Factory
         .AddSpredAngleY(shotgunConfig.SpredAngleY)
         .AddRayDistance(shotgunConfig.RayDistance)
         .AddIgnoreLayers(shotgunConfig.IgnoreLayers)
+        .AddEffectSetups(shotgunConfig.EffectSetups)
         .With(x => x.isWeapon = true)
         .With(x => x.isRaycastShooter = true)
         .With(x => x.isShotgun = true)

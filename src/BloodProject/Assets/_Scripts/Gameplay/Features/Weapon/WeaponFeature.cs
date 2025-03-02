@@ -7,10 +7,15 @@ namespace _Scripts.Gameplay.Features.Weapon
   {
     public WeaponFeature(ISystemFactory systemFactory)
     {
-      Add(systemFactory.Create<WeaponShootSystem>());
+      Add(systemFactory.Create<ProjectileShootSystem>());
       Add(systemFactory.Create<ShotgunRayCastWeaponSystem>());
+      Add(systemFactory.Create<MultipleShootRayCastSystem>());
+      Add(systemFactory.Create<RayCastDamageSystem>());
       Add(systemFactory.Create<RayCastBloodHandler>());
       Add(systemFactory.Create<AttackDelaySystem>());
+      Add(systemFactory.Create<HittableEntitiesCleanupSystem>());
+      Add(systemFactory.Create<RayCastBloodCleanupSystem>());
+      Add(systemFactory.Create<ShootRayCastCleanupSystem>());
     }
   }
 }

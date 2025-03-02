@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Weapon.Systems
 {
-  public class WeaponShootSystem : IExecuteSystem
+  public class ProjectileShootSystem : IExecuteSystem
   {
     private readonly IProjectileFactory _projectileFactory;
     private readonly IGroup<GameEntity> _weapons;
@@ -13,7 +13,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
     private readonly IGroup<GameEntity> _camera;
     private readonly List<GameEntity> _buffer = new(1);
 
-    public WeaponShootSystem(GameContext gameContext,
+    public ProjectileShootSystem(GameContext gameContext,
       InputContext inputContext,
       IProjectileFactory projectileFactory)
     {
