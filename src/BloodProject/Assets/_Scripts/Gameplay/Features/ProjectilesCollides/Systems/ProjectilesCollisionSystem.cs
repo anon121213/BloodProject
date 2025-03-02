@@ -62,6 +62,7 @@ namespace _Scripts.Gameplay.Features.ProjectilesCollides.Systems
       if (entity != null) 
         projectile.ReplaceCollideEntity(entity);
 
+      Debug.Log(collider.name);
       projectile.isCollide = true;
       projectile.ReplaceCollideEntityCollider(collider);
     }

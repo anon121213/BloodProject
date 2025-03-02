@@ -1,4 +1,5 @@
 ﻿using _Scripts.Common.Destruct;
+using _Scripts.Gameplay.Features.Backpack;
 using _Scripts.Gameplay.Features.Camera;
 using _Scripts.Gameplay.Features.Dash;
 using _Scripts.Gameplay.Features.Death;
@@ -27,6 +28,7 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<EnemiesFeature>());
       Add(systemFactory.Create<EffectsFeature>());
       Add(systemFactory.Create<HealthFeature>());
+      Add(systemFactory.Create<BackpackFeature>());
       
       Add(systemFactory.Create<ProcessDestructedFeature>());
     }

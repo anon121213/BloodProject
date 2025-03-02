@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Gameplay.Features.Effects.Data;
 using _Scripts.Gameplay.Features.Weapon.Data.Base;
 using Gameplay.Features.Effects.Data;
 using UnityEngine;

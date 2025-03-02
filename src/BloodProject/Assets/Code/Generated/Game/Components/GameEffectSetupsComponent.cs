@@ -34,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public _Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent effectSetups { get { return (_Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent)GetComponent(GameComponentsLookup.EffectSetups); } }
-    public System.Collections.Generic.List<Gameplay.Features.Effects.Data.EffectSetup> EffectSetups { get { return effectSetups.Value; } }
+    public System.Collections.Generic.List<_Scripts.Gameplay.Features.Effects.Data.EffectSetup> EffectSetups { get { return effectSetups.Value; } }
     public bool hasEffectSetups { get { return HasComponent(GameComponentsLookup.EffectSetups); } }
 
-    public GameEntity AddEffectSetups(System.Collections.Generic.List<Gameplay.Features.Effects.Data.EffectSetup> newValue) {
+    public GameEntity AddEffectSetups(System.Collections.Generic.List<_Scripts.Gameplay.Features.Effects.Data.EffectSetup> newValue) {
         var index = GameComponentsLookup.EffectSetups;
         var component = (_Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent));
         component.Value = newValue;
@@ -45,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceEffectSetups(System.Collections.Generic.List<Gameplay.Features.Effects.Data.EffectSetup> newValue) {
+    public GameEntity ReplaceEffectSetups(System.Collections.Generic.List<_Scripts.Gameplay.Features.Effects.Data.EffectSetup> newValue) {
         var index = GameComponentsLookup.EffectSetups;
         var component = (_Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Projectiles.EffectSetupsComponent));
         component.Value = newValue;

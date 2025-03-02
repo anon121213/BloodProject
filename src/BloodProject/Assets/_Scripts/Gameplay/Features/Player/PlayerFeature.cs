@@ -10,6 +10,7 @@ namespace _Scripts.Gameplay.Features.Player
       Add(systemFactory.Create<SetPlayerInputDirectionSystem>());
       Add(systemFactory.Create<EquipWeaponSystem>());
       Add(systemFactory.Create<SetArmOnHoldersSystem>());
+      Add(systemFactory.Create<WeaponAttackSystem>());
     }
   }
 }

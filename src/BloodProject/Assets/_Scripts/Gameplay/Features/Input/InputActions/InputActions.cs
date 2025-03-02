@@ -153,6 +153,24 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TakeShotgun"",
+                    ""type"": ""Button"",
+                    ""id"": ""2dd04368-3f98-4904-bea7-a04a805bf5da"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TakeRifle"",
+                    ""type"": ""Button"",
+                    ""id"": ""dfcd7aff-5bd8-4e86-8e83-190ff99d196c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -276,6 +294,28 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Dashing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34c2ce91-e918-4ba8-98de-938885fbc73b"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TakeShotgun"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d36edd7b-3238-40c6-a8c0-d559ef7e181e"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TakeRifle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -325,6 +365,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Pc_MouseDelta = m_Pc.FindAction("MouseDelta", throwIfNotFound: true);
         m_Pc_Jumping = m_Pc.FindAction("Jumping", throwIfNotFound: true);
         m_Pc_Dashing = m_Pc.FindAction("Dashing", throwIfNotFound: true);
+        m_Pc_TakeShotgun = m_Pc.FindAction("TakeShotgun", throwIfNotFound: true);
+        m_Pc_TakeRifle = m_Pc.FindAction("TakeRifle", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -416,6 +458,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Pc_MouseDelta;
     private readonly InputAction m_Pc_Jumping;
     private readonly InputAction m_Pc_Dashing;
+    private readonly InputAction m_Pc_TakeShotgun;
+    private readonly InputAction m_Pc_TakeRifle;
     /// <summary>
     /// Provides access to input actions defined in input action map "Pc".
     /// </summary>
@@ -455,6 +499,14 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Pc/Dashing".
         /// </summary>
         public InputAction @Dashing => m_Wrapper.m_Pc_Dashing;
+        /// <summary>
+        /// Provides access to the underlying input action "Pc/TakeShotgun".
+        /// </summary>
+        public InputAction @TakeShotgun => m_Wrapper.m_Pc_TakeShotgun;
+        /// <summary>
+        /// Provides access to the underlying input action "Pc/TakeRifle".
+        /// </summary>
+        public InputAction @TakeRifle => m_Wrapper.m_Pc_TakeRifle;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -502,6 +554,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Dashing.started += instance.OnDashing;
             @Dashing.performed += instance.OnDashing;
             @Dashing.canceled += instance.OnDashing;
+            @TakeShotgun.started += instance.OnTakeShotgun;
+            @TakeShotgun.performed += instance.OnTakeShotgun;
+            @TakeShotgun.canceled += instance.OnTakeShotgun;
+            @TakeRifle.started += instance.OnTakeRifle;
+            @TakeRifle.performed += instance.OnTakeRifle;
+            @TakeRifle.canceled += instance.OnTakeRifle;
         }
 
         /// <summary>
@@ -534,6 +592,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Dashing.started -= instance.OnDashing;
             @Dashing.performed -= instance.OnDashing;
             @Dashing.canceled -= instance.OnDashing;
+            @TakeShotgun.started -= instance.OnTakeShotgun;
+            @TakeShotgun.performed -= instance.OnTakeShotgun;
+            @TakeShotgun.canceled -= instance.OnTakeShotgun;
+            @TakeRifle.started -= instance.OnTakeRifle;
+            @TakeRifle.performed -= instance.OnTakeRifle;
+            @TakeRifle.canceled -= instance.OnTakeRifle;
         }
 
         /// <summary>
@@ -732,6 +796,20 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDashing(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TakeShotgun" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTakeShotgun(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TakeRifle" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTakeRifle(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

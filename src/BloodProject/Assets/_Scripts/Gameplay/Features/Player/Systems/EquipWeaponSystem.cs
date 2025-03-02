@@ -1,37 +1,41 @@
-﻿using _Scripts.Gameplay.Features.Weapon.Data;
-using _Scripts.Gameplay.Features.Weapon.Factory;
+﻿using System.Collections.Generic;
 using Entitas;
 
 namespace _Scripts.Gameplay.Features.Player.Systems
 {
   public class EquipWeaponSystem : IExecuteSystem
   {
-    private readonly IWeaponFactory _weaponFactory;
     private readonly IGroup<GameEntity> _players;
+    private readonly GameContext _gameContext;
+    private readonly List<GameEntity> _buffer = new(10);
 
-    public EquipWeaponSystem(GameContext gameContext, IWeaponFactory weaponFactory)
+    public EquipWeaponSystem(GameContext gameContext)
     {
-      _weaponFactory = weaponFactory;
-
+      _gameContext = gameContext;
       _players = gameContext.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Player,
           GameMatcher.WeaponHolder,
           GameMatcher.RigBuilder,
-          GameMatcher.CurrentWeapon
+          GameMatcher.ExistingWeapons,
+          GameMatcher.EquipWeapon,
+          GameMatcher.CurrentWeapon,
+          GameMatcher.EquipWeaponEntity
         ));
     }
 
     public void Execute()
     {
-      foreach (var player in _players)
+      foreach (var player in _players.GetEntities(_buffer))
       {
-        if (player.CurrentWeapon == 0)
-        {
-          GameEntity weapon = _weaponFactory.CreateWeapon(WeaponTypes.Shotgun, player.WeaponHolder, player.Id);
-          player.ReplaceCurrentWeapon(weapon.Id);
-          player.RigBuilder.enabled = false;
-        }
+        GameEntity currentWeapon = _gameContext.GetEntityWithId(player.CurrentWeapon);
+        currentWeapon?.Transform.gameObject.SetActive(false);
+
+        player.ReplaceCurrentWeapon(player.EquipWeaponEntity);
+        GameEntity newCurrentWeapon = _gameContext.GetEntityWithId(player.CurrentWeapon);
+        newCurrentWeapon?.Transform.gameObject.SetActive(true);
+        player.RigBuilder.enabled = false;
+        player.isEquipWeapon = false;
       }
     }
   }

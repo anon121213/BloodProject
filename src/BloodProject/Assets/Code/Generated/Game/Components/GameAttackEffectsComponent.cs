@@ -34,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public _Scripts.Gameplay.Features.Enemies.AttackEffects attackEffects { get { return (_Scripts.Gameplay.Features.Enemies.AttackEffects)GetComponent(GameComponentsLookup.AttackEffects); } }
-    public System.Collections.Generic.List<Gameplay.Features.Effects.Data.EffectSetup> AttackEffects { get { return attackEffects.Value; } }
+    public System.Collections.Generic.List<_Scripts.Gameplay.Features.Effects.Data.EffectSetup> AttackEffects { get { return attackEffects.Value; } }
     public bool hasAttackEffects { get { return HasComponent(GameComponentsLookup.AttackEffects); } }
 
-    public GameEntity AddAttackEffects(System.Collections.Generic.List<Gameplay.Features.Effects.Data.EffectSetup> newValue) {
+    public GameEntity AddAttackEffects(System.Collections.Generic.List<_Scripts.Gameplay.Features.Effects.Data.EffectSetup> newValue) {
         var index = GameComponentsLookup.AttackEffects;
         var component = (_Scripts.Gameplay.Features.Enemies.AttackEffects)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Enemies.AttackEffects));
         component.Value = newValue;
@@ -45,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceAttackEffects(System.Collections.Generic.List<Gameplay.Features.Effects.Data.EffectSetup> newValue) {
+    public GameEntity ReplaceAttackEffects(System.Collections.Generic.List<_Scripts.Gameplay.Features.Effects.Data.EffectSetup> newValue) {
         var index = GameComponentsLookup.AttackEffects;
         var component = (_Scripts.Gameplay.Features.Enemies.AttackEffects)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Enemies.AttackEffects));
         component.Value = newValue;

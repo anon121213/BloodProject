@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Gameplay.Features.Effects.Data;
 using Gameplay.Features.Effects.Data;
 using UnityEngine;
 using UnityEngine.AddressableAssets;

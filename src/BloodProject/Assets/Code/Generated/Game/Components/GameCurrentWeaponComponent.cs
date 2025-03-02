@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public _Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon currentWeapon { get { return (_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon)GetComponent(GameComponentsLookup.CurrentWeapon); } }
+    public _Scripts.Gameplay.Features.Backpack.CurrentWeapon currentWeapon { get { return (_Scripts.Gameplay.Features.Backpack.CurrentWeapon)GetComponent(GameComponentsLookup.CurrentWeapon); } }
     public int CurrentWeapon { get { return currentWeapon.Value; } }
     public bool hasCurrentWeapon { get { return HasComponent(GameComponentsLookup.CurrentWeapon); } }
 
     public GameEntity AddCurrentWeapon(int newValue) {
         var index = GameComponentsLookup.CurrentWeapon;
-        var component = (_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon));
+        var component = (_Scripts.Gameplay.Features.Backpack.CurrentWeapon)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Backpack.CurrentWeapon));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceCurrentWeapon(int newValue) {
         var index = GameComponentsLookup.CurrentWeapon;
-        var component = (_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Weapon.WeaponComponents.CurrentWeapon));
+        var component = (_Scripts.Gameplay.Features.Backpack.CurrentWeapon)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Backpack.CurrentWeapon));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

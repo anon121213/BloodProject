@@ -9,12 +9,10 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
   {
     private readonly IProjectileFactory _projectileFactory;
     private readonly IGroup<GameEntity> _weapons;
-    private readonly IGroup<InputEntity> _inputs;
     private readonly IGroup<GameEntity> _camera;
     private readonly List<GameEntity> _buffer = new(1);
 
     public ProjectileShootSystem(GameContext gameContext,
-      InputContext inputContext,
       IProjectileFactory projectileFactory)
     {
       _projectileFactory = projectileFactory;
@@ -27,29 +25,17 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
       _weapons = gameContext.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Weapon,
-          GameMatcher.AttackAvailable,
           GameMatcher.ProjectileData,
-          GameMatcher.AttackPoint
-        ));
-
-      _inputs = inputContext.GetGroup(InputMatcher
-        .AllOf(
-          InputMatcher.Input
+          GameMatcher.AttackPoint,
+          GameMatcher.Attack
         ));
     }
 
     public void Execute()
     {
-      foreach (var input in _inputs)
       foreach (var camera in _camera)
       foreach (var weapon in _weapons.GetEntities(_buffer))
-      {
-        if (!weapon.isAttackAvailable || !input.isShooting)
-          continue;
-
-        weapon.isAttack = true;
         Shoot(weapon, camera.Camera);
-      }
     }
 
     private void Shoot(GameEntity weapon, UnityEngine.Camera camera)

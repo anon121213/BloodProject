@@ -1,4 +1,5 @@
 ﻿using System;
+using _Scripts.Gameplay.Features.Weapon.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,6 +18,8 @@ namespace _Scripts.Gameplay.Features.Input.InputServices.PC
     public bool IsDashing { get; private set; }
     public bool IsShooting { get; private set; }
     public bool IsReloading { get; private set; }
+    public bool IsChangeWeapon { get; private set;}
+    public WeaponTypes ChangeWeaponType { get; private set; }
 
     public PCInputService()
     {
@@ -49,10 +52,12 @@ namespace _Scripts.Gameplay.Features.Input.InputServices.PC
       }
 
       RegisterAction(_playerInput.Pc.Movement, _ => IsMoving = true, _ => IsMoving = false);
-      RegisterAction(_playerInput.Pc.Shooting, _ => IsShooting = true, _ => IsShooting = false);
+      RegisterAction(_playerInput.Pc.Shooting, _ => IsShooting = true,  _ => IsShooting = false);
       RegisterAction(_playerInput.Pc.Reload, _ => IsReloading = true, _ => IsReloading = false);
       RegisterAction(_playerInput.Pc.Jumping, _ => IsJumping = true, _ => IsJumping = false);
       RegisterAction(_playerInput.Pc.Dashing, _ => IsDashing = true, _ => IsDashing = false);
+      RegisterAction(_playerInput.Pc.TakeRifle, _ => { IsChangeWeapon = true; ChangeWeaponType = WeaponTypes.Rifle; }, _ => IsChangeWeapon = false);
+      RegisterAction(_playerInput.Pc.TakeShotgun, _ => { IsChangeWeapon = true; ChangeWeaponType = WeaponTypes.Shotgun; }, _ => IsChangeWeapon = false);
     }
 
     public void Dispose()

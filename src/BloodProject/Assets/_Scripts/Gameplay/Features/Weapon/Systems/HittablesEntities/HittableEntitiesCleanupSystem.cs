@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-namespace _Scripts.Gameplay.Features.Weapon.Systems
+namespace _Scripts.Gameplay.Features.Weapon.Systems.HittablesEntities
 {
   public class HittableEntitiesCleanupSystem : ICleanupSystem
   {

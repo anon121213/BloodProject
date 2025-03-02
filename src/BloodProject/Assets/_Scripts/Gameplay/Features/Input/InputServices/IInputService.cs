@@ -1,3 +1,4 @@
+using _Scripts.Gameplay.Features.Weapon.Data;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Input.InputServices
@@ -14,6 +15,9 @@ namespace _Scripts.Gameplay.Features.Input.InputServices
         public bool IsMoving { get; }
         public bool IsJumping { get; }
         public bool IsDashing { get; }
+
+        public bool IsChangeWeapon { get; }
+        public WeaponTypes ChangeWeaponType { get; }
 
         void EnableInput();
         void DisableInput();

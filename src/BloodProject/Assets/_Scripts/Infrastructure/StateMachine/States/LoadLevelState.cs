@@ -3,6 +3,7 @@ using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Base;
 using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Nodes;
 using _Scripts.Gameplay.Features.Enemies.Data;
 using _Scripts.Gameplay.Features.Enemies.Factory;
+using _Scripts.Gameplay.Features.Weapon.Factory;
 using _Scripts.Infrastructure.Constants;
 using _Scripts.Infrastructure.Services.SceneLoader;
 using _Scripts.Infrastructure.Services.StaticData.Provider;

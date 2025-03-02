@@ -32,6 +32,8 @@ namespace _Scripts.Gameplay.Features.Projectiles.Systems
           int results = Physics.RaycastNonAlloc(projectile.Transform.position,
             projectile.Direction, _hit, 3, projectile.LayerMask);
 
+          Debug.DrawRay(projectile.Transform.position, projectile.Direction * 3f, Color.red, 5);
+          
           if (results > 0)
           {
             DamageData data = new DamageData

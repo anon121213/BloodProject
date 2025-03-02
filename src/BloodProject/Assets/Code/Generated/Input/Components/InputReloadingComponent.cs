@@ -33,7 +33,7 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    static readonly Gameplay.Features.Input.Reloading reloadingComponent = new Gameplay.Features.Input.Reloading();
+    static readonly _Scripts.Gameplay.Features.Input.Reloading reloadingComponent = new _Scripts.Gameplay.Features.Input.Reloading();
 
     public bool isReloading {
         get { return HasComponent(InputComponentsLookup.Reloading); }

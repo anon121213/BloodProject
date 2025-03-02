@@ -33,7 +33,7 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    static readonly Gameplay.Features.Input.Dashing dashingComponent = new Gameplay.Features.Input.Dashing();
+    static readonly _Scripts.Gameplay.Features.Input.Dashing dashingComponent = new _Scripts.Gameplay.Features.Input.Dashing();
 
     public bool isDashing {
         get { return HasComponent(InputComponentsLookup.Dashing); }

@@ -13,10 +13,8 @@ namespace _Scripts.Gameplay.Features.Player.Factory
   {
     private readonly IStaticDataProvider _staticDataProvider;
 
-    public PlayerFactory(IStaticDataProvider staticDataProvider)
-    {
+    public PlayerFactory(IStaticDataProvider staticDataProvider) => 
       _staticDataProvider = staticDataProvider;
-    }
 
     public GameEntity CreatePlayer(Vector3 position)
     {
@@ -24,7 +22,7 @@ namespace _Scripts.Gameplay.Features.Player.Factory
           .With(x => x[Stats.Speed] = _staticDataProvider.PlayerSettings.MoveSpeed)
           .With(x => x[Stats.MaxHeath] = _staticDataProvider.PlayerSettings.InitHealth);
       
-      return CreateEntity.Empty()
+      GameEntity player = CreateEntity.Empty()
         .AddId(IdentifierService.Next())
         .AddWorldPosition(position)
         .AddDirection(Vector3.zero)
@@ -53,6 +51,8 @@ namespace _Scripts.Gameplay.Features.Player.Factory
         .With(x => x.isJumpAvailable = true)
         .With(x => x.isDashAvailable = true)
         .With(x => x.isDead = false);
+      
+      return player;
     }
   }
 }

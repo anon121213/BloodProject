@@ -7,15 +7,13 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
   public class ShotgunRayCastWeaponSystem : IExecuteSystem
   {
     private readonly IGroup<GameEntity> _weapons;
-    private readonly IGroup<InputEntity> _inputs;
     private readonly IGroup<GameEntity> _camera;
     private readonly List<GameEntity> _buffer = new(1);
 
     private readonly List<Vector3> _rayPositions = new();
     private readonly List<Vector3> _rayDirections = new();
 
-    public ShotgunRayCastWeaponSystem(GameContext gameContext,
-      InputContext inputContext)
+    public ShotgunRayCastWeaponSystem(GameContext gameContext)
     {
       _camera = gameContext.GetGroup(GameMatcher
         .AllOf(
@@ -25,29 +23,20 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
       _weapons = gameContext.GetGroup(GameMatcher
         .AllOf(
           GameMatcher.Weapon,
-          GameMatcher.AttackAvailable,
           GameMatcher.RaycastShooter,
           GameMatcher.Shotgun,
           GameMatcher.PelletCount,
           GameMatcher.SpredAngleX,
-          GameMatcher.SpredAngleY
-        ));
-
-      _inputs = inputContext.GetGroup(InputMatcher
-        .AllOf(
-          InputMatcher.Input
+          GameMatcher.SpredAngleY,
+          GameMatcher.Attack
         ));
     }
 
     public void Execute()
     {
-      foreach (var input in _inputs)
       foreach (var camera in _camera)
       foreach (var weapon in _weapons.GetEntities(_buffer))
       {
-        if (!weapon.isAttackAvailable || !input.isShooting)
-          continue;
-
         _rayDirections.Clear();
         _rayPositions.Clear();
         

@@ -1,4 +1,5 @@
-﻿using _Scripts.Gameplay.Features.Enemies.Factory;
+﻿using _Scripts.Gameplay.Features.Effects.Factory;
+using _Scripts.Gameplay.Features.Enemies.Factory;
 using _Scripts.Gameplay.Features.Player.Factory;
 using _Scripts.Gameplay.Features.Projectiles.Factory;
 using _Scripts.Gameplay.Features.Weapon.Factory;

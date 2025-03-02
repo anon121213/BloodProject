@@ -33,13 +33,13 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    public Gameplay.Features.Input.MoveInputAxis moveInputAxis { get { return (Gameplay.Features.Input.MoveInputAxis)GetComponent(InputComponentsLookup.MoveInputAxis); } }
+    public _Scripts.Gameplay.Features.Input.MoveInputAxis moveInputAxis { get { return (_Scripts.Gameplay.Features.Input.MoveInputAxis)GetComponent(InputComponentsLookup.MoveInputAxis); } }
     public UnityEngine.Vector3 MoveInputAxis { get { return moveInputAxis.Value; } }
     public bool hasMoveInputAxis { get { return HasComponent(InputComponentsLookup.MoveInputAxis); } }
 
     public InputEntity AddMoveInputAxis(UnityEngine.Vector3 newValue) {
         var index = InputComponentsLookup.MoveInputAxis;
-        var component = (Gameplay.Features.Input.MoveInputAxis)CreateComponent(index, typeof(Gameplay.Features.Input.MoveInputAxis));
+        var component = (_Scripts.Gameplay.Features.Input.MoveInputAxis)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Input.MoveInputAxis));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class InputEntity {
 
     public InputEntity ReplaceMoveInputAxis(UnityEngine.Vector3 newValue) {
         var index = InputComponentsLookup.MoveInputAxis;
-        var component = (Gameplay.Features.Input.MoveInputAxis)CreateComponent(index, typeof(Gameplay.Features.Input.MoveInputAxis));
+        var component = (_Scripts.Gameplay.Features.Input.MoveInputAxis)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Input.MoveInputAxis));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

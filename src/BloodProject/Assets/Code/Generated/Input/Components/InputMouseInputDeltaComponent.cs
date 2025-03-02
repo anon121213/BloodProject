@@ -33,13 +33,13 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    public Gameplay.Features.Input.MouseInputDelta mouseInputDelta { get { return (Gameplay.Features.Input.MouseInputDelta)GetComponent(InputComponentsLookup.MouseInputDelta); } }
+    public _Scripts.Gameplay.Features.Input.MouseInputDelta mouseInputDelta { get { return (_Scripts.Gameplay.Features.Input.MouseInputDelta)GetComponent(InputComponentsLookup.MouseInputDelta); } }
     public UnityEngine.Vector2 MouseInputDelta { get { return mouseInputDelta.Value; } }
     public bool hasMouseInputDelta { get { return HasComponent(InputComponentsLookup.MouseInputDelta); } }
 
     public InputEntity AddMouseInputDelta(UnityEngine.Vector2 newValue) {
         var index = InputComponentsLookup.MouseInputDelta;
-        var component = (Gameplay.Features.Input.MouseInputDelta)CreateComponent(index, typeof(Gameplay.Features.Input.MouseInputDelta));
+        var component = (_Scripts.Gameplay.Features.Input.MouseInputDelta)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Input.MouseInputDelta));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class InputEntity {
 
     public InputEntity ReplaceMouseInputDelta(UnityEngine.Vector2 newValue) {
         var index = InputComponentsLookup.MouseInputDelta;
-        var component = (Gameplay.Features.Input.MouseInputDelta)CreateComponent(index, typeof(Gameplay.Features.Input.MouseInputDelta));
+        var component = (_Scripts.Gameplay.Features.Input.MouseInputDelta)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Input.MouseInputDelta));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

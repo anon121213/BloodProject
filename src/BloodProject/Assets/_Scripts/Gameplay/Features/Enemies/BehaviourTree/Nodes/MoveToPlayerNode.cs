@@ -1,4 +1,5 @@
-﻿using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Base;
+﻿using _Scripts.Gameplay.Features.Effects;
+using _Scripts.Gameplay.Features.Enemies.BehaviourTree.Base;
 using Gameplay.Features.Effects;
 using UnityEngine;
 

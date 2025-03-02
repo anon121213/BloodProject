@@ -1,6 +1,5 @@
 ﻿using _Scripts.Gameplay.Features.Input.InputServices;
 using Entitas;
-using UnityEngine;
 
 namespace _Scripts.Gameplay.Features.Input.System
 {
@@ -16,7 +15,7 @@ namespace _Scripts.Gameplay.Features.Input.System
       _inputs = gameContext.GetGroup(InputMatcher
         .AllOf(
           InputMatcher.Input
-          ));
+        ));
     }
 
     public void Execute()
@@ -25,14 +24,16 @@ namespace _Scripts.Gameplay.Features.Input.System
       {
         if (_inputService.IsMoving)
           input.ReplaceMoveInputAxis(_inputService.MoveDirection);
-        else if (input.hasMoveInputAxis) 
+        else if (input.hasMoveInputAxis)
           input.RemoveMoveInputAxis();
 
         input.isShooting = _inputService.IsShooting;
         input.isReloading = _inputService.IsReloading;
         input.isJumping = _inputService.IsJumping;
         input.isDashing = _inputService.IsDashing;
-        
+        input.isChangeWeapon = _inputService.IsChangeWeapon;
+
+        input.ReplaceChangeWeaponType(_inputService.ChangeWeaponType);
         input.ReplaceMouseInputAxis(_inputService.MousePosition);
         input.ReplaceMouseInputDelta(_inputService.MouseDelta);
       }

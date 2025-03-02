@@ -33,13 +33,13 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    public Gameplay.Features.Input.MouseInputAxis mouseInputAxis { get { return (Gameplay.Features.Input.MouseInputAxis)GetComponent(InputComponentsLookup.MouseInputAxis); } }
+    public _Scripts.Gameplay.Features.Input.MouseInputAxis mouseInputAxis { get { return (_Scripts.Gameplay.Features.Input.MouseInputAxis)GetComponent(InputComponentsLookup.MouseInputAxis); } }
     public UnityEngine.Vector2 MouseInputAxis { get { return mouseInputAxis.Value; } }
     public bool hasMouseInputAxis { get { return HasComponent(InputComponentsLookup.MouseInputAxis); } }
 
     public InputEntity AddMouseInputAxis(UnityEngine.Vector2 newValue) {
         var index = InputComponentsLookup.MouseInputAxis;
-        var component = (Gameplay.Features.Input.MouseInputAxis)CreateComponent(index, typeof(Gameplay.Features.Input.MouseInputAxis));
+        var component = (_Scripts.Gameplay.Features.Input.MouseInputAxis)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Input.MouseInputAxis));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class InputEntity {
 
     public InputEntity ReplaceMouseInputAxis(UnityEngine.Vector2 newValue) {
         var index = InputComponentsLookup.MouseInputAxis;
-        var component = (Gameplay.Features.Input.MouseInputAxis)CreateComponent(index, typeof(Gameplay.Features.Input.MouseInputAxis));
+        var component = (_Scripts.Gameplay.Features.Input.MouseInputAxis)CreateComponent(index, typeof(_Scripts.Gameplay.Features.Input.MouseInputAxis));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherPushEffect;
+    static Entitas.IMatcher<GameEntity> _matcherEquipWeapon;
 
-    public static Entitas.IMatcher<GameEntity> PushEffect {
+    public static Entitas.IMatcher<GameEntity> EquipWeapon {
         get {
-            if (_matcherPushEffect == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.PushEffect);
+            if (_matcherEquipWeapon == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.EquipWeapon);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherPushEffect = matcher;
+                _matcherEquipWeapon = matcher;
             }
 
-            return _matcherPushEffect;
+            return _matcherEquipWeapon;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly _Scripts.Gameplay.Features.Effects.PushEffect pushEffectComponent = new _Scripts.Gameplay.Features.Effects.PushEffect();
+    static readonly _Scripts.Gameplay.Features.Backpack.EquipWeapon equipWeaponComponent = new _Scripts.Gameplay.Features.Backpack.EquipWeapon();
 
-    public bool isPushEffect {
-        get { return HasComponent(GameComponentsLookup.PushEffect); }
+    public bool isEquipWeapon {
+        get { return HasComponent(GameComponentsLookup.EquipWeapon); }
         set {
-            if (value != isPushEffect) {
-                var index = GameComponentsLookup.PushEffect;
+            if (value != isEquipWeapon) {
+                var index = GameComponentsLookup.EquipWeapon;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : pushEffectComponent;
+                            : equipWeaponComponent;
 
                     AddComponent(index, component);
                 } else {

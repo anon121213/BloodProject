@@ -33,7 +33,7 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    static readonly Gameplay.Features.Input.Jumping jumpingComponent = new Gameplay.Features.Input.Jumping();
+    static readonly _Scripts.Gameplay.Features.Input.Jumping jumpingComponent = new _Scripts.Gameplay.Features.Input.Jumping();
 
     public bool isJumping {
         get { return HasComponent(InputComponentsLookup.Jumping); }

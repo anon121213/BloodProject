@@ -8,18 +8,22 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int Dashing = 0;
-    public const int Input = 1;
-    public const int Jumping = 2;
-    public const int MouseInputAxis = 3;
-    public const int MouseInputDelta = 4;
-    public const int MoveInputAxis = 5;
-    public const int Reloading = 6;
-    public const int Shooting = 7;
+    public const int ChangeWeapon = 0;
+    public const int ChangeWeaponType = 1;
+    public const int Dashing = 2;
+    public const int Input = 3;
+    public const int Jumping = 4;
+    public const int MouseInputAxis = 5;
+    public const int MouseInputDelta = 6;
+    public const int MoveInputAxis = 7;
+    public const int Reloading = 8;
+    public const int Shooting = 9;
 
-    public const int TotalComponents = 8;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
+        "ChangeWeapon",
+        "ChangeWeaponType",
         "Dashing",
         "Input",
         "Jumping",
@@ -31,13 +35,15 @@ public static class InputComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Gameplay.Features.Input.Dashing),
-        typeof(Gameplay.Features.Input.Input),
-        typeof(Gameplay.Features.Input.Jumping),
-        typeof(Gameplay.Features.Input.MouseInputAxis),
-        typeof(Gameplay.Features.Input.MouseInputDelta),
-        typeof(Gameplay.Features.Input.MoveInputAxis),
-        typeof(Gameplay.Features.Input.Reloading),
-        typeof(Gameplay.Features.Input.Shooting)
+        typeof(_Scripts.Gameplay.Features.Input.ChangeWeapon),
+        typeof(_Scripts.Gameplay.Features.Input.ChangeWeaponType),
+        typeof(_Scripts.Gameplay.Features.Input.Dashing),
+        typeof(_Scripts.Gameplay.Features.Input.Input),
+        typeof(_Scripts.Gameplay.Features.Input.Jumping),
+        typeof(_Scripts.Gameplay.Features.Input.MouseInputAxis),
+        typeof(_Scripts.Gameplay.Features.Input.MouseInputDelta),
+        typeof(_Scripts.Gameplay.Features.Input.MoveInputAxis),
+        typeof(_Scripts.Gameplay.Features.Input.Reloading),
+        typeof(_Scripts.Gameplay.Features.Input.Shooting)
     };
 }

@@ -22,7 +22,6 @@ namespace _Scripts.Gameplay.Features.Weapon
     [Game] public class LeftHandHolder : IComponent { public Transform Value; }
     [Game] public class AttackDelay : IComponent { public float Value; }
     [Game] public class CurrentAttackDelay : IComponent { public float Value; }
-    [Game] public class CurrentWeapon : IComponent { public int Value; }
     [Game] public class PelletCount : IComponent { public int Value; }
     [Game] public class SpredAngleX : IComponent { public float Value; }
     [Game] public class SpredAngleY : IComponent { public float Value; }

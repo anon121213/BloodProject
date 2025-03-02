@@ -1,4 +1,5 @@
 ﻿using _Scripts.Gameplay.Features.Weapon.Systems;
+using _Scripts.Gameplay.Features.Weapon.Systems.HittablesEntities;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Gameplay.Features.Weapon

@@ -10,7 +10,6 @@ namespace _Scripts.Gameplay.Features.Effects
     {
       Add(systemFactory.Create<ProcessCleanupEffectsSystem>());
       Add(systemFactory.Create<ProcessDamageEffectSystem>());
-      Add(systemFactory.Create<ProcessPushEffectsSystem>());
     }
   }
 }
