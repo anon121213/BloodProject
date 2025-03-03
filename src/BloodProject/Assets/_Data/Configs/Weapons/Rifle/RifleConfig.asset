@@ -22,6 +22,5 @@ MonoBehaviour:
     <BulletsInClipCount>k__BackingField: 30
     <ShootDelay>k__BackingField: 0.2
     <ReloadDelay>k__BackingField: 0
-    <Damage>k__BackingField: 30
-  <WeaponType>k__BackingField: 0
+  <WeaponType>k__BackingField: 1
   <BulletConfig>k__BackingField: {fileID: 11400000, guid: c7a0be8874ab42d41bba9d407a422cac, type: 2}

@@ -26,7 +26,7 @@ MonoBehaviour:
   Radius: 0.1
   IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 900
   DamageLayers:
     serializedVersion: 2
     m_Bits: 64
