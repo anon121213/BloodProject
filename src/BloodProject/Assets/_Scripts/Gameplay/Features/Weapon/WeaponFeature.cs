@@ -1,5 +1,8 @@
 ﻿using _Scripts.Gameplay.Features.Weapon.Systems;
+using _Scripts.Gameplay.Features.Weapon.Systems.Delay;
 using _Scripts.Gameplay.Features.Weapon.Systems.HittablesEntities;
+using _Scripts.Gameplay.Features.Weapon.Systems.RayCast;
+using _Scripts.Gameplay.Features.Weapon.Systems.ShootTypes;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 
 namespace _Scripts.Gameplay.Features.Weapon
@@ -10,6 +13,7 @@ namespace _Scripts.Gameplay.Features.Weapon
     {
       Add(systemFactory.Create<ProjectileShootSystem>());
       Add(systemFactory.Create<ShotgunRayCastWeaponSystem>());
+      Add(systemFactory.Create<GaussRayCastSystem>());
       Add(systemFactory.Create<MultipleShootRayCastSystem>());
       Add(systemFactory.Create<RayCastDamageSystem>());
       Add(systemFactory.Create<RayCastBloodHandler>());

@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using Gameplay.Features.Effects.Factory;
 
-namespace _Scripts.Gameplay.Features.Weapon.Systems
+namespace _Scripts.Gameplay.Features.Weapon.Systems.RayCast
 {
   public class RayCastDamageSystem : IExecuteSystem
   {

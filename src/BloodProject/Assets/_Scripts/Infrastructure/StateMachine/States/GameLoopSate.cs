@@ -19,7 +19,6 @@ namespace _Scripts.Infrastructure.StateMachine.States
     
     public override void Enter()
     {
-      Debug.Log(_systems);
       _updateFeature = _systems.Create<UpdateFeature>();
       _fixedUpdateFeature = _systems.Create<FixedUpdateFeature>();
       _fixedUpdateFeature.Initialize();

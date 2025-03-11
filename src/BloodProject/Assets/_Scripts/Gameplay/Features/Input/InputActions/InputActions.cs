@@ -171,6 +171,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TakeGauss"",
+                    ""type"": ""Button"",
+                    ""id"": ""6dff3a58-51cd-4cba-baf1-55fbc7a723ac"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -316,6 +325,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""TakeRifle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fef83ac7-50ca-4759-880c-1c7bbcce7314"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TakeGauss"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -367,6 +387,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Pc_Dashing = m_Pc.FindAction("Dashing", throwIfNotFound: true);
         m_Pc_TakeShotgun = m_Pc.FindAction("TakeShotgun", throwIfNotFound: true);
         m_Pc_TakeRifle = m_Pc.FindAction("TakeRifle", throwIfNotFound: true);
+        m_Pc_TakeGauss = m_Pc.FindAction("TakeGauss", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -460,6 +481,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Pc_Dashing;
     private readonly InputAction m_Pc_TakeShotgun;
     private readonly InputAction m_Pc_TakeRifle;
+    private readonly InputAction m_Pc_TakeGauss;
     /// <summary>
     /// Provides access to input actions defined in input action map "Pc".
     /// </summary>
@@ -507,6 +529,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Pc/TakeRifle".
         /// </summary>
         public InputAction @TakeRifle => m_Wrapper.m_Pc_TakeRifle;
+        /// <summary>
+        /// Provides access to the underlying input action "Pc/TakeGauss".
+        /// </summary>
+        public InputAction @TakeGauss => m_Wrapper.m_Pc_TakeGauss;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -560,6 +586,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TakeRifle.started += instance.OnTakeRifle;
             @TakeRifle.performed += instance.OnTakeRifle;
             @TakeRifle.canceled += instance.OnTakeRifle;
+            @TakeGauss.started += instance.OnTakeGauss;
+            @TakeGauss.performed += instance.OnTakeGauss;
+            @TakeGauss.canceled += instance.OnTakeGauss;
         }
 
         /// <summary>
@@ -598,6 +627,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TakeRifle.started -= instance.OnTakeRifle;
             @TakeRifle.performed -= instance.OnTakeRifle;
             @TakeRifle.canceled -= instance.OnTakeRifle;
+            @TakeGauss.started -= instance.OnTakeGauss;
+            @TakeGauss.performed -= instance.OnTakeGauss;
+            @TakeGauss.canceled -= instance.OnTakeGauss;
         }
 
         /// <summary>
@@ -810,6 +842,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTakeRifle(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TakeGauss" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTakeGauss(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

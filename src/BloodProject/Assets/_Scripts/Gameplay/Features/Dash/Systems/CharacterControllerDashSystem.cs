@@ -33,7 +33,7 @@ namespace _Scripts.Gameplay.Features.Dash.Systems
       foreach (var controller in _controllers.GetEntities(_buffer))
       {
         if (!input.isDashing || controller.isOnDashCooldown
-            && controller.CurrentDashDuration >= controller.DashDuration ) continue;
+            && controller.CurrentDashDuration >= controller.DashDuration) continue;
         
         float dashSpeed = Mathf.Lerp(0, controller.DashDistance / controller.DashDuration,
           1 - (controller.CurrentDashDuration / controller.DashDuration));

@@ -13,10 +13,13 @@ namespace _Scripts.Gameplay.Features.Weapon
     [Game] public class AttackAvailable : IComponent { }
     [Game] public class OnAttackDelay : IComponent { }
     [Game] public class RaycastShooter : IComponent { }
+    [Game] public class ProjectileBulletShooter : IComponent { }
     [Game] public class Shotgun : IComponent { }
+    [Game] public class Gauss : IComponent { }
     [Game] public class ShotProcessed : IComponent { }
     [Game] public class OwnerID : IComponent { public int Value; }
     [Game] public class AttackPoint : IComponent { public Transform Value; }
+    [Game] public class AttackPoints : IComponent { public List<Transform> Value; }
     [Game] public class WeaponHolder : IComponent { public Transform Value; }
     [Game] public class RightHandHolder : IComponent { public Transform Value; }
     [Game] public class LeftHandHolder : IComponent { public Transform Value; }

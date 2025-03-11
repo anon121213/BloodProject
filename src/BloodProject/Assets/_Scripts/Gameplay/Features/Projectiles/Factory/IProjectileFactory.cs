@@ -7,5 +7,8 @@ namespace _Scripts.Gameplay.Features.Projectiles.Factory
   {
     GameEntity CreateSimpleBulletProjectile(ProjectileConfig projectileConfig, 
       int producerID, Vector3 at, Quaternion rotation, Vector3 direction);
+
+    GameEntity CreateTeleportProjectile(ProjectileConfig projectileConfig,
+      int producerID, Vector3 startPoint, Vector3 endPoint);
   }
 }

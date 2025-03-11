@@ -5,27 +5,27 @@ using _Scripts.Gameplay.Features.Weapon.Data;
 
 namespace _Scripts.Infrastructure.Services.StaticData.Provider
 {
-    public class StaticDataProvider : IStaticDataProvider
+  public class StaticDataProvider : IStaticDataProvider
+  {
+    public StaticDataProvider(AllData allData)
     {
-        public StaticDataProvider(AllData allData)
-        {
-            CameraSettings = allData.CameraSettings;
-            PlayerSettings = allData.PlayerSettings;
-            WeaponConfigs = allData.WeaponConfigs;
-            EnemiesConfigs = allData.EnemiesConfigs;
-        }
-
-        public CameraSettings CameraSettings { get; }
-        public PlayerSettings PlayerSettings { get; }
-        public WeaponConfigs WeaponConfigs { get; }
-        public EnemiesConfigs EnemiesConfigs { get; }
+      CameraSettings = allData.CameraSettings;
+      PlayerSettings = allData.PlayerSettings;
+      WeaponConfigs = allData.WeaponConfigs;
+      EnemiesConfigs = allData.EnemiesConfigs;
     }
 
-    public interface IStaticDataProvider
-    {
-        CameraSettings CameraSettings { get; }
-        PlayerSettings PlayerSettings { get; }
-        WeaponConfigs WeaponConfigs { get; }
-        EnemiesConfigs EnemiesConfigs { get; }
-    }
+    public CameraSettings CameraSettings { get; }
+    public PlayerSettings PlayerSettings { get; }
+    public WeaponConfigs WeaponConfigs { get; }
+    public EnemiesConfigs EnemiesConfigs { get; }
+  }
+
+  public interface IStaticDataProvider
+  {
+    CameraSettings CameraSettings { get; }
+    PlayerSettings PlayerSettings { get; }
+    WeaponConfigs WeaponConfigs { get; }
+    EnemiesConfigs EnemiesConfigs { get; }
+  }
 }

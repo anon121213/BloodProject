@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37adbfc57d7edec4f999f9fd3f716bb9
+    m_Address: Assets/Prefabs/Weapons/Weapons/Gauss.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 92cdedd723ae2ee4c9885f83efd899de
     m_Address: Assets/Prefabs/Weapons/machine-gun.prefab
     m_ReadOnly: 0

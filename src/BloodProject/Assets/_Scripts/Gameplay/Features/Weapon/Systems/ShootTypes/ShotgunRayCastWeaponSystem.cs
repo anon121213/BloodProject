@@ -2,7 +2,7 @@
 using Entitas;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Features.Weapon.Systems
+namespace _Scripts.Gameplay.Features.Weapon.Systems.ShootTypes
 {
   public class ShotgunRayCastWeaponSystem : IExecuteSystem
   {

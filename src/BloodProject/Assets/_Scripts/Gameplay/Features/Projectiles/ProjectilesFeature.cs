@@ -10,6 +10,7 @@ namespace _Scripts.Gameplay.Features.Projectiles
       Add(systemFactory.Create<ApplyProjectilesEffectOnTargetsSystem>());
       Add(systemFactory.Create<ProjectilesCollidesBloodHandler>());
       Add(systemFactory.Create<SimpleBulletProjectileSystem>());
+      Add(systemFactory.Create<TeleportProjectileSystem>());
     }
   }
 }

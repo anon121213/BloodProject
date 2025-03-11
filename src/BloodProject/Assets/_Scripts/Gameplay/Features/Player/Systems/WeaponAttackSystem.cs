@@ -33,8 +33,8 @@ namespace _Scripts.Gameplay.Features.Player.Systems
           continue;
 
         GameEntity currentWeapon = _game.GetEntityWithId(player.CurrentWeapon);
-        
-        if (currentWeapon.isAttackAvailable) 
+
+        if (currentWeapon.isAttackAvailable)
           currentWeapon.isAttack = true;
       }
     }

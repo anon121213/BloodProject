@@ -1,7 +1,8 @@
 ﻿using _Scripts.Common.Time;
 using Entitas;
+using UnityEngine;
 
-namespace _Scripts.Gameplay.Features.Weapon.Systems
+namespace _Scripts.Gameplay.Features.Weapon.Systems.Delay
 {
   public class AttackDelaySystem : IExecuteSystem
   {

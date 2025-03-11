@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2583d851d56c4ff2933a55756e911597, type: 3}
+  m_Name: GaussConfig
+  m_EditorClassIdentifier: 
+  <Prefab>k__BackingField:
+    m_AssetGUID: 37adbfc57d7edec4f999f9fd3f716bb9
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <WeaponSettings>k__BackingField:
+    <BulletsInClipCount>k__BackingField: 30
+    <ShootDelay>k__BackingField: 1
+    <ReloadDelay>k__BackingField: 1
+  <WeaponType>k__BackingField: 3
+  <BulletConfig>k__BackingField: {fileID: 11400000, guid: fea2b86cd09e79e419f9a9c5ed7cb183, type: 2}
+  <ShootParticle>k__BackingField:
+    m_AssetGUID: 76ce3da9e8fb93d439001fa2a5d6dfb8
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <EffectSetups>k__BackingField:
+  - EffectTypeId: 1
+    Value: 100
+  <RayDistance>k__BackingField: 60
+  <PushDuration>k__BackingField: 0.2
+  <PushDistance>k__BackingField: 6
+  <IgnoreLayers>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 644

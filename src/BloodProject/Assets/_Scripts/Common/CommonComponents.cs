@@ -6,9 +6,8 @@ using UnityEngine.AddressableAssets;
 namespace _Scripts.Common
 {
   [Game] public class Destructed : IComponent { }
-  
   [Game] public class Processed : IComponent { }
-  
+  [Game] public class Spawned : IComponent { }
   [Game] public class View : IComponent { public IEntityView Value; }
   [Game] public class AddedView : IComponent { }
   [Game] public class ViewRootComponent : IComponent { public Transform Value; }

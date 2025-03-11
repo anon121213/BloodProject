@@ -8,6 +8,7 @@ using _Scripts.Gameplay.Features.Enemies;
 using _Scripts.Gameplay.Features.Input;
 using _Scripts.Gameplay.Features.Movement;
 using _Scripts.Gameplay.Features.Player;
+using _Scripts.Gameplay.Features.Push;
 using _Scripts.Gameplay.Features.Weapon;
 using _Scripts.Infrastructure.Services.Factories.SystemsFactory;
 using _Scripts.Infrastructure.View;
@@ -25,6 +26,7 @@ namespace _Scripts.Infrastructure
       Add(systemFactory.Create<CameraFeature>());
       Add(systemFactory.Create<WeaponFeature>());
       Add(systemFactory.Create<DashFeature>());
+      Add(systemFactory.Create<PushFeature>());
       Add(systemFactory.Create<EnemiesFeature>());
       Add(systemFactory.Create<EffectsFeature>());
       Add(systemFactory.Create<HealthFeature>());

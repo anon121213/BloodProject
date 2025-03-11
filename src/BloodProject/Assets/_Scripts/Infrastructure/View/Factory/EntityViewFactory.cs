@@ -18,7 +18,7 @@ namespace _Scripts.Infrastructure.View.Factory
       _resolver = resolver;
     }
     
-    public async UniTask<EntityBehaviour> CreateViewForEntity(GameEntity entity, Transform root)
+    public async UniTask<EntityBehaviour> CreateViewForReference(GameEntity entity, Transform root)
     {
       EntityBehaviour viewPrefab = await _assetProvider.LoadAsync<EntityBehaviour>(entity.ViewReference);
     
@@ -35,6 +35,7 @@ namespace _Scripts.Infrastructure.View.Factory
       view.transform.localRotation = spawnRotation;
       
       view.SetEntity(entity);
+      view.Entity.isSpawned = true;
       return view;
     }
 
@@ -52,7 +53,7 @@ namespace _Scripts.Infrastructure.View.Factory
       view.transform.localRotation = spawnRotation;
       
       view.SetEntity(entity);
-
+      view.Entity.isSpawned = true;
       return view;
     }
   }

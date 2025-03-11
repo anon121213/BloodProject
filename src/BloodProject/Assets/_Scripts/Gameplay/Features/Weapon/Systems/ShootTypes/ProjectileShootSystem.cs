@@ -3,7 +3,7 @@ using _Scripts.Gameplay.Features.Projectiles.Factory;
 using Entitas;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Features.Weapon.Systems
+namespace _Scripts.Gameplay.Features.Weapon.Systems.ShootTypes
 {
   public class ProjectileShootSystem : IExecuteSystem
   {
@@ -27,6 +27,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
           GameMatcher.Weapon,
           GameMatcher.ProjectileData,
           GameMatcher.AttackPoint,
+          GameMatcher.ProjectileBulletShooter,
           GameMatcher.Attack
         ));
     }

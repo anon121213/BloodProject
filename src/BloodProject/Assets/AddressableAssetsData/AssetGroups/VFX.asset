@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: VFX
+  m_EditorClassIdentifier: 
+  m_GroupName: VFX
+  m_GUID: 798b16cb1f9c1d54a98d4d8eca536cf3
+  m_SerializeEntries:
+  - m_GUID: 76ce3da9e8fb93d439001fa2a5d6dfb8
+    m_Address: Assets/ART/VFX/Gauss/fire traile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b8389853016b2a64ba62dc4a8ac29ab2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5a10a0945b69fb442903af97ed55c777, type: 2}
+    - {fileID: 11400000, guid: ca7eec776fb3e764e9796864a964bdfe, type: 2}

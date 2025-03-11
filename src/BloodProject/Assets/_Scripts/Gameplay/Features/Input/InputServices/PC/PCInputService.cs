@@ -58,6 +58,7 @@ namespace _Scripts.Gameplay.Features.Input.InputServices.PC
       RegisterAction(_playerInput.Pc.Dashing, _ => IsDashing = true, _ => IsDashing = false);
       RegisterAction(_playerInput.Pc.TakeRifle, _ => { IsChangeWeapon = true; ChangeWeaponType = WeaponTypes.Rifle; }, _ => IsChangeWeapon = false);
       RegisterAction(_playerInput.Pc.TakeShotgun, _ => { IsChangeWeapon = true; ChangeWeaponType = WeaponTypes.Shotgun; }, _ => IsChangeWeapon = false);
+      RegisterAction(_playerInput.Pc.TakeGauss, _ => { IsChangeWeapon = true; ChangeWeaponType = WeaponTypes.Gauss; }, _ => IsChangeWeapon = false);
     }
 
     public void Dispose()

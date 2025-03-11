@@ -25,13 +25,19 @@ namespace _Scripts.Gameplay.Features.Backpack.Systems
     {
       foreach (var player in _player.GetEntities(_buffer))
       {
-        if (player.hasExistingWeapons) 
+        if (player.hasExistingWeapons)
           continue;
-        
+
         var shotGun = _weaponFactory.CreateWeapon(WeaponTypes.Shotgun, player.WeaponHolder, player.Id);
         var rifle = _weaponFactory.CreateWeapon(WeaponTypes.Rifle, player.WeaponHolder, player.Id);
-        player.AddExistingWeapons(new Dictionary<WeaponTypes, int> { {WeaponTypes.Rifle, rifle.Id},
-          { WeaponTypes.Shotgun, shotGun.Id} });
+        var gauss = _weaponFactory.CreateWeapon(WeaponTypes.Gauss, player.WeaponHolder, player.Id);
+
+        player.AddExistingWeapons(new Dictionary<WeaponTypes, int>
+        {
+          { WeaponTypes.Rifle, rifle.Id },
+          { WeaponTypes.Shotgun, shotGun.Id },
+          { WeaponTypes.Gauss, gauss.Id }
+        });
       }
     }
   }

@@ -42,7 +42,7 @@ namespace _Scripts.Gameplay.Features.Player.Factory
         .AddDashCooldown(_staticDataProvider.PlayerSettings.DashCooldown)
         .AddCurrentDashDuration(0)
         .AddCurrentDashCooldown(0)
-        .AddCurrentWeapon(0)
+        .AddCurrentWeapon(1)
         .With(x => x.isPlayer = true)
         .With(x => x.isMovementAvailable = true)
         .With(x => x.isTeleport = true)

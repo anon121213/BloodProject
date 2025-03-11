@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using _Scripts.Infrastructure.View.Factory;
 using Entitas;
-using UnityEngine;
 
 namespace _Scripts.Infrastructure.View.Systems
 {
@@ -31,9 +30,9 @@ namespace _Scripts.Infrastructure.View.Systems
         _buffer[i].isAddedView = true;
 
         if (_buffer[i].hasViewRoot)
-          await _entityViewFactory.CreateViewForEntity(_buffer[i], _buffer[i].ViewRoot);
+          await _entityViewFactory.CreateViewForReference(_buffer[i], _buffer[i].ViewRoot);
         else
-          await _entityViewFactory.CreateViewForEntity(_buffer[i], null);
+          await _entityViewFactory.CreateViewForReference(_buffer[i], null);
       }
 
       _buffer.Clear();

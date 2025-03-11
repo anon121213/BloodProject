@@ -4,7 +4,7 @@ using Entitas;
 using Knife.RealBlood;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Features.Weapon.Systems
+namespace _Scripts.Gameplay.Features.Weapon.Systems.RayCast
 {
   public class MultipleShootRayCastSystem : IExecuteSystem
   {
@@ -26,6 +26,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
           GameMatcher.ShootRaycastDirecion,
           GameMatcher.ShootRaycastPosition,
           GameMatcher.IgnoreLayers,
+          GameMatcher.RayDistance,
           GameMatcher.OwnerID
         ));
     }
@@ -47,7 +48,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
 
           if (hit.collider == null)
             continue;
-
+          
           if (hit.collider.TryGetComponent(out IHittable hittable))
           {
             _hittables.Add(hittable);
@@ -55,7 +56,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Systems
             _points.Add(hit.point);
 
             if (hitEntity != null)
-              _hittablesEntities.Add(entity);
+              _hittablesEntities.Add(hitEntity);
           }
         }
         

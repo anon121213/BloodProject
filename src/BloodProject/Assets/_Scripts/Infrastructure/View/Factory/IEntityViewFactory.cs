@@ -5,7 +5,7 @@ namespace _Scripts.Infrastructure.View.Factory
 {
   public interface IEntityViewFactory
   {
-    UniTask<EntityBehaviour> CreateViewForEntity(GameEntity entity, Transform root);
+    UniTask<EntityBehaviour> CreateViewForReference(GameEntity entity, Transform root);
     EntityBehaviour CreateViewForEntityFromPrefab(GameEntity entity, Transform root);
   }
 }

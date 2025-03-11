@@ -29,6 +29,7 @@ namespace _Scripts.Gameplay.Features.Effects.Systems
         if (target.isDead)
           continue;
         
+        Debug.Log(target.Transform.name);
         target.ReplaceCurrentHealth(Mathf.Clamp(target.CurrentHealth - effect.EffectValue, 0, target.MaxHealth));
       }
     }

@@ -18,6 +18,7 @@ namespace _Scripts.Gameplay.Features.Weapon.Data
   {
     Unknown = 0,
     Rifle = 1,
-    Shotgun = 2
+    Shotgun = 2,
+    Gauss = 3
   }
 }
