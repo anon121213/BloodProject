@@ -1,0 +1,22 @@
+{
+    "name": "VRShooter.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9e40c3ac512c9fd42b9933525ef514d9",
+        "GUID:33eb4c044cb584da2a61f63ea771ce79",
+        "GUID:69448af7b92c7f342b298e06a37122aa",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
